@@ -45,7 +45,17 @@
    Custom overrides
    =============================== */
 
-/* Right-align top navigation menu */
+/* Right-align top navigation links */
 .masthead__menu {
+  width: 100%;
+}
+
+.masthead__menu ul {
+  display: flex;
   justify-content: flex-end;
+}
+.masthead__inner-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
