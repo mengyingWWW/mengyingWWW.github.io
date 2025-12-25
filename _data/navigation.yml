@@ -39,4 +39,19 @@ portfolio:
   - title: "CV"
     url: /cv/
 
+header:
+  - title: "News"
+    url: /news/
+
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Portfolio"
+    url: /portfolio/
+
+  - title: "Teaching"
+    url: /teaching/
+
+  - title: "CV"
+    url: /cv/
 
