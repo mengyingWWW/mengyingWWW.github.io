@@ -59,3 +59,51 @@
   justify-content: space-between;
   align-items: center;
 }
+/* ===============================
+   Force dark mode (black background, white text)
+   =============================== */
+
+body {
+  background-color: #000;
+  color: #f5f5f5;
+}
+
+a {
+  color: #9ecbff;
+}
+
+a:hover {
+  color: #cfe3ff;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+/* Content areas */
+.page__content,
+.archive__item,
+.sidebar {
+  background-color: transparent;
+}
+
+/* Sidebar text */
+.sidebar {
+  color: #e0e0e0;
+}
+
+/* Navigation bar */
+.masthead {
+  background-color: #000;
+  border-bottom: 1px solid #222;
+}
+
+/* Navigation links */
+.masthead__menu a {
+  color: #f5f5f5;
+}
+
+.masthead__menu a:hover {
+  color: #9ecbff;
+}
