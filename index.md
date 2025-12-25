@@ -1,8 +1,9 @@
 ---
 layout: single
 author_profile: true
+author: mengying
 permalink: /
-title: ""
+title: "Home"
 ---
 
 Hi! I’m **Mengying**, an HCI researcher interested in human–AI interaction, learning sciences, and human factors.
