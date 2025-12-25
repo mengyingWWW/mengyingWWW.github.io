@@ -41,3 +41,11 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+/* ===============================
+   Custom overrides
+   =============================== */
+
+/* Right-align top navigation menu */
+.masthead__menu {
+  justify-content: flex-end;
+}
