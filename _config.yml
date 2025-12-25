@@ -23,7 +23,7 @@ repository               : "mengyingWWW/mengyingWWW.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profilePic.png"
+  avatar           : "/images/profilePic.png"
   name             : "Mengying Wang"
   pronouns         : # example: "she/her"  
   bio              : "HCI Researcher in Human-AI Interaction, Learning Science & Human Factors @UW @Tsinghua"
