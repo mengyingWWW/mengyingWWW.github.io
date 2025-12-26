@@ -13,5 +13,40 @@
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
+<style>
+  /* Force dark mode globally */
+  html, body {
+    background: #000 !important;
+    color: #f5f5f5 !important;
+  }
+
+  /* Make common containers transparent so black shows through */
+  .masthead,
+  .page,
+  .page__content,
+  .archive,
+  .sidebar,
+  .initial-content,
+  .page__inner-wrap,
+  .archive__item,
+  .author__content,
+  .author__urls-wrapper {
+    background: transparent !important;
+  }
+
+  /* Links */
+  a { color: #9ecbff !important; }
+  a:hover { color: #cfe3ff !important; }
+
+  /* Hide theme/light-dark toggle (broad match) */
+  .theme-toggle,
+  .toggle-theme,
+  button[aria-label*="theme" i],
+  button[title*="theme" i],
+  a[aria-label*="theme" i],
+  a[title*="theme" i] {
+    display: none !important;
+  }
+</style>
 
 <!-- end custom head snippets -->
