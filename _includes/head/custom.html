@@ -189,6 +189,30 @@ nav#site-nav.greedy-nav > ul.visible-links {
 nav#site-nav.greedy-nav > ul.visible-links > li:first-child {
   margin-right: auto !important;
 }
+/* =========================================================
+   DESKTOP: disable hamburger (greedy-nav collapse)
+   ========================================================= */
+
+/* Only apply on wider screens */
+@media (min-width: 900px) {
+
+  /* Hide the hamburger button */
+  nav#site-nav.greedy-nav > button {
+    display: none !important;
+  }
+
+  /* Never show the hidden links dropdown */
+  nav#site-nav.greedy-nav > ul.hidden-links {
+    display: none !important;
+  }
+
+  /* Keep all links in one row */
+  nav#site-nav.greedy-nav > ul.visible-links {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+  }
+}
 </style>
 
 <!-- end custom head snippets -->
