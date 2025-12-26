@@ -64,3 +64,11 @@
 html {
   scroll-behavior: smooth;
 }
+/* Prevent section titles from being hidden under the sticky header */
+section {
+  scroll-margin-top: 6rem;
+}
+section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
