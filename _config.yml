@@ -13,7 +13,7 @@ title                    : "Mengying Wang"
 subtitle                 : "Human–AI Interaction, Learning Sciences & Human Factors"
 title_separator          : "-"
 name                     : &name "Mengying Wang"
-description              : &description "MS. HCDE @UW | B.Eng @Tsinghua"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Mengying Wang"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://mengyingWWW.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -27,7 +27,7 @@ author:
   avatar           : "profilePic.png"
   name             : "Mengying Wang"
   pronouns         : # example: "she/her"  
-  bio              : "HCI Researcher in Human-AI Interaction, Learning Science & Human Factors @UW @Tsinghua"
+  bio              : "MS.HCDE @UW | B.Eng @Tsinghua"
   location         : "Seattle, WA, USA"
   employer         : "University of Washington"
   uri              : # URL
