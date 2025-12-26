@@ -308,6 +308,31 @@ nav#site-nav.greedy-nav > ul.visible-links > li:first-child {
   font-weight: 400;
   opacity: 0.85;
 }
+/* ===== Header title typography ===== */
+
+/* Mengying Wang */
+.masthead .site-title {
+  font-size: 1.6rem;      /* 主标题大小（可调） */
+  font-weight: 800;       /* 加粗 */
+  letter-spacing: 0.02em; /* 学术感一点 */
+  line-height: 1.2;
+}
+
+/* Subtitle: researcher identity */
+.masthead .site-subtitle {
+  margin-top: 8px;
+  font-size: 0.95rem;     /* 比名字小 */
+  font-weight: 400;
+  opacity: 0.85;
+  max-width: 420px;       /* 关键：允许多词但不无限拉长 */
+  white-space: normal;   /* 允许换行 */
+}
+
+/* 整个 masthead 再稍微高一点 */
+.masthead {
+  padding-top: 22px !important;
+  padding-bottom: 22px !important;
+}
 </style>
 
 <!-- end custom head snippets -->
