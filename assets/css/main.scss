@@ -325,3 +325,36 @@ button[aria-label*="Toggle"] {
     box-shadow: none !important;
   }
 }
+/* ================================
+   FIX: Desktop nav shows white blocks / missing text
+   Force masthead nav to be transparent + white text
+   ================================ */
+.masthead,
+.masthead__inner-wrap,
+.masthead__menu,
+.greedy-nav,
+.greedy-nav .visible-links,
+.greedy-nav .hidden-links {
+  background: transparent !important;
+}
+
+/* remove the white rectangles drawn by menu items */
+.masthead__menu-item {
+  background: transparent !important;
+}
+
+/* force nav text to be visible (including Safari text fill) */
+.masthead a,
+.masthead a:visited,
+.greedy-nav a,
+.greedy-nav a:visited {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: transparent !important;
+}
+
+/* keep hover behavior: bold only */
+.masthead a:hover,
+.greedy-nav a:hover {
+  font-weight: 700 !important;
+}
