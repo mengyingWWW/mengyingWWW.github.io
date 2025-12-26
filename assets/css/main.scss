@@ -5,7 +5,7 @@
  * This file controls what is imported from /_sass
  *
  * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ * sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
 
 @import
@@ -41,11 +41,35 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
 /* ===============================
    Custom overrides
    =============================== */
 
-/* Right-align top navigation links (DESKTOP only, don't break mobile dropdown) */
+/* Smooth scroll for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent section titles from being hidden under sticky header */
+section {
+  scroll-margin-top: 6rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* Hide theme toggle button (top-right) */
+.theme-toggle,
+.toggle-theme,
+.masthead__menu-item--theme,
+#theme-toggle,
+button[aria-label*="theme"],
+button[title*="theme"],
+button[aria-label*="Toggle"] {
+  display: none !important;
+}
+
+/* ===== Desktop: keep site title left, push nav items right (without breaking mobile) ===== */
 .masthead__inner-wrap {
   max-width: 100%;
 }
@@ -54,7 +78,7 @@
   width: 100%;
 }
 
-/* Only target the top visible nav links row */
+/* Greedy nav layout */
 .greedy-nav {
   display: flex;
   align-items: center;
@@ -67,108 +91,123 @@
   width: 100%;
 }
 
-/* Keep site title on the left, push the rest to the right */
+/* Keep site title on the left */
 .greedy-nav .visible-links > li.masthead__menu-item--lg {
   margin-right: auto;
 }
 
-/* (Optional) make spacing tighter */
+/* Optional spacing */
 .greedy-nav .visible-links > li {
   margin-left: 0.3rem;
   margin-right: 0.3rem;
 }
 
-/* Smooth scroll for anchor navigation */
-html {
-  scroll-behavior: smooth;
-}
-/* Prevent section titles from being hidden under the sticky header */
-section {
-  scroll-margin-top: 6rem;
-}
-section {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+/* ===== Nav colors: force transparent background + white text (fix white rectangles) ===== */
+.masthead,
+.masthead__inner-wrap,
+.masthead__menu,
+.greedy-nav {
+  background: #000 !important;
 }
 
-/* Hide the theme toggle button (top-right) */
-.theme-toggle,
-.toggle-theme,
-.masthead__menu-item--theme,
-button[aria-label*="theme"],
-button[title*="theme"],
-button[aria-label*="Toggle"] {
-  display: none !important;
+.masthead a,
+.masthead a:visited,
+.greedy-nav .visible-links a,
+.greedy-nav .visible-links a:visited {
+  color: #fff !important;
+  background: transparent !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+.greedy-nav .visible-links li {
+  background: transparent !important;
+}
+
+.greedy-nav .visible-links a:hover {
+  font-weight: 700 !important;
 }
 
 /* ================================
-   Mobile author profile (Yuhan Luo style)
-   - Enlarge + center avatar
-   - Remove duplicated author name on mobile
-   - Center bio + contact links
+   Mobile / iPad fixes
+   - dropdown menu not clipped (News not off-screen)
+   - avatar centered
+   - remove Follow button
+   - contact links centered
    ================================ */
 @media (max-width: 768px) {
-  /* 1) Hide duplicated name in the author profile on mobile */
+
+  /* Sidebar should take full width so centering works */
+  .sidebar {
+    float: none !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* Hide duplicated name in author profile on mobile (optional) */
   .author__name {
     display: none !important;
   }
 
-  /* 2) Center & enlarge avatar */
+  /* Avatar: true center */
   .author__avatar {
     float: none !important;
-    display: flex !important;
-    justify-content: center !important;
-    margin: 24px 0 16px 0 !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 24px auto 16px auto !important;
   }
 
   .author__avatar img {
-    width: 160px !important;       /* change to 140/180 if you want */
-    max-width: 160px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    width: 180px !important;
+    max-width: 180px !important;
     height: auto !important;
     border-radius: 50% !important;
   }
 
-  /* 3) Center the author content (bio / meta) */
+  /* Text center */
   .author__content {
     text-align: center !important;
-    padding: 0 12px !important;
+    padding: 0 16px !important;
   }
 
-  /* 4) Degree / affiliation line (your bio) */
-  .author__bio {
-    font-size: 0.95rem !important;
-    opacity: 0.85 !important;
-    margin: 0 0 12px 0 !important;
+  /* Remove Follow button completely */
+  .author__urls-wrapper button {
+    display: none !important;
   }
 
-  /* 5) Center and wrap the contact links nicely */
+  /* Contact links always visible + centered */
   .author__urls-wrapper {
-    display: flex !important;
-    justify-content: center !important;
+    max-height: none !important;
+    overflow: visible !important;
+    display: block !important;
+    text-align: center !important;
   }
 
   .author__urls {
-    display: inline-flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 10px 16px !important;
+    list-style: none !important;
     padding: 0 !important;
+    margin: 12px auto 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px 16px !important;
+  }
+
+  .author__urls li {
     margin: 0 !important;
   }
 
   .author__urls a {
-    font-size: 0.9rem !important;
+    color: #fff !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
     opacity: 0.9 !important;
   }
-}
-/* ================================
-   Mobile fixes
-   1) dropdown menu not clipped
-   2) remove Follow button
-   3) contacts always visible + centered
-   ================================ */
-@media (max-width: 768px) {
-  /* 1) Fix greedy-nav dropdown (hidden-links) so the first item isn't off-screen */
+
+  /* Fix greedy-nav dropdown (hidden-links) so first item isn't off-screen */
   .greedy-nav {
     position: relative;
   }
@@ -178,8 +217,7 @@ button[aria-label*="Toggle"] {
     right: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding: 0 16px !important;
     box-sizing: border-box !important;
   }
 
@@ -187,27 +225,4 @@ button[aria-label*="Toggle"] {
     display: block !important;
     white-space: normal !important;
   }
-
-  /* 2) Remove Follow button completely */
-  .author__urls-wrapper button {
-    display: none !important;
-  }
-
-  /* 3) Make the contact links always visible & centered */
-  .author__urls-wrapper {
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-  .author__urls {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 10px 16px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
 }
-
-
