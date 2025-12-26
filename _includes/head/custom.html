@@ -291,8 +291,8 @@ nav#site-nav.greedy-nav > ul.visible-links > li:first-child {
 
 /* ===== Masthead: 2-line title + subtitle (Yuecheng style) ===== */
 .masthead {
-  padding-top: 18px !important;
-  padding-bottom: 18px !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
 }
 
 .masthead .site-title {
@@ -328,10 +328,22 @@ nav#site-nav.greedy-nav > ul.visible-links > li:first-child {
   white-space: normal;   /* 允许换行 */
 }
 
-/* 整个 masthead 再稍微高一点 */
+/* ===== Make header slimmer + push content down a bit ===== */
+
+/* 1) 顶栏变窄 */
 .masthead {
-  padding-top: 22px !important;
-  padding-bottom: 22px !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+/* 2) 让内容整体往下走一点，避免头像/侧栏贴顶 */
+body {
+  padding-top: 96px !important; /* 先用这个；想更低就 110px，更高就 80px */
+}
+
+/* 3) 再给主内容一个小 margin（更保险） */
+#main {
+  margin-top: 8px;
 }
 </style>
 
