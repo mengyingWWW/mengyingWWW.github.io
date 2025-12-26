@@ -897,3 +897,41 @@ nav#site-nav.greedy-nav .navicon::after  { top:  7px !important; }
     padding-bottom: 18px !important;
   }
 }
+/* ===============================
+   MOBILE: stop sidebar overlaying page content
+   (fix LinkedIn line covering正文)
+   =============================== */
+@media (max-width: 768px) {
+
+  /* 1) Sidebar 必须在正常文档流里，占位把正文顶下去 */
+  .sidebar,
+  .sidebar.sticky {
+    position: relative !important;   /* 干掉 sticky/absolute 造成的覆盖 */
+    top: auto !important;
+    clear: both !important;          /* 干掉 float 影响 */
+    float: none !important;
+    width: 100% !important;
+    margin: 0 auto 40px !important;  /* 给正文留出足够空间 */
+  }
+
+  /* 2) Sidebar 里面的内容别再 float，统一 block 居中堆叠 */
+  .sidebar .author__avatar,
+  .sidebar .author__content,
+  .sidebar .author__urls-wrapper {
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
+  }
+
+  /* 3) 正文强制在 sidebar 下面开始渲染（关键） */
+  .page__content,
+  .archive__item,
+  .page {
+    clear: both !important;
+  }
+
+  /* 4) 再保险：正文再往下挪一点点 */
+  .page__content {
+    margin-top: 18px !important;
+  }
+}
