@@ -354,4 +354,78 @@ button[aria-label*="Toggle"] {
     padding-right: 16px !important;
   }
 }
+/* =========================================================
+   FINAL DESKTOP FIXES (append at the VERY end of main.scss)
+   1) Fix white blocks in desktop masthead nav
+   2) Sidebar: avatar + bio centered, meta/links left-aligned
+   ========================================================= */
 
+/* ---------- 1) Desktop masthead: kill "white blocks" ---------- */
+@media (min-width: 769px) {
+  .masthead,
+  .masthead__inner-wrap,
+  .masthead__menu,
+  .greedy-nav,
+  .greedy-nav .visible-links,
+  .greedy-nav .visible-links > li,
+  .greedy-nav .visible-links > li > a {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* If any rule accidentally set background-color (often white), force it off */
+  .masthead__menu-item,
+  .masthead__menu-item > a {
+    background-color: transparent !important;
+  }
+
+  /* Ensure text is visible (not “white rectangle”) */
+  .masthead a,
+  .masthead a:visited {
+    color: #ffffff !important;
+  }
+
+  /* Hover: bold only (no underline / no background) */
+  .masthead a:hover {
+    font-weight: 600 !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+  }
+}
+
+/* ---------- 2) Desktop sidebar alignment rules ---------- */
+@media (min-width: 769px) {
+  /* Center the avatar block */
+  .sidebar .author__avatar {
+    float: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 0 10px 0 !important;
+  }
+
+  /* Center ONLY the bio line */
+  .sidebar .author__bio {
+    text-align: center !important;
+    margin: 0 0 14px 0 !important;
+  }
+
+  /* Keep location/school + social links LEFT aligned */
+  .sidebar .author__urls-wrapper,
+  .sidebar .author__urls {
+    text-align: left !important;
+  }
+
+  .sidebar .author__urls {
+    display: block !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .sidebar .author__urls li {
+    justify-content: flex-start !important;
+  }
+
+  .sidebar .author__urls a {
+    justify-content: flex-start !important;
+  }
+}
