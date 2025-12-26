@@ -10,7 +10,7 @@
 locale                   : "en-US"
 site_theme               : "contrast" # the available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Mengying Wang"
-subtitle                 : "Human–AI Interaction, Learning Sciences & Human Factors"
+subtitle                 : "HCI Researcher in Human–AI Interaction, Learning Sciences & Human Factors"
 title_separator          : "-"
 name                     : &name "Mengying Wang"
 description              : &description "Mengying Wang"   # Update this with a general description of your site, this is the default if not overridden by a page
