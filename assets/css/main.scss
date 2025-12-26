@@ -358,3 +358,35 @@ button[aria-label*="Toggle"] {
 .greedy-nav a:hover {
   font-weight: 700 !important;
 }
+
+/* ================================
+   HARD FIX: white blocks in masthead nav
+   (force nav items + links to be transparent + white text)
+   ================================ */
+.masthead .greedy-nav,
+.masthead .greedy-nav * {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* specifically kill the blocks on each menu item */
+.masthead .greedy-nav .visible-links > li,
+.masthead .greedy-nav .visible-links > li > a,
+.masthead .greedy-nav .visible-links > li > a:visited {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* keep hover as bold only */
+.masthead .greedy-nav .visible-links > li > a:hover {
+  font-weight: 700 !important;
+}
+
+/* (optional) prevent any focus/active bg flashes */
+.masthead .greedy-nav a:focus,
+.masthead .greedy-nav a:active {
+  background: transparent !important;
+  background-color: transparent !important;
+}
