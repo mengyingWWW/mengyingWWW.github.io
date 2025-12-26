@@ -363,3 +363,292 @@ button[aria-label*="Toggle"] {
   /* IMPORTANT: stop theme default forcing links to block (which makes them vertical) */
   .author__urls a { display: inline-flex !important; }
 }
+/* =========================================================
+   FINAL PATCH (PASTE AS THE VERY LAST THING IN main.scss)
+   1) Kill the triangle above CV (pseudo-element triangle in masthead/nav)
+   2) Mobile: avatar + bio/school/address/email/github/linkedin stacked centered
+   3) Back-to-top: fixed bottom-right white triangle + label "Back to top"
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1) KILL the annoying triangle near CV (pseudo-elements)
+   We only nuke pseudo-elements inside masthead/nav so it
+   won't affect your main content.
+   --------------------------------------------------------- */
+.masthead *::before,
+.masthead *::after,
+nav#site-nav *::before,
+nav#site-nav *::after,
+.greedy-nav *::before,
+.greedy-nav *::after {
+  /* This kills triangles/bubbles made by CSS */
+  content: none !important;
+  display: none !important;
+}
+
+/* Also ensure masthead links never paint a background block */
+.masthead a,
+.masthead a:visited,
+.masthead a:hover,
+.masthead a:active,
+.masthead a:focus {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   3) Back-to-top button: bottom-right, white triangle + label
+   IMPORTANT: CSS cannot create a clickable link out of thin air.
+   This styles the existing back-to-top element if present.
+   --------------------------------------------------------- */
+
+/* target common back-to-top patterns */
+.back-to-top,
+a.back-to-top,
+a[href="#top"],
+a[href="#page-top"],
+a[href="#main"],
+a[href="#"] {
+  position: fixed !important;
+  right: 18px !important;
+  bottom: 18px !important;
+  left: auto !important;
+  top: auto !important;
+  z-index: 9999 !important;
+
+  width: 44px !important;
+  height: 44px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: rgba(0,0,0,0.55) !important;
+  border: 1px solid rgba(255,255,255,0.25) !important;
+  border-radius: 12px !important;
+
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+/* Make the triangle white (works for icon-font / svg / pseudo) */
+.back-to-top svg,
+a.back-to-top svg,
+a[href="#top"] svg,
+a[href="#page-top"] svg,
+a[href="#main"] svg {
+  fill: #fff !important;
+}
+
+.back-to-top i,
+a.back-to-top i,
+a[href="#top"] i,
+a[href="#page-top"] i,
+a[href="#main"] i {
+  color: #fff !important;
+}
+
+/* If triangle is drawn by pseudo element on the link itself */
+.back-to-top::before,
+a.back-to-top::before,
+a[href="#top"]::before,
+a[href="#page-top"]::before,
+a[href="#main"]::before {
+  content: "" !important;
+  display: block !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 9px solid transparent !important;
+  border-right: 9px solid transparent !important;
+  border-bottom: 14px solid #fff !important; /* white triangle */
+}
+
+/* label under the button */
+.back-to-top::after,
+a.back-to-top::after,
+a[href="#top"]::after,
+a[href="#page-top"]::after,
+a[href="#main"]::after {
+  content: "Back to top" !important;
+  display: block !important;
+
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  font-size: 12px !important;
+  line-height: 1 !important;
+  color: #fff !important;
+  white-space: nowrap !important;
+
+  opacity: 0.95 !important;
+}
+
+/* Mobile tap area a bit more comfortable */
+@media (max-width: 768px) {
+  .back-to-top,
+  a.back-to-top,
+  a[href="#top"],
+  a[href="#page-top"],
+  a[href="#main"],
+  a[href="#"] {
+    right: 14px !important;
+    bottom: 14px !important;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   2) MOBILE: force everything under avatar to be stacked centered
+   (bio, school, address, email, github, linkedin)
+   --------------------------------------------------------- */
+@media (max-width: 768px) {
+
+  /* stop floats causing "bio drifts to the right" */
+  .sidebar,
+  .sidebar.sticky,
+  .author__avatar,
+  .author__content,
+  .author__urls-wrapper {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* avatar centered */
+  .sidebar .author__avatar,
+  .sidebar.sticky .author__avatar {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    /* move up a bit */
+    margin: -12px 0 14px 0 !important;
+  }
+
+  .sidebar .author__avatar img,
+  .sidebar.sticky .author__avatar img {
+    display: block !important;
+    margin: 0 auto !important;
+    width: 180px !important;
+    max-width: 70vw !important;
+    height: auto !important;
+    border-radius: 50% !important;
+  }
+
+  /* hide duplicated sidebar name */
+  .sidebar .author__name,
+  .sidebar.sticky .author__name {
+    display: none !important;
+  }
+
+  /* content column centered */
+  .sidebar .author__content,
+  .sidebar.sticky .author__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    text-align: center !important;
+    padding: 0 12px !important;
+  }
+
+  /* bio centered (one line) */
+  .sidebar .author__bio,
+  .sidebar.sticky .author__bio {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 6px 0 12px 0 !important;
+  }
+
+  /* remove Follow button */
+  .sidebar .author__urls-wrapper button,
+  .sidebar .author__urls-wrapper .btn,
+  .sidebar.sticky .author__urls-wrapper button,
+  .sidebar.sticky .author__urls-wrapper .btn {
+    display: none !important;
+  }
+
+  /* links wrapper: no background box/bubble */
+  .sidebar .author__urls-wrapper,
+  .sidebar.sticky .author__urls-wrapper {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* UL becomes vertical list (each item is a row) */
+  .sidebar ul.author__urls,
+  .sidebar ul.author__urls.social-icons,
+  .sidebar.sticky ul.author__urls,
+  .sidebar.sticky ul.author__urls.social-icons {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* each LI centered row */
+  .sidebar ul.author__urls li,
+  .sidebar.sticky ul.author__urls li {
+    display: block !important;
+    width: 100% !important;
+    margin: 10px 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* anchor centered inline-flex (icon + label) */
+  .sidebar ul.author__urls li a,
+  .sidebar.sticky ul.author__urls li a {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+
+    white-space: nowrap !important;
+    text-decoration: none !important;
+  }
+
+  /* kill any bubble pseudo-elements in sidebar urls */
+  .sidebar .author__urls-wrapper::before,
+  .sidebar .author__urls-wrapper::after,
+  .sidebar ul.author__urls::before,
+  .sidebar ul.author__urls::after,
+  .sidebar.sticky .author__urls-wrapper::before,
+  .sidebar.sticky .author__urls-wrapper::after,
+  .sidebar.sticky ul.author__urls::before,
+  .sidebar.sticky ul.author__urls::after {
+    content: none !important;
+    display: none !important;
+  }
+}
