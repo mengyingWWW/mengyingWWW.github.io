@@ -5,7 +5,7 @@ permalink: /
 title: ""
 ---
 
-TEST-DEPLOY-005 Hi! I’m **Mengying Wang**, an HCI researcher interested in human–AI interaction, learning sciences, and human factors.
+TEST-DEPLOY-006 Hi! I’m **Mengying Wang**, an HCI researcher interested in human–AI interaction, learning sciences, and human factors.
 
 I am currently a Research Assistant at the University of Washington and City University of Hong Kong. My work focuses on designing and evaluating AI-assisted systems for learning and creative tasks.
 
