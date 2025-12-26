@@ -197,12 +197,12 @@ nav#site-nav.greedy-nav > ul.visible-links > li:first-child {
 @media (min-width: 900px) {
 
   /* Hide the hamburger button */
-  nav#site-nav.greedy-nav > button {
+  /*nav#site-nav.greedy-nav > button {
     display: none !important;
   }
 
   /* Never show the hidden links dropdown */
-  nav#site-nav.greedy-nav > ul.hidden-links {
+  /*nav#site-nav.greedy-nav > ul.hidden-links {
     display: none !important;
   }
 
@@ -211,6 +211,59 @@ nav#site-nav.greedy-nav > ul.visible-links > li:first-child {
     display: flex !important;
     flex-wrap: nowrap !important;
     white-space: nowrap !important;
+  }
+}
+/* =========================================================
+   DESKTOP: always show menu as a flat row (no hamburger)
+   ========================================================= */
+@media (min-width: 900px) {
+
+  /* Hide the hamburger button */
+  nav#site-nav.greedy-nav > button {
+    display: none !important;
+  }
+
+  /* Make the nav a flex row */
+  nav#site-nav.greedy-nav {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* Force BOTH lists to behave like one flat menu row */
+  nav#site-nav.greedy-nav > ul.visible-links,
+  nav#site-nav.greedy-nav > ul.hidden-links {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    position: static !important;   /* cancel dropdown positioning */
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Important: the theme may add .hidden class to hidden-links */
+  nav#site-nav.greedy-nav > ul.hidden-links.hidden {
+    display: flex !important;
+  }
+
+  /* Keep "Mengying Wang" (first item in visible-links) on the left */
+  nav#site-nav.greedy-nav > ul.visible-links > li:first-child {
+    margin-right: auto !important;
+  }
+
+  /* Spacing between items (optional, makes it cleaner) */
+  nav#site-nav.greedy-nav li {
+    margin-left: 0.6rem;
+  }
+  nav#site-nav.greedy-nav > ul.visible-links > li:first-child {
+    margin-left: 0 !important;
   }
 }
 </style>
