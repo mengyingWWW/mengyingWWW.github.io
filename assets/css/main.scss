@@ -349,3 +349,58 @@ a.back-to-top {
     display: none !important;
   }
 }
+/* ===== FINAL FIX: mobile contacts MUST be horizontal ===== */
+@media (max-width: 768px) {
+
+  /* 1) masthead mobile 不要白底（防止你那个顶部白块复发） */
+  .masthead,
+  .masthead__inner-wrap,
+  .masthead__menu,
+  nav#site-nav.greedy-nav,
+  nav#site-nav.greedy-nav * {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+
+  /* 2) 关键：把 social-icons 这个 UL 强制横排 */
+  .sidebar ul.author__urls.social-icons,
+  .sidebar.sticky ul.author__urls.social-icons {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px 18px !important;
+
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  /* 3) 关键：把 li/a 从 block 改回 “不占整行” */
+  .sidebar ul.author__urls.social-icons > li,
+  .sidebar.sticky ul.author__urls.social-icons > li {
+    display: inline-flex !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .sidebar ul.author__urls.social-icons > li > a,
+  .sidebar.sticky ul.author__urls.social-icons > li > a {
+    display: inline-flex !important;   /* 干掉主题的 display:block */
+    width: auto !important;
+    margin: 0 !important;              /* 干掉主题的 margin-bottom */
+    padding: 2px 6px !important;
+    white-space: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+  }
+}
