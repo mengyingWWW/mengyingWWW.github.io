@@ -1026,3 +1026,50 @@ nav#site-nav.greedy-nav .navicon::after  { top:  7px !important; }
     width: 100%;
   }
 }
+
+/* =========================================================
+   FINAL DESKTOP LAYOUT PATCH (prevents sidebar overlay)
+   - Make #main a 2-column flex layout
+   - Sidebar fixed width, content fills remaining space
+   ========================================================= */
+@media (min-width: 769px) {
+
+  /* Two-column layout */
+  #main {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 36px !important;            /* 你想更紧凑就改小，比如 24px */
+  }
+
+  /* Kill old float-based layout so it can't overlap */
+  .sidebar,
+  .sidebar.sticky,
+  .page,
+  article.page,
+  .page__inner-wrap {
+    float: none !important;
+  }
+
+  /* Sidebar column */
+  .sidebar,
+  .sidebar.sticky {
+    flex: 0 0 240px !important;      /* sidebar 宽度：想窄就 220px，想宽就 260px */
+    width: 240px !important;
+    max-width: 240px !important;
+    align-self: flex-start !important;
+  }
+
+  /* Content column */
+  .page,
+  article.page {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;         /* 防止长内容把布局撑炸 */
+  }
+
+  .page__inner-wrap {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
