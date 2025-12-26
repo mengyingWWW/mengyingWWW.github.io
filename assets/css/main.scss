@@ -221,3 +221,136 @@ button[aria-label*="Toggle"] {
     outline: none !important;
   }
 }
+/* ================================
+   FINAL mobile overrides (put at VERY END of main.scss)
+   Fix:
+   - iPhone avatar centered
+   - bio centered
+   - contacts centered + NO white box
+   - hamburger always visible on mobile
+   ================================ */
+
+@media (max-width: 768px) {
+
+  /* --- 0) Make sidebar full-width on mobile (avoid left clipping) --- */
+  .sidebar,
+  .sidebar.sticky {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* --- 1) Avatar: force center + move UP (reduce top gap) --- */
+  .sidebar .author__avatar,
+  .sidebar.sticky .author__avatar {
+    float: none !important;
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+    margin: 10px auto 10px !important; /* 往上移：调小第一个数，比如 6px */
+  }
+
+  .sidebar .author__avatar img,
+  .sidebar.sticky .author__avatar img {
+    display: block !important;
+    margin: 0 auto !important;
+    width: 180px !important;       /* 想更大：200px；更小：160px */
+    max-width: 70vw !important;
+    height: auto !important;
+    border-radius: 50% !important;
+  }
+
+  /* --- 2) Hide duplicated author name (if you don't want it on mobile) --- */
+  .sidebar .author__name,
+  .sidebar.sticky .author__name {
+    display: none !important;
+  }
+
+  /* --- 3) Bio centered --- */
+  .sidebar .author__content,
+  .sidebar.sticky .author__content {
+    text-align: center !important;
+  }
+
+  .sidebar .author__bio,
+  .sidebar.sticky .author__bio {
+    text-align: center !important;
+    margin: 10px auto 12px !important;
+  }
+
+  /* --- 4) Remove Follow button everywhere on mobile --- */
+  .sidebar .author__urls-wrapper button,
+  .sidebar .author__urls-wrapper .btn,
+  .sidebar.sticky .author__urls-wrapper button,
+  .sidebar.sticky .author__urls-wrapper .btn {
+    display: none !important;
+  }
+
+  /* --- 5) Contacts: centered + remove white box/background/arrow --- */
+  .sidebar .author__urls-wrapper,
+  .sidebar.sticky .author__urls-wrapper {
+    max-height: none !important;
+    overflow: visible !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .sidebar .author__urls,
+  .sidebar.sticky .author__urls {
+    display: inline-flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px 18px !important;
+    background: transparent !important; /* 干掉白框 */
+    border: 0 !important;              /* 干掉白框 */
+    box-shadow: none !important;       /* 干掉白框 */
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .sidebar .author__urls li,
+  .sidebar .author__urls a,
+  .sidebar.sticky .author__urls li,
+  .sidebar.sticky .author__urls a {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* 某些主题会给 wrapper / urls 加 pseudo-element 做“气泡小尖角” */
+  .sidebar .author__urls-wrapper:before,
+  .sidebar .author__urls-wrapper:after,
+  .sidebar .author__urls:before,
+  .sidebar .author__urls:after,
+  .sidebar.sticky .author__urls-wrapper:before,
+  .sidebar.sticky .author__urls-wrapper:after,
+  .sidebar.sticky .author__urls:before,
+  .sidebar.sticky .author__urls:after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* --- 6) Hamburger: force show on mobile (Chrome emulation也会出现) --- */
+  nav#site-nav.greedy-nav > button {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* dropdown panel not off-screen */
+  nav#site-nav.greedy-nav .hidden-links {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
