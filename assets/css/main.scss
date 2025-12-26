@@ -703,3 +703,96 @@ nav#site-nav.greedy-nav .navicon {
 
 nav#site-nav.greedy-nav .navicon::before { top: -7px !important; }
 nav#site-nav.greedy-nav .navicon::after  { top:  7px !important; }
+
+/* ===========================
+   FINAL HOTFIX (paste at VERY END)
+   1) Mobile: stop author links overlaying page content
+   2) Restore hamburger 3-line icon (.navicon uses pseudo-elements)
+   =========================== */
+
+/* ---------- 1) MOBILE: make the author links wrapper NOT-collapsible ---------- */
+@media (max-width: 768px) {
+
+  /* sidebar must be in normal flow */
+  .sidebar,
+  .sidebar.sticky {
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    clear: both !important;
+  }
+
+  /* IMPORTANT: this is the collapsible container in the theme */
+  .sidebar .author__urls-wrapper,
+  .sidebar.sticky .author__urls-wrapper {
+    display: block !important;
+    position: static !important;
+    height: auto !important;
+    max-height: none !important;     /* <- kills "collapsed" height */
+    overflow: visible !important;    /* <- allow content to take space */
+    margin-top: 10px !important;
+    margin-bottom: 18px !important;  /* <- creates separation from正文 */
+    padding: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  /* you said you want: bio / school / address / email / github / linkedin each on ONE line, centered */
+  .sidebar .author__urls,
+  .sidebar .author__urls.social-icons,
+  .sidebar.sticky .author__urls,
+  .sidebar.sticky .author__urls.social-icons {
+    display: flex !important;
+    flex-direction: column !important;   /* <- one per line */
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .sidebar .author__urls li,
+  .sidebar .author__urls a,
+  .sidebar.sticky .author__urls li,
+  .sidebar.sticky .author__urls a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+  }
+}
+
+/* ---------- 2) HAMBURGER: restore 3 bars even if pseudo-elements were nuked ---------- */
+#site-nav.greedy-nav button .navicon {
+  position: relative !important;
+  display: inline-block !important;
+  width: 22px !important;
+  height: 2px !important;              /* middle bar thickness */
+  background: #fff !important;         /* middle bar */
+}
+
+#site-nav.greedy-nav button .navicon::before,
+#site-nav.greedy-nav button .navicon::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 2px !important;
+  background: #fff !important;
+  display: block !important;
+}
+
+#site-nav.greedy-nav button .navicon::before { top: -7px !important; }
+#site-nav.greedy-nav button .navicon::after  { top:  7px !important; }
