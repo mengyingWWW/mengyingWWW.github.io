@@ -973,3 +973,33 @@ nav#site-nav.greedy-nav .navicon::after  { top:  7px !important; }
     padding-right: 0 !important;
   }
 }
+
+/* =========================================================
+   DESKTOP LAYOUT WIDTH FIX
+   ========================================================= */
+@media (min-width: 769px) {
+
+  /* 1. 整个页面允许更宽 */
+  .page,
+  .page__inner-wrap,
+  .archive,
+  .archive__inner-wrap {
+    max-width: 1400px !important; /* 原来大约 1200 */
+  }
+
+  /* 2. Sidebar 用固定宽度，不用百分比 */
+  .sidebar,
+  .sidebar.sticky {
+    width: 220px !important;   /* 稳定、可控 */
+    flex: 0 0 220px !important;
+    margin-right: 32px !important;
+  }
+
+  /* 3. 正文吃掉剩余空间 */
+  .page__content,
+  .archive__item,
+  article.page {
+    max-width: none !important;
+    width: 100% !important;
+  }
+}
