@@ -226,3 +226,102 @@ button[aria-label*="Toggle"] {
     white-space: normal !important;
   }
 }
+/* =========================================================
+   HOTFIX (override everything)
+   ========================================================= */
+
+/* --- Desktop nav: remove white blocks, force text visible --- */
+.masthead .greedy-nav .visible-links a,
+.masthead .greedy-nav .visible-links a:visited {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important; /* Safari sometimes */
+  text-shadow: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.masthead .greedy-nav .visible-links a::before,
+.masthead .greedy-nav .visible-links a::after,
+.masthead .greedy-nav .visible-links li::before,
+.masthead .greedy-nav .visible-links li::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* In case something set font-size:0 or opacity */
+.masthead .greedy-nav .visible-links a {
+  font-size: 1rem !important;
+  opacity: 1 !important;
+}
+
+/* hover: bold only */
+.masthead .greedy-nav .visible-links a:hover {
+  font-weight: 700 !important;
+}
+
+/* --- Mobile author: hard center avatar + contact row --- */
+@media (max-width: 768px) {
+  /* Make the whole author profile block centered */
+  .author__content,
+  .author__profile,
+  .author__profile * {
+    text-align: center !important;
+  }
+
+  /* Avatar centering (works even if wrapped in <a>) */
+  .author__avatar,
+  .author__avatar a {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .author__avatar img {
+    display: block !important;
+    float: none !important;
+    margin: 0 auto !important;
+    width: 180px !important;
+    max-width: 180px !important;
+    height: auto !important;
+    border-radius: 50% !important;
+  }
+
+  /* Remove Follow button */
+  .author__urls-wrapper button {
+    display: none !important;
+  }
+
+  /* Center the social/contact links row */
+  .author__urls-wrapper {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .author__urls,
+  .author__urls.social-icons {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px 16px !important;
+    padding: 0 !important;
+    margin: 12px auto 0 auto !important;
+    width: 100% !important;
+  }
+
+  .author__urls li {
+    margin: 0 !important;
+  }
+
+  .author__urls a {
+    color: #fff !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+}
