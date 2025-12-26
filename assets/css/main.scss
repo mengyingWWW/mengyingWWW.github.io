@@ -935,3 +935,41 @@ nav#site-nav.greedy-nav .navicon::after  { top:  7px !important; }
     margin-top: 18px !important;
   }
 }
+
+/* =========================================================
+   DESKTOP WIDTH TUNING (append at VERY END)
+   Goal:
+   - Reduce left/right empty gutters
+   - Sidebar visually closer to left edge
+   - Main content uses more width
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+  /* 1) Make the whole page container wider + reduce side padding */
+  .masthead__inner-wrap,
+  .page__inner-wrap,
+  .archive__wrap {
+    max-width: 1400px !important;   /* 想更宽：1500px；更窄：1280px */
+    padding-left: 18px !important;  /* 两侧留白 */
+    padding-right: 18px !important;
+  }
+
+  /* 2) Reduce extra padding inside the main layout */
+  .page,
+  .archive {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 3) Sidebar: remove any extra left indentation */
+  .sidebar {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* 4) Main content: remove extra right padding so it can “stretch” */
+  .page__content {
+    padding-right: 0 !important;
+  }
+}
