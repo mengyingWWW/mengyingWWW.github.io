@@ -2,7 +2,7 @@
 ---
 
 /*
- * This file controls what is imported from /_sass
+ * main.scss
  * Note: first two lines are required by Jekyll.
  */
 
@@ -45,7 +45,6 @@
    ========================================================= */
 
 html { scroll-behavior: smooth; }
-
 section { scroll-margin-top: 6rem; }
 section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 
@@ -60,7 +59,7 @@ button[aria-label*="Toggle"] {
   display: none !important;
 }
 
-/* Sidebar: remove duplicated name (desktop & mobile) */
+/* Sidebar: remove duplicated name everywhere */
 .sidebar .author__name,
 .sidebar.sticky .author__name {
   display: none !important;
@@ -68,14 +67,15 @@ button[aria-label*="Toggle"] {
 
 /* =========================================================
    DESKTOP (>=769px)
-   - No white blocks in masthead (including CV)
    - Title left, menu right
-   - Sidebar: avatar+bio centered; meta/links left-aligned
+   - No white blocks in masthead (incl CV)
+   - Remove greedy-nav dropdown "triangle"
+   - Sidebar: avatar+bio centered; meta/links left
    ========================================================= */
 
 @media (min-width: 769px) {
 
-  /* --- Masthead layout: title left, menu right --- */
+  /* ---- layout: title left, menu right ---- */
   .masthead__inner-wrap { max-width: 100%; }
   .masthead__menu { width: 100%; }
 
@@ -91,18 +91,16 @@ button[aria-label*="Toggle"] {
     width: 100%;
   }
 
-  /* keep site title on left */
   nav#site-nav.greedy-nav .visible-links > li.masthead__menu-item--lg {
     margin-right: auto;
   }
 
-  /* spacing */
   nav#site-nav.greedy-nav .visible-links > li {
     margin-left: 0.3rem;
     margin-right: 0.3rem;
   }
 
-  /* --- Kill white blocks in masthead items/links (incl. CV) --- */
+  /* ---- kill white blocks in masthead items ---- */
   .masthead,
   .masthead__inner-wrap,
   .masthead__menu,
@@ -112,12 +110,11 @@ button[aria-label*="Toggle"] {
   nav#site-nav.greedy-nav a {
     background: transparent !important;
     background-color: transparent !important;
-    box-shadow: none !important;
     border: 0 !important;
+    box-shadow: none !important;
     outline: none !important;
   }
 
-  /* Make sure text renders as white (prevents “white rectangle text fill”) */
   .masthead a,
   .masthead a:visited,
   .masthead .site-title,
@@ -126,14 +123,20 @@ button[aria-label*="Toggle"] {
     -webkit-text-fill-color: #ffffff !important;
   }
 
-  /* Hover: no background */
   .masthead a:hover {
     background: transparent !important;
     background-color: transparent !important;
     text-decoration: none !important;
   }
 
-  /* --- Sidebar desktop alignment --- */
+  /* ---- IMPORTANT: only remove greedy-nav dropdown bubble triangle (desktop) ---- */
+  nav#site-nav.greedy-nav .hidden-links:before,
+  nav#site-nav.greedy-nav .hidden-links:after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* ---- sidebar desktop alignment ---- */
   .sidebar .author__avatar {
     float: none !important;
     display: flex !important;
@@ -146,7 +149,7 @@ button[aria-label*="Toggle"] {
     margin: 0 0 14px 0 !important;
   }
 
-  /* keep meta/links left aligned on desktop */
+  /* meta + links left aligned */
   .sidebar .author__content { text-align: left !important; }
 
   .sidebar .author__urls-wrapper,
@@ -171,26 +174,24 @@ button[aria-label*="Toggle"] {
 
 /* =========================================================
    MOBILE / iPad (<=768px)
-   - Hamburger has black background
-   - Dropdown not clipped
-   - Sidebar stack & CENTER:
-       avatar -> bio -> (Email/GitHub/LinkedIn in ONE ROW centered)
-   - No white bubble / triangle / box
+   - Hamburger black background
+   - Sidebar stacked & centered:
+       avatar -> bio -> contacts (ONE ROW centered)
+   - Prevent "bio + contacts in same line"
    ========================================================= */
 
 @media (max-width: 768px) {
 
-  /* --- Make sidebar full width & stop float-caused “right drifting” --- */
+  /* --- Sidebar must NOT float; force full width --- */
   .sidebar,
-  .sidebar.sticky,
-  .author__content,
-  .author__urls-wrapper {
+  .sidebar.sticky {
     float: none !important;
     width: 100% !important;
     max-width: 100% !important;
+    margin: 0 auto !important;
   }
 
-  /* --- Hamburger button: keep it visible + black background --- */
+  /* --- Hamburger button: visible + black pill --- */
   nav#site-nav.greedy-nav { position: relative; }
 
   nav#site-nav.greedy-nav > button {
@@ -198,9 +199,9 @@ button[aria-label*="Toggle"] {
     align-items: center !important;
     justify-content: center !important;
 
-    background: rgba(0,0,0,0.85) !important;
+    background: rgba(0,0,0,0.88) !important;
     border: 1px solid rgba(255,255,255,0.25) !important;
-    border-radius: 10px !important;
+    border-radius: 12px !important;
     padding: 10px 12px !important;
 
     box-shadow: none !important;
@@ -208,26 +209,23 @@ button[aria-label*="Toggle"] {
     visibility: visible !important;
   }
 
-  /* make the hamburger lines visible */
   nav#site-nav.greedy-nav > button .navicon,
   nav#site-nav.greedy-nav > button .navicon:before,
   nav#site-nav.greedy-nav > button .navicon:after {
     background: #ffffff !important;
   }
 
-  /* --- Dropdown panel not off-screen --- */
+  /* dropdown not clipped */
   nav#site-nav.greedy-nav .hidden-links {
     left: 12px !important;
     right: 12px !important;
     width: auto !important;
     max-width: none !important;
-    box-sizing: border-box !important;
 
     background: rgba(0,0,0,0.92) !important;
     border: 1px solid rgba(255,255,255,0.18) !important;
     border-radius: 12px !important;
     padding: 10px 12px !important;
-    box-shadow: none !important;
   }
 
   nav#site-nav.greedy-nav .hidden-links a {
@@ -244,12 +242,14 @@ button[aria-label*="Toggle"] {
     display: none !important;
   }
 
-  /* --- Avatar centered & closer to header --- */
+  /* --- Avatar: force ONE full row & centered --- */
   .sidebar .author__avatar,
   .sidebar.sticky .author__avatar {
-    display: block !important;
-    text-align: center !important;
-    margin: 0px auto 10px !important; /* 想再上移：改成 -6px auto 10px */
+    float: none !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0px auto 10px !important; /* 想再往上：改成 -6px auto 10px */
   }
 
   .sidebar .author__avatar img,
@@ -262,45 +262,57 @@ button[aria-label*="Toggle"] {
     border-radius: 50% !important;
   }
 
-  /* --- Bio centered under avatar --- */
+  /* --- Author content becomes a centered column (prevents drifting) --- */
   .sidebar .author__content,
   .sidebar.sticky .author__content {
+    float: none !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
     text-align: center !important;
     padding: 0 12px !important;
   }
 
+  /* --- Bio MUST be its own full row under avatar --- */
   .sidebar .author__bio,
   .sidebar.sticky .author__bio {
     display: block !important;
     width: 100% !important;
     text-align: center !important;
     margin: 10px auto 10px !important;
+    clear: both !important;
   }
 
-  /* --- IMPORTANT: Make the whole list a flex ROW (fix vertical stacking) --- */
+  /* --- Contacts wrapper: full row under bio --- */
   .sidebar .author__urls-wrapper,
   .sidebar.sticky .author__urls-wrapper {
+    width: 100% !important;
     max-height: none !important;
     overflow: visible !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-    text-align: center !important;
+
+    display: flex !important;
+    justify-content: center !important;
   }
 
-  /* UL becomes a centered flex row */
+  /* --- UL: one centered row (can wrap if needed, but stays centered) --- */
   .sidebar ul.author__urls,
   .sidebar ul.author__urls.social-icons,
   .sidebar.sticky ul.author__urls,
   .sidebar.sticky ul.author__urls.social-icons {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important;        /* 一排放不下会溢出；你只有3个通常没问题 */
+    flex-wrap: wrap !important;            /* 关键：小屏不够就换行，但仍居中 */
     justify-content: center !important;
     align-items: center !important;
-    gap: 18px !important;
+    gap: 12px 18px !important;
 
     list-style: none !important;
     padding: 0 !important;
@@ -311,18 +323,17 @@ button[aria-label*="Toggle"] {
     box-shadow: none !important;
   }
 
-  /* LI should NOT be block */
   .sidebar ul.author__urls li,
   .sidebar.sticky ul.author__urls li {
     display: inline-flex !important;
     margin: 0 !important;
     padding: 0 !important;
+
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
   }
 
-  /* A should be inline-flex (icon + text stays together) */
   .sidebar ul.author__urls li a,
   .sidebar.sticky ul.author__urls li a {
     display: inline-flex !important;
@@ -333,9 +344,10 @@ button[aria-label*="Toggle"] {
     border: 0 !important;
     box-shadow: none !important;
     text-decoration: none !important;
+    white-space: nowrap !important;
   }
 
-  /* Kill bubble triangles (pseudo-elements) */
+  /* kill any bubble triangles around author urls */
   .sidebar .author__urls-wrapper:before,
   .sidebar .author__urls-wrapper:after,
   .sidebar .author__urls:before,
@@ -347,4 +359,7 @@ button[aria-label*="Toggle"] {
     content: none !important;
     display: none !important;
   }
+
+  /* IMPORTANT: stop theme default forcing links to block (which makes them vertical) */
+  .author__urls a { display: inline-flex !important; }
 }
