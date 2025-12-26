@@ -21,7 +21,7 @@ main:
     url: /#teaching
 
   - title: "CV"
-    url: /files/CV.pdf
+    url: /files/MengyingWangCV_110725.pdf
 
 portfolio:
   - title: "News"
@@ -37,7 +37,7 @@ portfolio:
     url: /#teaching
 
   - title: "CV"
-    url: /files/CV.pdf
+    url: /files/MengyingWangCV_110725.pdf
 
 header:
   - title: "News"
@@ -53,5 +53,5 @@ header:
     url: /#teaching
 
   - title: "CV"
-    url: /files/CV.pdf
+    url: /files/MengyingWangCV_110725.pdf
 
