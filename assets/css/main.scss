@@ -400,3 +400,30 @@ button[aria-label*="Toggle"] {
 .sidebar .author__name {
   display: none !important;
 }
+
+/* ================================
+   Mobile fine-tuning (final polish)
+   ================================ */
+@media (max-width: 768px) {
+
+  /* 1) Bio line centered & tighter */
+  .author__bio {
+    text-align: center !important;
+    margin-top: 4px !important;
+    margin-bottom: 10px !important;
+    line-height: 1.35 !important;
+  }
+
+  /* 2) Move avatar closer to top menu */
+  .author__avatar {
+    margin-top: 8px !important;   /* 原来是 24px */
+    margin-bottom: 12px !important;
+  }
+
+  /* （可选）如果你还想再近一点，用负值 */
+  /*
+  .author__avatar {
+    margin-top: -4px !important;
+  }
+  */
+}
