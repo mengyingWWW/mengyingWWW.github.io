@@ -3,9 +3,7 @@
 
 /*
  * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
- * sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ * Note: first two lines are required by Jekyll.
  */
 
 @import
@@ -43,15 +41,17 @@
 ;
 
 /* =========================================================
-   Global small tweaks
+   GLOBAL SMALL TWEAKS
    ========================================================= */
 
+/* Smooth scroll */
 html { scroll-behavior: smooth; }
 
+/* Prevent section titles from being hidden under sticky header */
 section { scroll-margin-top: 6rem; }
 section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 
-/* Hide theme toggle button */
+/* Hide theme toggle */
 .theme-toggle,
 .toggle-theme,
 .masthead__menu-item--theme,
@@ -63,16 +63,17 @@ button[aria-label*="Toggle"] {
 }
 
 /* =========================================================
-   Desktop (>= 769px)
+   DESKTOP (>=769px)
    Goals:
-   1) Title left, menu right
-   2) NO greedy hidden-links “bubble” (white block + white triangle)
-   3) Sidebar: hide duplicated name; avatar+bio centered; rest left aligned
+   - Title left, menu right
+   - No white blocks in masthead (including CV)
+   - No masthead triangles / bubble arrows
+   - Sidebar: hide author name, avatar+bio centered, meta/links left
    ========================================================= */
 
 @media (min-width: 769px) {
 
-  /* ---- Masthead layout: title left, menu right ---- */
+  /* ---- 1) Layout: title left, menu right (greedy-nav) ---- */
   .masthead__inner-wrap { max-width: 100%; }
   .masthead__menu { width: 100%; }
 
@@ -88,67 +89,60 @@ button[aria-label*="Toggle"] {
     width: 100%;
   }
 
-  /* keep site title on left */
+  /* Keep site title on the left */
   nav#site-nav.greedy-nav .visible-links > li.masthead__menu-item--lg {
     margin-right: auto;
   }
 
-  /* menu spacing */
+  /* Tight spacing */
   nav#site-nav.greedy-nav .visible-links > li {
     margin-left: 0.3rem;
     margin-right: 0.3rem;
   }
 
-  /* ---- THE KEY FIX: kill hidden-links bubble on desktop ----
-     CV 白块 + 顶部小三角，根源几乎都是 greedy-nav 把某项丢进 hidden-links
-     然后 hidden-links 的 “气泡样式/三角伪元素” 被显示出来了。
-  */
-  nav#site-nav.greedy-nav > ul.hidden-links,
-  nav#site-nav.greedy-nav > ul.hidden-links.hidden {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-
-  /* 即使某些情况下 hidden-links 被 JS/样式强行显示，也把“白块/三角”干掉 */
-  nav#site-nav.greedy-nav > ul.hidden-links,
-  nav#site-nav.greedy-nav > ul.hidden-links * {
+  /* ---- 2) Kill ALL white blocks in masthead (including CV in hidden-links) ---- */
+  .masthead,
+  .masthead__inner-wrap,
+  .masthead__menu,
+  nav#site-nav.greedy-nav,
+  nav#site-nav.greedy-nav ul,
+  nav#site-nav.greedy-nav li,
+  nav#site-nav.greedy-nav a,
+  nav#site-nav.greedy-nav button,
+  nav#site-nav.greedy-nav ul.visible-links > li > a,
+  nav#site-nav.greedy-nav ul.hidden-links > li > a {
     background: transparent !important;
     background-color: transparent !important;
-    box-shadow: none !important;
     border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    text-decoration: none !important;
   }
 
-  nav#site-nav.greedy-nav > ul.hidden-links:before,
-  nav#site-nav.greedy-nav > ul.hidden-links:after,
-  nav#site-nav.greedy-nav > ul.hidden-links li:before,
-  nav#site-nav.greedy-nav > ul.hidden-links li:after {
+  /* Ensure masthead text is visible */
+  .masthead a,
+  .masthead a:visited,
+  .masthead .site-title,
+  .masthead .site-subtitle {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Kill any pseudo-element triangles/bubbles in masthead/nav */
+  .masthead :before,
+  .masthead :after,
+  nav#site-nav.greedy-nav :before,
+  nav#site-nav.greedy-nav :after {
     content: none !important;
     display: none !important;
   }
 
-  /* Ensure masthead link text always visible */
-  .masthead a,
-  .masthead a:visited {
-    color: #ffffff !important;
-    background: transparent !important;
-  }
+  /* ---- 3) Sidebar desktop styling ---- */
 
-  .masthead a:hover {
-    background: transparent !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-  }
+  /* Hide duplicated name in sidebar */
+  .sidebar .author__name { display: none !important; }
 
-  /* ---- Desktop sidebar alignment ---- */
-
-  /* Remove duplicated name in sidebar */
-  .sidebar .author__name {
-    display: none !important;
-  }
-
-  /* center avatar block */
+  /* Avatar centered */
   .sidebar .author__avatar {
     float: none !important;
     display: flex !important;
@@ -156,13 +150,15 @@ button[aria-label*="Toggle"] {
     margin: 0 0 10px 0 !important;
   }
 
-  /* center bio line */
+  /* Bio centered */
   .sidebar .author__bio {
     text-align: center !important;
     margin: 0 0 14px 0 !important;
   }
 
-  /* keep location/school + social links left-aligned */
+  /* Location/school/links LEFT aligned */
+  .sidebar .author__content { text-align: left !important; }
+
   .sidebar .author__urls-wrapper,
   .sidebar .author__urls {
     text-align: left !important;
@@ -177,22 +173,25 @@ button[aria-label*="Toggle"] {
   .sidebar .author__urls li,
   .sidebar .author__urls a {
     justify-content: flex-start !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
   }
 }
 
 /* =========================================================
-   Mobile / iPad (<= 768px)
+   MOBILE / iPad (<=768px)
    Goals:
-   1) hamburger dropdown not clipped (News not off-screen)
-   2) remove Follow button
-   3) avatar centered and closer to header
-   4) bio centered under avatar
-   5) Email/GitHub/LinkedIn centered, no white bubble/box/triangle
+   - Hamburger works, dropdown not clipped
+   - Remove Follow button
+   - Sidebar becomes stacked & centered:
+       avatar (center) -> bio (center) -> contacts (center)
+   - No white bubble/triangle/box around contacts
    ========================================================= */
 
 @media (max-width: 768px) {
 
-  /* ---- 0) Sidebar should be full width on mobile ---- */
+  /* ---- 0) Make sidebar full width (avoid “float causes bio to the right”) ---- */
   .sidebar,
   .sidebar.sticky {
     float: none !important;
@@ -201,9 +200,13 @@ button[aria-label*="Toggle"] {
     margin: 0 auto !important;
   }
 
-  /* ---- 1) Greedy-nav dropdown panel full width ---- */
-  nav#site-nav.greedy-nav {
-    position: relative;
+  /* ---- 1) Dropdown menu not clipped (News not off-screen) ---- */
+  nav#site-nav.greedy-nav { position: relative; }
+
+  nav#site-nav.greedy-nav > button {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   nav#site-nav.greedy-nav .hidden-links {
@@ -221,27 +224,20 @@ button[aria-label*="Toggle"] {
     white-space: normal !important;
   }
 
-  /* Ensure hamburger button is visible on real mobile + emulation */
-  nav#site-nav.greedy-nav > button {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
   /* ---- 2) Remove Follow button completely ---- */
   .author__urls-wrapper button,
   .author__urls-wrapper .btn {
     display: none !important;
   }
 
-  /* ---- 3) Avatar: force center + move UP (smaller top margin) ---- */
+  /* ---- 3) Avatar centered & move UP a bit ---- */
   .sidebar .author__avatar,
   .sidebar.sticky .author__avatar {
     float: none !important;
     width: 100% !important;
     display: block !important;
     text-align: center !important;
-    margin: 2px auto 10px !important; /* 想更靠上：把 2px 改成 0px 或 -2px */
+    margin: 0px auto 10px !important; /* 想更靠上：可改成 -6px auto 10px */
   }
 
   .sidebar .author__avatar img,
@@ -254,7 +250,7 @@ button[aria-label*="Toggle"] {
     border-radius: 50% !important;
   }
 
-  /* ---- 4) Hide duplicated author name (mobile already has top title) ---- */
+  /* ---- 4) Hide duplicated name in sidebar on mobile ---- */
   .sidebar .author__name,
   .sidebar.sticky .author__name {
     display: none !important;
@@ -263,6 +259,8 @@ button[aria-label*="Toggle"] {
   /* ---- 5) Bio centered under avatar ---- */
   .sidebar .author__content,
   .sidebar.sticky .author__content {
+    float: none !important;
+    width: 100% !important;
     text-align: center !important;
   }
 
@@ -272,11 +270,9 @@ button[aria-label*="Toggle"] {
     width: 100% !important;
     text-align: center !important;
     margin: 10px auto 12px !important;
-    font-size: 0.98rem !important;
-    opacity: 0.95 !important;
   }
 
-  /* ---- 6) Contacts centered, remove bubble/box/triangle ---- */
+  /* ---- 6) Contacts centered, no white box, no triangle ---- */
   .sidebar .author__urls-wrapper,
   .sidebar.sticky .author__urls-wrapper {
     max-height: none !important;
@@ -298,8 +294,6 @@ button[aria-label*="Toggle"] {
     justify-content: center !important;
     align-items: center !important;
     gap: 10px 18px !important;
-    width: auto !important;
-
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
@@ -316,7 +310,7 @@ button[aria-label*="Toggle"] {
     box-shadow: none !important;
   }
 
-  /* kill any pseudo-element “arrow” bubble */
+  /* Kill bubble pseudo-elements (the little triangle) */
   .sidebar .author__urls-wrapper:before,
   .sidebar .author__urls-wrapper:after,
   .sidebar .author__urls:before,
@@ -328,73 +322,4 @@ button[aria-label*="Toggle"] {
     content: none !important;
     display: none !important;
   }
-
-  /* remove focus outline bubble effect */
-  .sidebar .author__urls a:focus,
-  .sidebar .author__urls a:active,
-  .sidebar.sticky .author__urls a:focus,
-  .sidebar.sticky .author__urls a:active {
-    outline: none !important;
-  }
-}
-/* ===== HOTFIX: kill ALL white blocks in masthead nav ===== */
-.masthead nav#site-nav.greedy-nav,
-.masthead nav#site-nav.greedy-nav .visible-links,
-.masthead nav#site-nav.greedy-nav .visible-links > li,
-.masthead nav#site-nav.greedy-nav .visible-links > li > a,
-.masthead nav#site-nav.greedy-nav .hidden-links,
-.masthead nav#site-nav.greedy-nav .hidden-links > li,
-.masthead nav#site-nav.greedy-nav .hidden-links > li > a,
-.masthead .masthead__menu-item,
-.masthead .masthead__menu-item > a {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: 0 !important;
-}
-
-/* Ensure text is visible */
-.masthead nav#site-nav.greedy-nav a,
-.masthead nav#site-nav.greedy-nav a:visited {
-  color: #fff !important;
-}
-
-/* Kill the little triangle/bubble if it ever appears */
-.masthead nav#site-nav.greedy-nav .hidden-links:before,
-.masthead nav#site-nav.greedy-nav .hidden-links:after,
-.masthead nav#site-nav.greedy-nav .hidden-links li:before,
-.masthead nav#site-nav.greedy-nav .hidden-links li:after {
-  content: none !important;
-  display: none !important;
-}
-/* ===== ABSOLUTE LAST RESORT: masthead background reset ===== */
-.masthead,
-.masthead * {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border-color: transparent !important;
-}
-
-/* masthead itself stays black */
-.masthead {
-  background-color: #000 !important;
-}
-
-/* all masthead text stays white */
-.masthead,
-.masthead a,
-.masthead a:visited,
-.masthead .site-title,
-.masthead .site-subtitle,
-.masthead .greedy-nav a {
-  color: #fff !important;
-}
-
-/* kill any “little triangle / bubble” pseudo elements in the header */
-.masthead:before,
-.masthead:after,
-.masthead *:before,
-.masthead *:after {
-  box-shadow: none !important;
 }
