@@ -323,3 +323,10 @@ button[aria-label*="Toggle"] {
     display: none !important;
   }
 }
+@media (min-width: 769px) {
+  nav#site-nav.greedy-nav > button {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
