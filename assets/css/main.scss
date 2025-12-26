@@ -1003,3 +1003,26 @@ nav#site-nav.greedy-nav .navicon::after  { top:  7px !important; }
     width: 100% !important;
   }
 }
+
+/* =========================================================
+   FIX OVER-WIDE ORANGE AREA (#main)
+   ========================================================= */
+@media (min-width: 769px) {
+
+  /* 1. 收紧 main 本身的宽度 */
+  #main {
+    max-width: 1400px;          /* 控制橙色总宽度 */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;         /* 原来这里非常大 */
+    padding-right: 24px;
+  }
+
+  /* 2. 让 page 不再自己限制宽度 */
+  .page,
+  .page__inner-wrap,
+  article.page {
+    max-width: none !important;
+    width: 100%;
+  }
+}
