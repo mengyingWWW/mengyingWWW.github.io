@@ -72,3 +72,13 @@ section {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+
+/* Hide the theme toggle button (top-right) */
+.theme-toggle,
+.toggle-theme,
+.masthead__menu-item--theme,
+button[aria-label*="theme"],
+button[title*="theme"],
+button[aria-label*="Toggle"] {
+  display: none !important;
+}
