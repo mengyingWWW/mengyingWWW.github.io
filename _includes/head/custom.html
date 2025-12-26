@@ -266,6 +266,28 @@ nav#site-nav.greedy-nav > ul.visible-links > li:first-child {
     margin-left: 0 !important;
   }
 }
+
+/* =========================================================
+   FIX: Ensure items moved into hidden-links (e.g., CV) still show on desktop
+   ========================================================= */
+@media (min-width: 900px) {
+  /* If theme marks hidden-links as hidden, unhide it */
+  nav#site-nav.greedy-nav > ul.hidden-links {
+    visibility: visible !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Force any li inside hidden-links to display inline like normal menu items */
+  nav#site-nav.greedy-nav > ul.hidden-links > li {
+    display: list-item !important; /* keep li semantics */
+  }
+
+  /* The anchor inside should behave like menu links */
+  nav#site-nav.greedy-nav > ul.hidden-links > li > a {
+    display: block !important;
+  }
+}
 </style>
 
 <!-- end custom head snippets -->
