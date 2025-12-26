@@ -93,6 +93,29 @@ a:hover {
 hr {
   border-color: rgba(255,255,255,0.15) !important;
 }
+/* =========================================================
+   FIX NAV HEIGHT + RESTORE BOTTOM LINE
+   ========================================================= */
+
+.masthead__inner-wrap {
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
+}
+
+.greedy-nav a {
+  padding: 0.4rem 0.8rem !important;
+}
+
+.masthead {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.masthead::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
 </style>
 
 <!-- end custom head snippets -->
