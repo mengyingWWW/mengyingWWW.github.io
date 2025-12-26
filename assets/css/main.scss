@@ -334,3 +334,90 @@ button[aria-label*="Toggle"] {
     display: none !important;
   }
 }
+/* =========================================================
+   FINAL MOBILE CENTERING (put at VERY END)
+   - avatar centered
+   - bio centered
+   - contacts horizontal, centered (one row, wrap if needed)
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* Bio: force center */
+  .sidebar .author__content,
+  .sidebar.sticky .author__content,
+  .sidebar .author__bio,
+  .sidebar.sticky .author__bio {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Contacts wrapper: center */
+  .sidebar .author__urls-wrapper,
+  .sidebar.sticky .author__urls-wrapper {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* Make the UL a centered horizontal row */
+  .sidebar ul.author__urls,
+  .sidebar ul.author__urls.social-icons,
+  .sidebar.sticky ul.author__urls,
+  .sidebar.sticky ul.author__urls.social-icons {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;           /* 屏幕太窄就自动换行，但优先同一排 */
+    gap: 10px 18px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* STOP theme from forcing vertical full-width items */
+  .sidebar ul.author__urls > li,
+  .sidebar ul.author__urls.social-icons > li,
+  .sidebar.sticky ul.author__urls > li,
+  .sidebar.sticky ul.author__urls.social-icons > li {
+    display: inline-flex !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .sidebar ul.author__urls > li > a,
+  .sidebar ul.author__urls.social-icons > li > a,
+  .sidebar.sticky ul.author__urls > li > a,
+  .sidebar.sticky ul.author__urls.social-icons > li > a {
+    display: inline-flex !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    justify-content: center !important;
+    align-items: center !important;
+    white-space: nowrap !important;       /* 防止 “Email” 之类断行 */
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* If the “bubble triangle” ever comes back, kill it only here */
+  .sidebar .author__urls-wrapper:before,
+  .sidebar .author__urls-wrapper:after,
+  .sidebar .author__urls:before,
+  .sidebar .author__urls:after,
+  .sidebar.sticky .author__urls-wrapper:before,
+  .sidebar.sticky .author__urls-wrapper:after,
+  .sidebar.sticky .author__urls:before,
+  .sidebar.sticky .author__urls:after {
+    content: none !important;
+    display: none !important;
+  }
+}
