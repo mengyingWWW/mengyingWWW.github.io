@@ -883,3 +883,17 @@ nav#site-nav.greedy-nav .navicon::after  { top:  7px !important; }
   nav#site-nav.greedy-nav > button .navicon::before { top: -7px !important; }
   nav#site-nav.greedy-nav > button .navicon::after  { top:  7px !important; }
 }
+
+/* --- tiny extra spacing to prevent last link (LinkedIn) touching正文 --- */
+@media (max-width: 768px) {
+  .sidebar,
+  .sidebar.sticky {
+    margin-bottom: 52px !important; /* 原来 28px，直接加大 */
+  }
+
+  /* 再保险：links 区块本身也加一点底部 padding */
+  .sidebar .author__urls-wrapper,
+  .sidebar.sticky .author__urls-wrapper {
+    padding-bottom: 18px !important;
+  }
+}
