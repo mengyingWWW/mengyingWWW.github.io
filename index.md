@@ -5,8 +5,33 @@ permalink: /
 title: ""
 ---
 
-Hi! I’m **Mengying**, an HCI researcher interested in human–AI interaction, learning sciences, and human factors.
+Hi! I’m **Mengying Wang**, an HCI researcher interested in human–AI interaction, learning sciences, and human factors.
 
 I am currently a Research Assistant at the University of Washington and City University of Hong Kong. My work focuses on designing and evaluating AI-assisted systems for learning and creative tasks.
 
-You can find my publications, projects, and academic activities through the navigation above.
+---
+
+<section id="news">
+## News
+- 2025.10 — Teaching Assistant for HCDE 321 at UW.
+- 2025.08 — Research Assistant at City University of Hong Kong.
+</section>
+
+<section id="publications">
+## Publications
+- Manuscripts in preparation.
+</section>
+
+<section id="portfolio">
+## Portfolio
+### Research
+- (Coming soon)
+
+### Design
+- (Coming soon)
+</section>
+
+<section id="teaching">
+## Teaching
+- Teaching Assistant, HCDE 321 (University of Washington).
+</section>
