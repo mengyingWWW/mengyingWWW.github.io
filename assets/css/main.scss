@@ -83,4 +83,65 @@ button[aria-label*="Toggle"] {
   display: none !important;
 }
 
+/* ================================
+   Mobile author profile (Yuhan Luo style)
+   - Enlarge + center avatar
+   - Remove duplicated author name on mobile
+   - Center bio + contact links
+   ================================ */
+@media (max-width: 768px) {
+  /* 1) Hide duplicated name in the author profile on mobile */
+  .author__name {
+    display: none !important;
+  }
+
+  /* 2) Center & enlarge avatar */
+  .author__avatar {
+    float: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 24px 0 16px 0 !important;
+  }
+
+  .author__avatar img {
+    width: 160px !important;       /* change to 140/180 if you want */
+    max-width: 160px !important;
+    height: auto !important;
+    border-radius: 50% !important;
+  }
+
+  /* 3) Center the author content (bio / meta) */
+  .author__content {
+    text-align: center !important;
+    padding: 0 12px !important;
+  }
+
+  /* 4) Degree / affiliation line (your bio) */
+  .author__bio {
+    font-size: 0.95rem !important;
+    opacity: 0.85 !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  /* 5) Center and wrap the contact links nicely */
+  .author__urls-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .author__urls {
+    display: inline-flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px 16px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .author__urls a {
+    font-size: 0.9rem !important;
+    opacity: 0.9 !important;
+  }
+}
+
 
