@@ -43,16 +43,15 @@
 ;
 
 /* =========================================================
-   Custom overrides
+   Global small tweaks
    ========================================================= */
 
-/* Smooth scroll */
 html { scroll-behavior: smooth; }
 
-/* Prevent anchor titles hidden under sticky header */
-section { scroll-margin-top: 6rem; padding: 2.5rem 0; }
+section { scroll-margin-top: 6rem; }
+section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 
-/* Hide theme toggle */
+/* Hide theme toggle button */
 .theme-toggle,
 .toggle-theme,
 .masthead__menu-item--theme,
@@ -64,14 +63,16 @@ button[aria-label*="Toggle"] {
 }
 
 /* =========================================================
-   DESKTOP (>= 769px)
-   - title left, menu right
-   - remove any “white block” including active/current (CV)
-   - sidebar: hide name, avatar+bio centered, meta/links left
+   Desktop (>= 769px)
+   Goals:
+   1) Title left, menu right
+   2) NO greedy hidden-links “bubble” (white block + white triangle)
+   3) Sidebar: hide duplicated name; avatar+bio centered; rest left aligned
    ========================================================= */
 
 @media (min-width: 769px) {
-  /* masthead layout */
+
+  /* ---- Masthead layout: title left, menu right ---- */
   .masthead__inner-wrap { max-width: 100%; }
   .masthead__menu { width: 100%; }
 
@@ -87,59 +88,67 @@ button[aria-label*="Toggle"] {
     width: 100%;
   }
 
-  /* site title stays left */
+  /* keep site title on left */
   nav#site-nav.greedy-nav .visible-links > li.masthead__menu-item--lg {
     margin-right: auto;
   }
 
-  /* spacing */
+  /* menu spacing */
   nav#site-nav.greedy-nav .visible-links > li {
-    margin: 0 0.3rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
   }
 
-  /* ---- KILL white blocks (normal/hover/active/current) ---- */
-  .masthead,
-  .masthead__inner-wrap,
-  .masthead__menu,
-  nav#site-nav.greedy-nav,
-  nav#site-nav.greedy-nav .visible-links,
-  nav#site-nav.greedy-nav .visible-links > li,
-  nav#site-nav.greedy-nav .visible-links > li > a {
+  /* ---- THE KEY FIX: kill hidden-links bubble on desktop ----
+     CV 白块 + 顶部小三角，根源几乎都是 greedy-nav 把某项丢进 hidden-links
+     然后 hidden-links 的 “气泡样式/三角伪元素” 被显示出来了。
+  */
+  nav#site-nav.greedy-nav > ul.hidden-links,
+  nav#site-nav.greedy-nav > ul.hidden-links.hidden {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* 即使某些情况下 hidden-links 被 JS/样式强行显示，也把“白块/三角”干掉 */
+  nav#site-nav.greedy-nav > ul.hidden-links,
+  nav#site-nav.greedy-nav > ul.hidden-links * {
     background: transparent !important;
     background-color: transparent !important;
     box-shadow: none !important;
     border: 0 !important;
   }
 
-  /* active/current page (often adds background on CV) */
-  .masthead a.active,
-  .masthead a[aria-current="page"],
-  .masthead li.active > a,
-  .masthead li.current > a,
-  .masthead li.current-menu-item > a,
-  .masthead li.current_page_item > a,
-  .masthead li.current_page_parent > a {
-    background: transparent !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    border: 0 !important;
+  nav#site-nav.greedy-nav > ul.hidden-links:before,
+  nav#site-nav.greedy-nav > ul.hidden-links:after,
+  nav#site-nav.greedy-nav > ul.hidden-links li:before,
+  nav#site-nav.greedy-nav > ul.hidden-links li:after {
+    content: none !important;
+    display: none !important;
   }
 
-  /* keep text visible */
+  /* Ensure masthead link text always visible */
   .masthead a,
   .masthead a:visited {
     color: #ffffff !important;
+    background: transparent !important;
   }
+
   .masthead a:hover {
     background: transparent !important;
     text-decoration: none !important;
     font-weight: 600 !important;
   }
 
-  /* ---- Sidebar (desktop) ---- */
-  .sidebar .author__name { display: none !important; }
+  /* ---- Desktop sidebar alignment ---- */
 
-  /* center avatar */
+  /* Remove duplicated name in sidebar */
+  .sidebar .author__name {
+    display: none !important;
+  }
+
+  /* center avatar block */
   .sidebar .author__avatar {
     float: none !important;
     display: flex !important;
@@ -147,13 +156,13 @@ button[aria-label*="Toggle"] {
     margin: 0 0 10px 0 !important;
   }
 
-  /* center bio only */
+  /* center bio line */
   .sidebar .author__bio {
     text-align: center !important;
     margin: 0 0 14px 0 !important;
   }
 
-  /* keep meta + social links left aligned */
+  /* keep location/school + social links left-aligned */
   .sidebar .author__urls-wrapper,
   .sidebar .author__urls {
     text-align: left !important;
@@ -172,17 +181,18 @@ button[aria-label*="Toggle"] {
 }
 
 /* =========================================================
-   MOBILE / iPad (<= 768px)
+   Mobile / iPad (<= 768px)
    Goals:
-   - hamburger works, dropdown not off-screen
-   - avatar + bio + contacts ALWAYS centered below avatar
-   - remove Follow button completely
-   - remove any white bubble/box on contacts
+   1) hamburger dropdown not clipped (News not off-screen)
+   2) remove Follow button
+   3) avatar centered and closer to header
+   4) bio centered under avatar
+   5) Email/GitHub/LinkedIn centered, no white bubble/box/triangle
    ========================================================= */
 
 @media (max-width: 768px) {
 
-  /* ---- Make sidebar full width & stop any float layout ---- */
+  /* ---- 0) Sidebar should be full width on mobile ---- */
   .sidebar,
   .sidebar.sticky {
     float: none !important;
@@ -191,129 +201,9 @@ button[aria-label*="Toggle"] {
     margin: 0 auto !important;
   }
 
-  /* some themes float author content next to avatar -> kill it */
-  .author__content,
-  .author__urls-wrapper,
-  .author__urls {
-    float: none !important;
-  }
-
-  /* hide duplicated name (mobile header already has your name) */
-  .sidebar .author__name,
-  .sidebar.sticky .author__name {
-    display: none !important;
-  }
-
-  /* ---- Avatar centered (and move it UP by tuning margin-top) ---- */
-  .sidebar .author__avatar,
-  .sidebar.sticky .author__avatar {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin: 0px auto 10px !important; /* 👈 想更靠近顶栏：这里改成 -6px / -10px 试试 */
-  }
-
-  .sidebar .author__avatar img,
-  .sidebar.sticky .author__avatar img {
-    display: block !important;
-    margin: 0 auto !important;
-    width: 180px !important;
-    max-width: 70vw !important;
-    height: auto !important;
-    border-radius: 50% !important;
-  }
-
-  /* ---- Bio centered under avatar ---- */
-  .sidebar .author__content,
-  .sidebar.sticky .author__content {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 0 12px !important;
-  }
-
-  .sidebar .author__bio,
-  .sidebar.sticky .author__bio {
-    width: 100% !important;
-    text-align: center !important;
-    margin: 6px auto 12px !important;
-    font-size: 0.98rem !important;
-    opacity: 0.92 !important;
-  }
-
-  /* ---- Remove Follow button ---- */
-  .sidebar .author__urls-wrapper button,
-  .sidebar .author__urls-wrapper .btn,
-  .sidebar.sticky .author__urls-wrapper button,
-  .sidebar.sticky .author__urls-wrapper .btn {
-    display: none !important;
-  }
-
-  /* ---- Contacts centered & always visible ---- */
-  .sidebar .author__urls-wrapper,
-  .sidebar.sticky .author__urls-wrapper {
-    width: 100% !important;
-    max-height: none !important;
-    overflow: visible !important;
-    display: flex !important;
-    justify-content: center !important;
-
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-  }
-
-  .sidebar .author__urls,
-  .sidebar .author__urls.social-icons,
-  .sidebar.sticky .author__urls,
-  .sidebar.sticky .author__urls.social-icons {
-    width: auto !important;
-    display: inline-flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 10px 18px !important;
-
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-  }
-
-  .sidebar .author__urls li,
-  .sidebar .author__urls a,
-  .sidebar.sticky .author__urls li,
-  .sidebar.sticky .author__urls a {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-
-  /* remove bubble “small triangle” pseudo elements */
-  .sidebar .author__urls-wrapper:before,
-  .sidebar .author__urls-wrapper:after,
-  .sidebar .author__urls:before,
-  .sidebar .author__urls:after,
-  .sidebar.sticky .author__urls-wrapper:before,
-  .sidebar.sticky .author__urls-wrapper:after,
-  .sidebar.sticky .author__urls:before,
-  .sidebar.sticky .author__urls:after {
-    content: none !important;
-    display: none !important;
-  }
-
-  /* ---- Mobile nav dropdown not off-screen (News won't be clipped) ---- */
-  nav#site-nav.greedy-nav { position: relative; }
-
-  nav#site-nav.greedy-nav > button {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+  /* ---- 1) Greedy-nav dropdown panel full width ---- */
+  nav#site-nav.greedy-nav {
+    position: relative;
   }
 
   nav#site-nav.greedy-nav .hidden-links {
@@ -330,79 +220,28 @@ button[aria-label*="Toggle"] {
     display: block !important;
     white-space: normal !important;
   }
-}
-/* =========================================================
-   HOTFIX — paste at the VERY END of assets/css/main.scss
-   Fix 1) Desktop: CV white box (CV lives in .hidden-links)
-   Fix 2) Mobile/iPad: avatar + bio + contacts stacked & centered
-   ========================================================= */
 
-/* ---------- Fix 1: Desktop “CV white box” coming from hidden-links styles ---------- */
-@media (min-width: 769px) {
-  /* Make hidden-links look like normal top nav (no white button styles) */
-  nav#site-nav.greedy-nav ul.hidden-links,
-  nav#site-nav.greedy-nav ul.hidden-links li,
-  nav#site-nav.greedy-nav ul.hidden-links li a {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
+  /* Ensure hamburger button is visible on real mobile + emulation */
+  nav#site-nav.greedy-nav > button {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
-  /* Remove dropdown-like padding that makes it look like a button */
-  nav#site-nav.greedy-nav ul.hidden-links li a {
-    padding: 0 !important;
-    margin: 0 !important;
-    line-height: inherit !important;
-    color: #fff !important;
-    font-weight: 400 !important;
+  /* ---- 2) Remove Follow button completely ---- */
+  .author__urls-wrapper button,
+  .author__urls-wrapper .btn {
+    display: none !important;
   }
 
-  /* In case active/current styles apply only to hidden-links (CV) */
-  nav#site-nav.greedy-nav ul.hidden-links li a.active,
-  nav#site-nav.greedy-nav ul.hidden-links li a[aria-current="page"],
-  nav#site-nav.greedy-nav ul.hidden-links li.active > a,
-  nav#site-nav.greedy-nav ul.hidden-links li.current > a {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    color: #fff !important;
-  }
-}
-
-/* ---------- Fix 2: Mobile/iPad author block forced to centered vertical layout ---------- */
-@media (max-width: 1024px) {
-  /* kill any float-based split layout */
-  .sidebar,
-  .sidebar.sticky,
-  .sidebar .author__avatar,
-  .sidebar .author__content,
-  .sidebar .author__urls-wrapper,
-  .sidebar .author__urls,
-  .sidebar.sticky .author__avatar,
-  .sidebar.sticky .author__content,
-  .sidebar.sticky .author__urls-wrapper,
-  .sidebar.sticky .author__urls {
-    float: none !important;
-  }
-
-  /* sidebar becomes full width */
-  .sidebar,
-  .sidebar.sticky {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-  }
-
-  /* avatar centered (move UP: tweak margin-top here) */
+  /* ---- 3) Avatar: force center + move UP (smaller top margin) ---- */
   .sidebar .author__avatar,
   .sidebar.sticky .author__avatar {
+    float: none !important;
     width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin: -4px auto 10px !important; /* 👈 往上移：更靠上就 -12/-16；更靠下就 -4/0 */
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto 10px !important; /* 想更靠上：把 2px 改成 0px 或 -2px */
   }
 
   .sidebar .author__avatar img,
@@ -415,47 +254,34 @@ button[aria-label*="Toggle"] {
     border-radius: 50% !important;
   }
 
-  /* hide duplicated name under avatar (keep only your bio line) */
+  /* ---- 4) Hide duplicated author name (mobile already has top title) ---- */
   .sidebar .author__name,
   .sidebar.sticky .author__name {
     display: none !important;
   }
 
-  /* content centered */
+  /* ---- 5) Bio centered under avatar ---- */
   .sidebar .author__content,
   .sidebar.sticky .author__content {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
     text-align: center !important;
-    padding: 0 12px !important;
   }
 
-  /* bio centered under avatar */
   .sidebar .author__bio,
   .sidebar.sticky .author__bio {
+    display: block !important;
     width: 100% !important;
     text-align: center !important;
-    margin: 6px auto 12px !important;
+    margin: 10px auto 12px !important;
+    font-size: 0.98rem !important;
+    opacity: 0.95 !important;
   }
 
-  /* remove Follow button */
-  .sidebar .author__urls-wrapper button,
-  .sidebar .author__urls-wrapper .btn,
-  .sidebar.sticky .author__urls-wrapper button,
-  .sidebar.sticky .author__urls-wrapper .btn {
-    display: none !important;
-  }
-
-  /* contacts centered */
+  /* ---- 6) Contacts centered, remove bubble/box/triangle ---- */
   .sidebar .author__urls-wrapper,
   .sidebar.sticky .author__urls-wrapper {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
     max-height: none !important;
     overflow: visible !important;
+    text-align: center !important;
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
@@ -467,12 +293,13 @@ button[aria-label*="Toggle"] {
   .sidebar .author__urls.social-icons,
   .sidebar.sticky .author__urls,
   .sidebar.sticky .author__urls.social-icons {
-    width: auto !important;
     display: inline-flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
     align-items: center !important;
     gap: 10px 18px !important;
+    width: auto !important;
+
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
@@ -480,7 +307,16 @@ button[aria-label*="Toggle"] {
     margin: 0 auto !important;
   }
 
-  /* remove any bubble/box/triangle pseudo elements */
+  .sidebar .author__urls li,
+  .sidebar .author__urls a,
+  .sidebar.sticky .author__urls li,
+  .sidebar.sticky .author__urls a {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* kill any pseudo-element “arrow” bubble */
   .sidebar .author__urls-wrapper:before,
   .sidebar .author__urls-wrapper:after,
   .sidebar .author__urls:before,
@@ -493,13 +329,11 @@ button[aria-label*="Toggle"] {
     display: none !important;
   }
 
-  /* links themselves: no background */
-  .sidebar .author__urls li,
-  .sidebar .author__urls a,
-  .sidebar.sticky .author__urls li,
-  .sidebar.sticky .author__urls a {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
+  /* remove focus outline bubble effect */
+  .sidebar .author__urls a:focus,
+  .sidebar .author__urls a:active,
+  .sidebar.sticky .author__urls a:focus,
+  .sidebar.sticky .author__urls a:active {
+    outline: none !important;
   }
 }
