@@ -9,49 +9,49 @@
 
 main:
   - title: "News"
-    url: /news/
+    url: /#news
 
   - title: "Publications"
-    url: /publications/
+    url: /#publications
 
   - title: "Portfolio"
-    url: /portfolio/
+    url: /#portfolio
 
   - title: "Teaching"
-    url: /teaching/
+    url: /#teaching
 
   - title: "CV"
-    url: /cv/
-    
+    url: /files/CV.pdf
+
 portfolio:
   - title: "News"
-    url: /news/
+    url: /#news
 
   - title: "Publications"
-    url: /publications/
+    url: /#publications
 
   - title: "Portfolio"
-    url: /portfolio/
+    url: /#portfolio
 
   - title: "Teaching"
-    url: /teaching/
+    url: /#teaching
 
   - title: "CV"
-    url: /cv/
+    url: /files/CV.pdf
 
 header:
   - title: "News"
-    url: /news/
+    url: /#news
 
   - title: "Publications"
-    url: /publications/
+    url: /#publications
 
   - title: "Portfolio"
-    url: /portfolio/
+    url: /#portfolio
 
   - title: "Teaching"
-    url: /teaching/
+    url: /#teaching
 
   - title: "CV"
-    url: /cv/
+    url: /files/CV.pdf
 
