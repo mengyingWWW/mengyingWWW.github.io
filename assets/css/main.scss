@@ -45,19 +45,37 @@
    Custom overrides
    =============================== */
 
-/* Right-align top navigation links */
+/* Right-align top navigation links (DESKTOP only, don't break mobile dropdown) */
+.masthead__inner-wrap {
+  max-width: 100%;
+}
+
 .masthead__menu {
   width: 100%;
 }
 
-.masthead__menu ul {
+/* Only target the top visible nav links row */
+.greedy-nav {
   display: flex;
-  justify-content: flex-end;
-}
-.masthead__inner-wrap {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+.greedy-nav .visible-links {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Keep site title on the left, push the rest to the right */
+.greedy-nav .visible-links > li.masthead__menu-item--lg {
+  margin-right: auto;
+}
+
+/* (Optional) make spacing tighter */
+.greedy-nav .visible-links > li {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 /* Smooth scroll for anchor navigation */
@@ -141,6 +159,54 @@ button[aria-label*="Toggle"] {
   .author__urls a {
     font-size: 0.9rem !important;
     opacity: 0.9 !important;
+  }
+}
+/* ================================
+   Mobile fixes
+   1) dropdown menu not clipped
+   2) remove Follow button
+   3) contacts always visible + centered
+   ================================ */
+@media (max-width: 768px) {
+  /* 1) Fix greedy-nav dropdown (hidden-links) so the first item isn't off-screen */
+  .greedy-nav {
+    position: relative;
+  }
+
+  .greedy-nav .hidden-links {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .greedy-nav .hidden-links a {
+    display: block !important;
+    white-space: normal !important;
+  }
+
+  /* 2) Remove Follow button completely */
+  .author__urls-wrapper button {
+    display: none !important;
+  }
+
+  /* 3) Make the contact links always visible & centered */
+  .author__urls-wrapper {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .author__urls {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 
