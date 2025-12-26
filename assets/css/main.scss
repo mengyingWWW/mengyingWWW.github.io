@@ -390,3 +390,13 @@ button[aria-label*="Toggle"] {
   background: transparent !important;
   background-color: transparent !important;
 }
+/* Remove the little triangle/caret from greedy-nav dropdown */
+.masthead .greedy-nav .hidden-links:before,
+.masthead .greedy-nav .hidden-links:after {
+  display: none !important;
+  content: none !important;
+}
+/* Sidebar: hide author name (keep bio only) */
+.sidebar .author__name {
+  display: none !important;
+}
