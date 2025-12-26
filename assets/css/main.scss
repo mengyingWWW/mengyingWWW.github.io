@@ -796,3 +796,90 @@ nav#site-nav.greedy-nav .navicon::after  { top:  7px !important; }
 
 #site-nav.greedy-nav button .navicon::before { top: -7px !important; }
 #site-nav.greedy-nav button .navicon::after  { top:  7px !important; }
+
+/* ===========================
+   FINAL FIX v2 (paste at VERY END)
+   Fix:
+   1) Mobile: sidebar must push main content down (no overlay)
+   2) Mobile: restore hamburger (3 lines) + black rounded background
+   =========================== */
+
+@media (max-width: 768px) {
+
+  /* --- A) STOP OVERLAP: force both columns become normal flow blocks --- */
+  /* These are the common content wrappers in Minimal Mistakes */
+  #main,
+  .page,
+  .page__content,
+  .archive,
+  .archive__item,
+  .initial-content,
+  article.page {
+    float: none !important;
+    width: 100% !important;
+    clear: both !important;
+  }
+
+  /* Sidebar must also be a normal block and contribute height */
+  .sidebar,
+  .sidebar.sticky {
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    clear: both !important;
+    z-index: 0 !important;
+    margin-bottom: 28px !important; /* <- key: create real space before正文 */
+  }
+
+  /* Make sure author blocks are not floating */
+  .sidebar .author__avatar,
+  .sidebar .author__content,
+  .sidebar .author__urls-wrapper,
+  .sidebar.sticky .author__avatar,
+  .sidebar.sticky .author__content,
+  .sidebar.sticky .author__urls-wrapper {
+    float: none !important;
+    clear: both !important;
+  }
+
+  /* Also add a little top space before正文（防止任何情况下贴太近） */
+  article.page {
+    padding-top: 14px !important;
+  }
+
+  /* --- B) HAMBURGER: 3 lines + black rounded square background --- */
+  nav#site-nav.greedy-nav > button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: rgba(0,0,0,0.85) !important; /* black background */
+    border: 1px solid rgba(255,255,255,0.25) !important;
+    border-radius: 12px !important;
+    padding: 10px 12px !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  nav#site-nav.greedy-nav > button .navicon {
+    position: relative !important;
+    display: inline-block !important;
+    width: 22px !important;
+    height: 2px !important;      /* middle bar */
+    background: #fff !important; /* middle bar color */
+  }
+
+  nav#site-nav.greedy-nav > button .navicon::before,
+  nav#site-nav.greedy-nav > button .navicon::after {
+    content: "" !important;      /* override any content:none */
+    position: absolute !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    background: #fff !important;
+    display: block !important;
+  }
+  nav#site-nav.greedy-nav > button .navicon::before { top: -7px !important; }
+  nav#site-nav.greedy-nav > button .navicon::after  { top:  7px !important; }
+}
