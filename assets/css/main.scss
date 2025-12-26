@@ -354,24 +354,4 @@ button[aria-label*="Toggle"] {
     padding-right: 16px !important;
   }
 }
-  /* --- 7) Make 3 contact links visually centered (equal-width) --- */
-  .sidebar .author__urls,
-  .sidebar.sticky .author__urls {
-    width: 100% !important;
-  }
 
-  .sidebar .author__urls li,
-  .sidebar.sticky .author__urls li {
-    flex: 1 1 33% !important;     /* 三等分 */
-    display: flex !important;
-    justify-content: center !important;
-  }
-
-  .sidebar .author__urls a,
-  .sidebar.sticky .author__urls a {
-    display: inline-flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;       /* 填满每一格 */
-    text-align: center !important;
-  }
