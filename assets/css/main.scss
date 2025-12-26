@@ -331,3 +331,175 @@ button[aria-label*="Toggle"] {
     white-space: normal !important;
   }
 }
+/* =========================================================
+   HOTFIX — paste at the VERY END of assets/css/main.scss
+   Fix 1) Desktop: CV white box (CV lives in .hidden-links)
+   Fix 2) Mobile/iPad: avatar + bio + contacts stacked & centered
+   ========================================================= */
+
+/* ---------- Fix 1: Desktop “CV white box” coming from hidden-links styles ---------- */
+@media (min-width: 769px) {
+  /* Make hidden-links look like normal top nav (no white button styles) */
+  nav#site-nav.greedy-nav ul.hidden-links,
+  nav#site-nav.greedy-nav ul.hidden-links li,
+  nav#site-nav.greedy-nav ul.hidden-links li a {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Remove dropdown-like padding that makes it look like a button */
+  nav#site-nav.greedy-nav ul.hidden-links li a {
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: inherit !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+  }
+
+  /* In case active/current styles apply only to hidden-links (CV) */
+  nav#site-nav.greedy-nav ul.hidden-links li a.active,
+  nav#site-nav.greedy-nav ul.hidden-links li a[aria-current="page"],
+  nav#site-nav.greedy-nav ul.hidden-links li.active > a,
+  nav#site-nav.greedy-nav ul.hidden-links li.current > a {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    color: #fff !important;
+  }
+}
+
+/* ---------- Fix 2: Mobile/iPad author block forced to centered vertical layout ---------- */
+@media (max-width: 1024px) {
+  /* kill any float-based split layout */
+  .sidebar,
+  .sidebar.sticky,
+  .sidebar .author__avatar,
+  .sidebar .author__content,
+  .sidebar .author__urls-wrapper,
+  .sidebar .author__urls,
+  .sidebar.sticky .author__avatar,
+  .sidebar.sticky .author__content,
+  .sidebar.sticky .author__urls-wrapper,
+  .sidebar.sticky .author__urls {
+    float: none !important;
+  }
+
+  /* sidebar becomes full width */
+  .sidebar,
+  .sidebar.sticky {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* avatar centered (move UP: tweak margin-top here) */
+  .sidebar .author__avatar,
+  .sidebar.sticky .author__avatar {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: -4px auto 10px !important; /* 👈 往上移：更靠上就 -12/-16；更靠下就 -4/0 */
+  }
+
+  .sidebar .author__avatar img,
+  .sidebar.sticky .author__avatar img {
+    display: block !important;
+    margin: 0 auto !important;
+    width: 180px !important;
+    max-width: 70vw !important;
+    height: auto !important;
+    border-radius: 50% !important;
+  }
+
+  /* hide duplicated name under avatar (keep only your bio line) */
+  .sidebar .author__name,
+  .sidebar.sticky .author__name {
+    display: none !important;
+  }
+
+  /* content centered */
+  .sidebar .author__content,
+  .sidebar.sticky .author__content {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 12px !important;
+  }
+
+  /* bio centered under avatar */
+  .sidebar .author__bio,
+  .sidebar.sticky .author__bio {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 6px auto 12px !important;
+  }
+
+  /* remove Follow button */
+  .sidebar .author__urls-wrapper button,
+  .sidebar .author__urls-wrapper .btn,
+  .sidebar.sticky .author__urls-wrapper button,
+  .sidebar.sticky .author__urls-wrapper .btn {
+    display: none !important;
+  }
+
+  /* contacts centered */
+  .sidebar .author__urls-wrapper,
+  .sidebar.sticky .author__urls-wrapper {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .sidebar .author__urls,
+  .sidebar .author__urls.social-icons,
+  .sidebar.sticky .author__urls,
+  .sidebar.sticky .author__urls.social-icons {
+    width: auto !important;
+    display: inline-flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px 18px !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  /* remove any bubble/box/triangle pseudo elements */
+  .sidebar .author__urls-wrapper:before,
+  .sidebar .author__urls-wrapper:after,
+  .sidebar .author__urls:before,
+  .sidebar .author__urls:after,
+  .sidebar.sticky .author__urls-wrapper:before,
+  .sidebar.sticky .author__urls-wrapper:after,
+  .sidebar.sticky .author__urls:before,
+  .sidebar.sticky .author__urls:after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* links themselves: no background */
+  .sidebar .author__urls li,
+  .sidebar .author__urls a,
+  .sidebar.sticky .author__urls li,
+  .sidebar.sticky .author__urls a {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+}
