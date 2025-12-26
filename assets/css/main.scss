@@ -652,3 +652,54 @@ a[href="#main"]::after {
     display: none !important;
   }
 }
+
+/* ===========================
+   HOTFIX: mobile overlap + hamburger 3 lines
+   paste AFTER your current last line
+   =========================== */
+
+@media (max-width: 768px) {
+  /* 1) Stop sidebar from floating over content (no sticky/absolute) */
+  .sidebar,
+  .sidebar.sticky,
+  .author__urls-wrapper,
+  .author__content {
+    position: static !important;
+    top: auto !important;
+  }
+
+  /* Force sidebar to take space and separate from main content */
+  .sidebar,
+  .sidebar.sticky {
+    margin-bottom: 28px !important;
+    padding-bottom: 10px !important;
+  }
+
+  /* Sometimes the wrapper is absolutely positioned by theme */
+  .sidebar .author__urls-wrapper,
+  .sidebar.sticky .author__urls-wrapper {
+    position: static !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+}
+
+/* 2) Restore hamburger icon (navicon uses ::before/::after for 3 bars) */
+nav#site-nav.greedy-nav .navicon::before,
+nav#site-nav.greedy-nav .navicon::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 2px !important;
+  background: #fff !important;
+}
+
+nav#site-nav.greedy-nav .navicon {
+  background: #fff !important; /* middle bar */
+  height: 2px !important;
+}
+
+nav#site-nav.greedy-nav .navicon::before { top: -7px !important; }
+nav#site-nav.greedy-nav .navicon::after  { top:  7px !important; }
