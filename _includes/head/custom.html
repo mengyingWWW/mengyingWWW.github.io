@@ -169,6 +169,26 @@ hr {
 .masthead__menu nav.greedy-nav ul.visible-links {
   margin-left: auto !important;
 }
+/* =========================================================
+   RIGHT-ALIGN MENU ITEMS (site name stays left)
+   ========================================================= */
+
+/* Make nav take full width */
+nav#site-nav.greedy-nav {
+  width: 100% !important;
+}
+
+/* Turn the visible links row into a flex layout */
+nav#site-nav.greedy-nav > ul.visible-links {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+/* Push everything after the first item to the right */
+nav#site-nav.greedy-nav > ul.visible-links > li:first-child {
+  margin-right: auto !important;
+}
 </style>
 
 <!-- end custom head snippets -->
