@@ -367,3 +367,34 @@ button[aria-label*="Toggle"] {
   content: none !important;
   display: none !important;
 }
+/* ===== ABSOLUTE LAST RESORT: masthead background reset ===== */
+.masthead,
+.masthead * {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* masthead itself stays black */
+.masthead {
+  background-color: #000 !important;
+}
+
+/* all masthead text stays white */
+.masthead,
+.masthead a,
+.masthead a:visited,
+.masthead .site-title,
+.masthead .site-subtitle,
+.masthead .greedy-nav a {
+  color: #fff !important;
+}
+
+/* kill any “little triangle / bubble” pseudo elements in the header */
+.masthead:before,
+.masthead:after,
+.masthead *:before,
+.masthead *:after {
+  box-shadow: none !important;
+}
