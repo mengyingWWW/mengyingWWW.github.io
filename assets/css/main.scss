@@ -337,3 +337,33 @@ button[aria-label*="Toggle"] {
     outline: none !important;
   }
 }
+/* ===== HOTFIX: kill ALL white blocks in masthead nav ===== */
+.masthead nav#site-nav.greedy-nav,
+.masthead nav#site-nav.greedy-nav .visible-links,
+.masthead nav#site-nav.greedy-nav .visible-links > li,
+.masthead nav#site-nav.greedy-nav .visible-links > li > a,
+.masthead nav#site-nav.greedy-nav .hidden-links,
+.masthead nav#site-nav.greedy-nav .hidden-links > li,
+.masthead nav#site-nav.greedy-nav .hidden-links > li > a,
+.masthead .masthead__menu-item,
+.masthead .masthead__menu-item > a {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Ensure text is visible */
+.masthead nav#site-nav.greedy-nav a,
+.masthead nav#site-nav.greedy-nav a:visited {
+  color: #fff !important;
+}
+
+/* Kill the little triangle/bubble if it ever appears */
+.masthead nav#site-nav.greedy-nav .hidden-links:before,
+.masthead nav#site-nav.greedy-nav .hidden-links:after,
+.masthead nav#site-nav.greedy-nav .hidden-links li:before,
+.masthead nav#site-nav.greedy-nav .hidden-links li:after {
+  content: none !important;
+  display: none !important;
+}
