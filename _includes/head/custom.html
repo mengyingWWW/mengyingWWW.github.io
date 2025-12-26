@@ -14,39 +14,85 @@
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 <style>
-  /* Force dark mode globally */
-  html, body {
-    background: #000 !important;
-    color: #f5f5f5 !important;
-  }
+/* =========================================================
+   GLOBAL DARK MODE (force, no toggle)
+   ========================================================= */
+html, body {
+  background: #000 !important;
+  color: #f5f5f5 !important;
+}
 
-  /* Make common containers transparent so black shows through */
-  .masthead,
-  .page,
-  .page__content,
-  .archive,
-  .sidebar,
-  .initial-content,
-  .page__inner-wrap,
-  .archive__item,
-  .author__content,
-  .author__urls-wrapper {
-    background: transparent !important;
-  }
+/* Make all main containers transparent so black shows */
+.masthead,
+.masthead__inner-wrap,
+.page,
+.page__content,
+.archive,
+.sidebar,
+.initial-content,
+.page__inner-wrap,
+.archive__item,
+.author__content,
+.author__urls-wrapper {
+  background: transparent !important;
+}
 
-  /* Links */
-  a { color: #9ecbff !important; }
-  a:hover { color: #cfe3ff !important; }
+/* =========================================================
+   HEADER / NAV BAR — solid black, no gaps
+   ========================================================= */
+.masthead,
+.masthead__inner-wrap,
+.greedy-nav,
+.greedy-nav .visible-links,
+.greedy-nav .hidden-links {
+  background: #000 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
 
-  /* Hide theme/light-dark toggle (broad match) */
-  .theme-toggle,
-  .toggle-theme,
-  button[aria-label*="theme" i],
-  button[title*="theme" i],
-  a[aria-label*="theme" i],
-  a[title*="theme" i] {
-    display: none !important;
-  }
+/* Remove vertical padding that causes gaps when scrolling */
+.masthead__inner-wrap,
+.greedy-nav,
+.greedy-nav a {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Match body offset to header height (prevents jump/gap) */
+body {
+  padding-top: 61px !important; /* adjust later only if nav height changes */
+}
+
+/* Nav text colors */
+.masthead a,
+.masthead a:visited {
+  color: #9ecbff !important;
+}
+.masthead a:hover {
+  color: #cfe3ff !important;
+}
+
+/* =========================================================
+   KILL THE THEME TOGGLE (moon icon) — exact hit
+   ========================================================= */
+#theme-toggle {
+  display: none !important;
+}
+
+/* =========================================================
+   LINKS & TEXT REFINEMENT
+   ========================================================= */
+a {
+  color: #9ecbff !important;
+}
+a:hover {
+  color: #cfe3ff !important;
+}
+
+/* Optional: soften dividers */
+hr {
+  border-color: rgba(255,255,255,0.15) !important;
+}
 </style>
 
 <!-- end custom head snippets -->
