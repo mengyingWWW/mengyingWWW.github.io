@@ -22,6 +22,7 @@ main:
 
   - title: "CV"
     url: /files/MengyingWangCV_110725.pdf
+    classes: persist
 
 portfolio:
   - title: "News"
@@ -38,6 +39,7 @@ portfolio:
 
   - title: "CV"
     url: /files/MengyingWangCV_110725.pdf
+    classes: persist
 
 header:
   - title: "News"
@@ -54,4 +56,5 @@ header:
 
   - title: "CV"
     url: /files/MengyingWangCV_110725.pdf
+    classes: persist
 
