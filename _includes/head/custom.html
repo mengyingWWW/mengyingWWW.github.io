@@ -144,6 +144,31 @@ hr {
 .greedy-nav .visible-links {
   margin-left: auto !important;
 }
+/* =========================================================
+   RIGHT-ALIGN MENU ONLY (keep site title on the left)
+   ========================================================= */
+
+/* Make the whole masthead menu a flex row */
+.masthead__menu {
+  display: flex !important;
+  align-items: center;
+}
+
+/* Let the nav take full width so left and right can separate */
+.masthead__menu nav.greedy-nav {
+  width: 100% !important;
+}
+
+/* Keep site title (home link) pinned to the left */
+.masthead__menu nav.greedy-nav .site-title,
+.masthead__menu nav.greedy-nav a.site-title {
+  margin-right: auto !important;
+}
+
+/* Push the menu items list to the far right */
+.masthead__menu nav.greedy-nav ul.visible-links {
+  margin-left: auto !important;
+}
 </style>
 
 <!-- end custom head snippets -->
