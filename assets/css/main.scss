@@ -427,3 +427,50 @@ button[aria-label*="Toggle"] {
   }
   */
 }
+/* ================================
+   Mobile override (force)
+   Put this at VERY END of main.scss
+   ================================ */
+@media (max-width: 768px) {
+
+  /* Reduce the big empty gap between header and avatar */
+  .layout--single .sidebar,
+  .layout--single .sidebar__right,
+  .layout--single .sidebar__left {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Force avatar to move UP + center */
+  .layout--single .sidebar .author__avatar,
+  .layout--single .author__avatar {
+    float: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: -10px 0 10px 0 !important;  /* 👈 关键：用负值往上提 */
+    width: 100% !important;
+  }
+
+  .layout--single .sidebar .author__avatar img,
+  .layout--single .author__avatar img {
+    width: 180px !important;
+    max-width: 180px !important;
+    height: auto !important;
+    border-radius: 50% !important;
+  }
+
+  /* Force the MS.HCDE line to be centered */
+  .layout--single .sidebar .author__content,
+  .layout--single .author__content {
+    text-align: center !important;
+  }
+
+  .layout--single .sidebar .author__bio,
+  .layout--single .author__bio {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 6px 0 12px 0 !important;
+    line-height: 1.35 !important;
+  }
+}
