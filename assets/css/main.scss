@@ -66,14 +66,15 @@ button[aria-label*="Toggle"] {
    DESKTOP (>=769px)
    Goals:
    - Title left, menu right
-   - No white blocks in masthead (including CV)
-   - No masthead triangles / bubble arrows
+   - No white blocks in masthead
+   - CV always visible (persist stays in visible-links)
+   - Keep greedy-nav “more” button functional (DON'T kill :before/:after globally)
    - Sidebar: hide author name, avatar+bio centered, meta/links left
    ========================================================= */
 
 @media (min-width: 769px) {
 
-  /* ---- 1) Layout: title left, menu right (greedy-nav) ---- */
+  /* ---- 1) Layout: title left, menu right ---- */
   .masthead__inner-wrap { max-width: 100%; }
   .masthead__menu { width: 100%; }
 
@@ -89,55 +90,65 @@ button[aria-label*="Toggle"] {
     width: 100%;
   }
 
-  /* Keep site title on the left */
+  /* site title stays left */
   nav#site-nav.greedy-nav .visible-links > li.masthead__menu-item--lg {
     margin-right: auto;
   }
 
-  /* Tight spacing */
+  /* spacing */
   nav#site-nav.greedy-nav .visible-links > li {
     margin-left: 0.3rem;
     margin-right: 0.3rem;
   }
 
-  /* ---- 2) Kill ALL white blocks in masthead (including CV in hidden-links) ---- */
+  /* ---- 2) Fix “white blocks” in masthead ---- */
   .masthead,
   .masthead__inner-wrap,
   .masthead__menu,
   nav#site-nav.greedy-nav,
   nav#site-nav.greedy-nav ul,
-  nav#site-nav.greedy-nav li,
-  nav#site-nav.greedy-nav a,
-  nav#site-nav.greedy-nav button,
-  nav#site-nav.greedy-nav ul.visible-links > li > a,
-  nav#site-nav.greedy-nav ul.hidden-links > li > a {
+  nav#site-nav.greedy-nav li {
     background: transparent !important;
     background-color: transparent !important;
-    border: 0 !important;
     box-shadow: none !important;
+  }
+
+  .masthead a,
+  .masthead a:visited {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-decoration: none !important;
+  }
+
+  .masthead a:hover,
+  .masthead a:focus {
+    background: transparent !important;
+    background-color: transparent !important;
     outline: none !important;
     text-decoration: none !important;
   }
 
-  /* Ensure masthead text is visible */
-  .masthead a,
-  .masthead a:visited,
-  .masthead .site-title,
-  .masthead .site-subtitle {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
+  /* ---- 3) IMPORTANT: keep CV (persist) always in visible-links on desktop ---- */
+  nav#site-nav.greedy-nav .visible-links li.persist {
+    display: block !important;
   }
-
-  /* Kill any pseudo-element triangles/bubbles in masthead/nav */
-  .masthead :before,
-  .masthead :after,
-  nav#site-nav.greedy-nav :before,
-  nav#site-nav.greedy-nav :after {
-    content: none !important;
+  nav#site-nav.greedy-nav .hidden-links li.persist {
     display: none !important;
   }
 
-  /* ---- 3) Sidebar desktop styling ---- */
+  /* ---- 4) Ensure the “more” button still exists if menu overflows ---- */
+  /* (Do NOT kill nav pseudo-elements; they may draw the button icon.) */
+  nav#site-nav.greedy-nav > button {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* ---- 5) Sidebar desktop styling ---- */
 
   /* Hide duplicated name in sidebar */
   .sidebar .author__name { display: none !important; }
@@ -184,14 +195,14 @@ button[aria-label*="Toggle"] {
    Goals:
    - Hamburger works, dropdown not clipped
    - Remove Follow button
-   - Sidebar becomes stacked & centered:
-       avatar (center) -> bio (center) -> contacts (center)
+   - Sidebar stacked & centered:
+       avatar -> bio -> contacts
    - No white bubble/triangle/box around contacts
    ========================================================= */
 
 @media (max-width: 768px) {
 
-  /* ---- 0) Make sidebar full width (avoid “float causes bio to the right”) ---- */
+  /* ---- 0) Sidebar full width ---- */
   .sidebar,
   .sidebar.sticky {
     float: none !important;
@@ -200,7 +211,7 @@ button[aria-label*="Toggle"] {
     margin: 0 auto !important;
   }
 
-  /* ---- 1) Dropdown menu not clipped (News not off-screen) ---- */
+  /* ---- 1) Hamburger + dropdown not clipped ---- */
   nav#site-nav.greedy-nav { position: relative; }
 
   nav#site-nav.greedy-nav > button {
@@ -224,7 +235,7 @@ button[aria-label*="Toggle"] {
     white-space: normal !important;
   }
 
-  /* ---- 2) Remove Follow button completely ---- */
+  /* ---- 2) Remove Follow button ---- */
   .author__urls-wrapper button,
   .author__urls-wrapper .btn {
     display: none !important;
@@ -237,7 +248,7 @@ button[aria-label*="Toggle"] {
     width: 100% !important;
     display: block !important;
     text-align: center !important;
-    margin: 0px auto 10px !important; /* 想更靠上：可改成 -6px auto 10px */
+    margin: 0px auto 10px !important; /* 想更靠上：改成 -6px auto 10px */
   }
 
   .sidebar .author__avatar img,
@@ -250,7 +261,7 @@ button[aria-label*="Toggle"] {
     border-radius: 50% !important;
   }
 
-  /* ---- 4) Hide duplicated name in sidebar on mobile ---- */
+  /* ---- 4) Hide duplicated author name ---- */
   .sidebar .author__name,
   .sidebar.sticky .author__name {
     display: none !important;
@@ -272,7 +283,7 @@ button[aria-label*="Toggle"] {
     margin: 10px auto 12px !important;
   }
 
-  /* ---- 6) Contacts centered, no white box, no triangle ---- */
+  /* ---- 6) Contacts centered, no white box, no bubble triangle ---- */
   .sidebar .author__urls-wrapper,
   .sidebar.sticky .author__urls-wrapper {
     max-height: none !important;
@@ -310,7 +321,7 @@ button[aria-label*="Toggle"] {
     box-shadow: none !important;
   }
 
-  /* Kill bubble pseudo-elements (the little triangle) */
+  /* Kill ONLY the bubble pseudo-elements for contact wrapper */
   .sidebar .author__urls-wrapper:before,
   .sidebar .author__urls-wrapper:after,
   .sidebar .author__urls:before,
@@ -321,12 +332,5 @@ button[aria-label*="Toggle"] {
   .sidebar.sticky .author__urls:after {
     content: none !important;
     display: none !important;
-  }
-}
-@media (min-width: 769px) {
-  nav#site-nav.greedy-nav > button {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
   }
 }
