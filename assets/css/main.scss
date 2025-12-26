@@ -2,7 +2,7 @@
 ---
 
 /*
- * main.scss
+ * This file controls what is imported from /_sass
  * Note: first two lines are required by Jekyll.
  */
 
@@ -46,11 +46,11 @@
 
 html { scroll-behavior: smooth; }
 
-/* Prevent anchor titles hidden under sticky header */
+/* Prevent section titles from being hidden under sticky header */
 section { scroll-margin-top: 6rem; }
 section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 
-/* Hide theme toggle */
+/* Hide theme toggle button */
 .theme-toggle,
 .toggle-theme,
 .masthead__menu-item--theme,
@@ -61,24 +61,12 @@ button[aria-label*="Toggle"] {
   display: none !important;
 }
 
-/* Kill “back to top” little triangle if theme shows it */
-.page__back-to-top,
-a.page__back-to-top,
-.back-to-top,
-a.back-to-top {
-  display: none !important;
-}
-
 /* =========================================================
-   DESKTOP (>=769px)
-   - Title left, menu right
-   - No white blocks (including CV)
-   - Sidebar: hide name, avatar+bio centered, meta/links left
+   DESKTOP (>= 769px)
    ========================================================= */
-
 @media (min-width: 769px) {
 
-  /* ---- Masthead layout ---- */
+  /* --- Masthead layout: title left, menu right --- */
   .masthead__inner-wrap { max-width: 100%; }
   .masthead__menu { width: 100%; }
 
@@ -94,60 +82,52 @@ a.back-to-top {
     width: 100%;
   }
 
+  /* site title stays left */
   nav#site-nav.greedy-nav .visible-links > li.masthead__menu-item--lg {
     margin-right: auto;
   }
 
+  /* spacing */
   nav#site-nav.greedy-nav .visible-links > li {
-    margin-left: .35rem;
-    margin-right: .35rem;
+    margin: 0 0.3rem;
   }
 
-  /* ---- HARD kill white blocks (visible + hidden links + CV) ---- */
+  /* --- Kill white blocks in masthead (including CV) --- */
   .masthead,
   .masthead__inner-wrap,
   .masthead__menu,
   nav#site-nav.greedy-nav,
-  nav#site-nav.greedy-nav * {
+  nav#site-nav.greedy-nav ul,
+  nav#site-nav.greedy-nav li,
+  nav#site-nav.greedy-nav a,
+  nav#site-nav.greedy-nav button {
     background: transparent !important;
     background-color: transparent !important;
-    box-shadow: none !important;
     border: 0 !important;
+    box-shadow: none !important;
     outline: none !important;
   }
 
-  nav#site-nav.greedy-nav a,
-  nav#site-nav.greedy-nav a:visited {
-    color: #fff !important;
-    -webkit-text-fill-color: #fff !important;
-    text-decoration: none !important;
+  /* make sure masthead text is visible */
+  .masthead a,
+  .masthead a:visited,
+  .masthead .site-title,
+  .masthead .site-subtitle {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
   }
 
-  nav#site-nav.greedy-nav a:hover {
-    background: transparent !important;
-    background-color: transparent !important;
-    text-decoration: none !important;
-  }
-
-  /* remove any pseudo triangles/bubbles in header */
-  .masthead *:before,
-  .masthead *:after,
-  nav#site-nav.greedy-nav *:before,
-  nav#site-nav.greedy-nav *:after {
+  /* remove ONLY the “bubble triangle” that sometimes appears */
+  nav#site-nav.greedy-nav .hidden-links:before,
+  nav#site-nav.greedy-nav .hidden-links:after {
     content: none !important;
     display: none !important;
   }
 
-  /* desktop should NOT show hamburger button */
-  nav#site-nav.greedy-nav > button {
-    display: none !important;
-  }
+  /* --- Desktop sidebar rules --- */
+  .sidebar .author__name { display: none !important; } /* remove duplicated name */
 
-  /* ---- Sidebar desktop ---- */
-  .sidebar .author__name {
-    display: none !important;
-  }
-
+  /* avatar centered */
   .sidebar .author__avatar {
     float: none !important;
     display: flex !important;
@@ -155,12 +135,13 @@ a.back-to-top {
     margin: 0 0 10px 0 !important;
   }
 
+  /* bio centered */
   .sidebar .author__bio {
     text-align: center !important;
     margin: 0 0 14px 0 !important;
   }
 
-  /* meta + links left aligned */
+  /* meta + links LEFT aligned */
   .sidebar .author__content { text-align: left !important; }
 
   .sidebar .author__urls-wrapper,
@@ -184,16 +165,11 @@ a.back-to-top {
 }
 
 /* =========================================================
-   MOBILE / iPad (<=768px)
-   - Hamburger works, dropdown not clipped
-   - Sidebar stacked centered:
-       avatar -> bio -> contacts (horizontal centered)
-   - No white bubble/triangle/box
+   MOBILE / iPad (<= 768px)
    ========================================================= */
-
 @media (max-width: 768px) {
 
-  /* make sidebar full width so content doesn't float to the right */
+  /* --- sidebar must be stacked full width (prevents “bio to the right”) --- */
   .sidebar,
   .sidebar.sticky {
     float: none !important;
@@ -202,7 +178,7 @@ a.back-to-top {
     margin: 0 auto !important;
   }
 
-  /* ---- Greedy-nav dropdown not clipped ---- */
+  /* --- mobile nav dropdown not clipped + hamburger visible --- */
   nav#site-nav.greedy-nav { position: relative; }
 
   nav#site-nav.greedy-nav > button {
@@ -226,20 +202,20 @@ a.back-to-top {
     white-space: normal !important;
   }
 
-  /* ---- Remove Follow button ---- */
+  /* --- remove Follow button --- */
   .author__urls-wrapper button,
   .author__urls-wrapper .btn {
     display: none !important;
   }
 
-  /* ---- Avatar centered + move UP a bit ---- */
+  /* --- avatar centered (and slightly closer to header) --- */
   .sidebar .author__avatar,
   .sidebar.sticky .author__avatar {
     float: none !important;
     width: 100% !important;
     display: block !important;
     text-align: center !important;
-    margin: -8px auto 10px !important; /* 往上移：这里控制（-8px 可改成 -12px / -4px） */
+    margin: 0px auto 10px !important; /* 想再往上：改成 -6px auto 10px */
   }
 
   .sidebar .author__avatar img,
@@ -252,13 +228,13 @@ a.back-to-top {
     border-radius: 50% !important;
   }
 
-  /* ---- Hide duplicated author name on mobile ---- */
+  /* hide duplicated name in sidebar on mobile */
   .sidebar .author__name,
   .sidebar.sticky .author__name {
     display: none !important;
   }
 
-  /* ---- Bio centered ---- */
+  /* --- bio centered under avatar --- */
   .sidebar .author__content,
   .sidebar.sticky .author__content {
     float: none !important;
@@ -274,7 +250,7 @@ a.back-to-top {
     margin: 10px auto 12px !important;
   }
 
-  /* ---- Contacts: FORCE horizontal centered row ---- */
+  /* --- contacts: force ONE ROW centered (no vertical stack) --- */
   .sidebar .author__urls-wrapper,
   .sidebar.sticky .author__urls-wrapper {
     max-height: none !important;
@@ -285,122 +261,68 @@ a.back-to-top {
     box-shadow: none !important;
     padding: 0 !important;
     margin: 0 auto !important;
-    width: 100% !important;
   }
 
-  /* UL must be flex-row (this is the key) */
+  /* IMPORTANT: theme often sets .author__urls a { display:block } -> must override */
   .sidebar ul.author__urls,
   .sidebar ul.author__urls.social-icons,
   .sidebar.sticky ul.author__urls,
   .sidebar.sticky ul.author__urls.social-icons {
+    list-style: none !important;
+    width: 100% !important;
     display: flex !important;
     flex-direction: row !important;
+    flex-wrap: nowrap !important;         /* keep in one row */
     justify-content: center !important;
     align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 10px 18px !important;
+    gap: 18px !important;
 
-    width: 100% !important;
-    margin: 0 auto !important;
     padding: 0 !important;
+    margin: 0 auto !important;
 
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
   }
 
-  /* prevent theme forcing li/a full-width vertical blocks */
-  .sidebar ul.author__urls > li,
-  .sidebar ul.author__urls.social-icons > li,
-  .sidebar.sticky ul.author__urls > li,
-  .sidebar.sticky ul.author__urls.social-icons > li {
-    display: inline-flex !important;
-    width: auto !important;
-    flex: 0 0 auto !important;
+  .sidebar ul.author__urls li,
+  .sidebar.sticky ul.author__urls li {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     margin: 0 !important;
     padding: 0 !important;
+
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
   }
 
-  .sidebar ul.author__urls > li > a,
-  .sidebar ul.author__urls.social-icons > li > a,
-  .sidebar.sticky ul.author__urls > li > a,
-  .sidebar.sticky ul.author__urls.social-icons > li > a {
-    display: inline-flex !important;
-    width: auto !important;
-    flex: 0 0 auto !important;
-    justify-content: center !important;
+  .sidebar ul.author__urls li a,
+  .sidebar.sticky ul.author__urls li a {
+    display: inline-flex !important;      /* override theme “display:block” */
     align-items: center !important;
-    white-space: nowrap !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;                /* avoid turning into “buttons” */
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
     text-decoration: none !important;
+    white-space: nowrap !important;
   }
 
-  /* kill bubble pseudo-elements (little triangles) */
-  .sidebar *:before,
-  .sidebar *:after,
-  .sidebar.sticky *:before,
-  .sidebar.sticky *:after {
+  /* kill the little bubble triangle for contacts */
+  .sidebar .author__urls-wrapper:before,
+  .sidebar .author__urls-wrapper:after,
+  .sidebar .author__urls:before,
+  .sidebar .author__urls:after,
+  .sidebar.sticky .author__urls-wrapper:before,
+  .sidebar.sticky .author__urls-wrapper:after,
+  .sidebar.sticky .author__urls:before,
+  .sidebar.sticky .author__urls:after {
     content: none !important;
     display: none !important;
-  }
-}
-/* ===== FINAL FIX: mobile contacts MUST be horizontal ===== */
-@media (max-width: 768px) {
-
-  /* 1) masthead mobile 不要白底（防止你那个顶部白块复发） */
-  .masthead,
-  .masthead__inner-wrap,
-  .masthead__menu,
-  nav#site-nav.greedy-nav,
-  nav#site-nav.greedy-nav * {
-    background: transparent !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    border: 0 !important;
-  }
-
-  /* 2) 关键：把 social-icons 这个 UL 强制横排 */
-  .sidebar ul.author__urls.social-icons,
-  .sidebar.sticky ul.author__urls.social-icons {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 10px 18px !important;
-
-    width: 100% !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-  }
-
-  /* 3) 关键：把 li/a 从 block 改回 “不占整行” */
-  .sidebar ul.author__urls.social-icons > li,
-  .sidebar.sticky ul.author__urls.social-icons > li {
-    display: inline-flex !important;
-    width: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .sidebar ul.author__urls.social-icons > li > a,
-  .sidebar.sticky ul.author__urls.social-icons > li > a {
-    display: inline-flex !important;   /* 干掉主题的 display:block */
-    width: auto !important;
-    margin: 0 !important;              /* 干掉主题的 margin-bottom */
-    padding: 2px 6px !important;
-    white-space: nowrap !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    text-decoration: none !important;
   }
 }
