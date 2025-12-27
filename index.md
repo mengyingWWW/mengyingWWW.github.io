@@ -45,26 +45,7 @@ title: ""
       with a focus on how AI systems shape human attention, reasoning, and behavior.
     </p>
   
-    <p>
-      I was a Research Assistant in KnowVisLab
-      at
-      <a href="https://www.cityu.edu.hk/en" target="_blank">City University of Hong Kong</a>,
-      advised by
-      <a href="https://xiaoyu-zhang-betsy.github.io/homepage/" target="_blank">Xiaoyu Zhang</a>,
-      where I contributed to research on AI-assisted reading and sensemaking systems,
-      focusing on experimental design, behavioral evaluation, and human-centered analysis of AI support.
-    </p>
-  
-    <p>
-      At the beginning of my HCI research journey, I worked at
-      <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a>
-      with
-      <a href="https://scholar.google.com/citations?user=ZXXlX3UAAAAJ&hl=zh-CN" target="_blank">Xin Zhang</a>,
-      <a href="https://scholar.google.com/citations?user=2NEA088AAAAJ&hl=zh-CN" target="_blank">Weixin Huang</a>, and
-      <a href="https://dusp.mit.edu/spurs-fellows/ning-zhu" target="_blank">Ning Zhu</a>
-      on human-centered studies of behavior and perception in built environments,
-      which later shaped my interest in HCI.
-    </p>
+    
   </div>
 </section>
 
