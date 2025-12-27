@@ -42,7 +42,7 @@ I am currently a Research Assistant at the University of Washington and City Uni
 
 <section id="news">
 ## News
-- Test 063
+- Test 064
 - 2025.10 — Teaching Assistant for HCDE 321 at UW.
 - 2025.08 — Research Assistant at City University of Hong Kong.
 </section>
