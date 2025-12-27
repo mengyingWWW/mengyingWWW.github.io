@@ -2,7 +2,7 @@
 ---
 
 /*
- * main.scss (CLEAN STABLE VERSION)
+ * main.scss (LANDING VERSION - NO DESKTOP SIDEBAR)
  * Note: first two lines are required by Jekyll.
  */
 
@@ -58,15 +58,8 @@ button[aria-label*="Toggle"] {
   display: none !important;
 }
 
-/* remove duplicated author name everywhere */
-.sidebar .author__name,
-.sidebar.sticky .author__name {
-  display: none !important;
-}
-
 /* =========================================================
    MASTHEAD: no white blocks, keep components working
-   (DO NOT globally kill ::before/::after)
    ========================================================= */
 .masthead,
 .masthead__inner-wrap,
@@ -92,7 +85,7 @@ nav#site-nav.greedy-nav {
   text-decoration: none !important;
 }
 
-/* kill ONLY the dropdown bubble triangle (the usual culprit) */
+/* kill ONLY the dropdown bubble triangle */
 nav#site-nav.greedy-nav .hidden-links:before,
 nav#site-nav.greedy-nav .hidden-links:after {
   content: none !important;
@@ -100,27 +93,22 @@ nav#site-nav.greedy-nav .hidden-links:after {
 }
 
 /* =========================================================
-   DESKTOP (>=769px)
-   Goal:
-   - Reduce left/right empty gutters
-   - Sidebar stays on the left, NEVER overlays content
-   - Content fills remaining width
+   PAGE WIDTH (desktop)
+   - reduce left/right empty gutters
    ========================================================= */
 @media (min-width: 769px) {
-
-  /* Make page wider + shrink outer gutters */
   .masthead__inner-wrap,
   .page__inner-wrap,
   .archive__wrap,
   #main {
-    max-width: 1400px !important;      /* 想更宽就 1500/1600 */
+    max-width: 1400px !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
-  /* NAV: title left, menu right */
+  /* NAV: title left, menu right (keep your previous behavior) */
   .masthead__inner-wrap { max-width: 100% !important; }
   .masthead__menu { width: 100% !important; }
 
@@ -141,124 +129,16 @@ nav#site-nav.greedy-nav .hidden-links:after {
     margin-left: 0.35rem !important;
     margin-right: 0.35rem !important;
   }
-
-  /* ===== THE IMPORTANT PART: stable two-column layout ===== */
-  #main {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 32px !important;
-  }
-
-  /* disable float layout so it cannot overlap */
-  #main > .sidebar,
-  #main > .sidebar.sticky,
-  #main > .page,
-  #main > article.page,
-  .page__inner-wrap {
-    float: none !important;
-  }
-
-  /* Sidebar fixed width */
-  #main > .sidebar,
-  #main > .sidebar.sticky {
-    flex: 0 0 240px !important;
-    width: 240px !important;
-    max-width: 240px !important;
-  }
-
-  /* CRITICAL: kill JS “fixed sticky sidebar” inline styles */
-  #main > .sidebar.sticky,
-  #main > .sidebar.sticky[style] {
-    position: static !important;      /* must be in normal flow */
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    z-index: 0 !important;
-  }
-
-  /* Content fills remaining width */
-  #main > .page,
-  #main > article.page {
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    width: auto !important;
-    max-width: none !important;
-  }
-
-  .page__inner-wrap {
-    width: 100% !important;
-    max-width: none !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  /* Sidebar desktop visual alignment (your preference from before) */
-  .sidebar .author__avatar {
-    float: none !important;
-    display: flex !important;
-    justify-content: center !important;
-    margin: 0 0 10px 0 !important;
-  }
-
-  .sidebar .author__bio {
-    text-align: center !important;
-    margin: 0 0 14px 0 !important;
-  }
-
-  /* meta + links left aligned */
-  .sidebar .author__content { text-align: left !important; }
-  .sidebar .author__urls-wrapper,
-  .sidebar .author__urls { text-align: left !important; }
-
-  .sidebar .author__urls {
-    display: block !important;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-  }
-
-  .sidebar .author__urls li,
-  .sidebar .author__urls a {
-    justify-content: flex-start !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-  }
 }
 
 /* =========================================================
    MOBILE / iPad (<=768px)
-   Goal:
-   - Hamburger black pill + 3 lines
-   - Sidebar stacked centered
-   - Bio / school / address / email / github / linkedin each one line centered
-   - Sidebar NEVER overlays正文
+   - hamburger black pill + 3 lines
    ========================================================= */
 @media (max-width: 768px) {
 
-  /* prevent overlay: everything normal flow */
-  #main,
-  .page,
-  article.page,
-  .page__content {
-    float: none !important;
-    width: 100% !important;
-    clear: both !important;
-  }
-
-  .sidebar,
-  .sidebar.sticky {
-    position: static !important;
-    float: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto 56px !important;  /* 给正文留空间，绝不压正文 */
-    clear: both !important;
-  }
-
-  /* Hamburger button style */
   nav#site-nav.greedy-nav { position: relative; }
+
   nav#site-nav.greedy-nav > button {
     display: inline-flex !important;
     align-items: center !important;
@@ -272,13 +152,12 @@ nav#site-nav.greedy-nav .hidden-links:after {
     box-shadow: none !important;
   }
 
-  /* Ensure 3-line hamburger */
   nav#site-nav.greedy-nav > button .navicon {
     position: relative !important;
     display: inline-block !important;
     width: 22px !important;
     height: 2px !important;
-    background: #fff !important;
+    background: #fff !important; /* middle bar */
   }
   nav#site-nav.greedy-nav > button .navicon::before,
   nav#site-nav.greedy-nav > button .navicon::after {
@@ -293,7 +172,6 @@ nav#site-nav.greedy-nav .hidden-links:after {
   nav#site-nav.greedy-nav > button .navicon::before { top: -7px !important; }
   nav#site-nav.greedy-nav > button .navicon::after  { top:  7px !important; }
 
-  /* dropdown panel */
   nav#site-nav.greedy-nav .hidden-links {
     left: 12px !important;
     right: 12px !important;
@@ -303,204 +181,95 @@ nav#site-nav.greedy-nav .hidden-links:after {
     border-radius: 12px !important;
     padding: 10px 12px !important;
   }
+
   nav#site-nav.greedy-nav .hidden-links a {
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
     background: transparent !important;
   }
-
-  /* remove Follow button */
-  .author__urls-wrapper button,
-  .author__urls-wrapper .btn {
-    display: none !important;
-  }
-
-  /* avatar centered */
-  .sidebar .author__avatar,
-  .sidebar.sticky .author__avatar {
-    display: flex !important;
-    justify-content: center !important;
-    margin: -12px auto 12px !important;
-    float: none !important;
-    width: 100% !important;
-  }
-  .sidebar .author__avatar img,
-  .sidebar.sticky .author__avatar img {
-    width: 180px !important;
-    max-width: 70vw !important;
-    border-radius: 50% !important;
-    height: auto !important;
-  }
-
-  /* content column centered */
-  .sidebar .author__content,
-  .sidebar.sticky .author__content {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 0 12px !important;
-    float: none !important;
-    width: 100% !important;
-  }
-
-  /* bio single row */
-  .sidebar .author__bio,
-  .sidebar.sticky .author__bio {
-    width: 100% !important;
-    margin: 6px 0 12px !important;
-    text-align: center !important;
-    clear: both !important;
-  }
-
-  /* urls wrapper */
-  .sidebar .author__urls-wrapper,
-  .sidebar.sticky .author__urls-wrapper {
-    width: 100% !important;
-    max-height: none !important;
-    overflow: visible !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-    float: none !important;
-  }
-
-  /* one per line */
-  .sidebar ul.author__urls,
-  .sidebar ul.author__urls.social-icons,
-  .sidebar.sticky ul.author__urls,
-  .sidebar.sticky ul.author__urls.social-icons {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px !important;
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .sidebar ul.author__urls li,
-  .sidebar.sticky ul.author__urls li {
-    width: 100% !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .sidebar ul.author__urls li a,
-  .sidebar.sticky ul.author__urls li a {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    white-space: nowrap !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    text-decoration: none !important;
-  }
-
-  /* kill bubbles around urls only */
-  .sidebar .author__urls-wrapper::before,
-  .sidebar .author__urls-wrapper::after,
-  .sidebar ul.author__urls::before,
-  .sidebar ul.author__urls::after,
-  .sidebar.sticky .author__urls-wrapper::before,
-  .sidebar.sticky .author__urls-wrapper::after,
-  .sidebar.sticky ul.author__urls::before,
-  .sidebar.sticky ul.author__urls::after {
-    content: none !important;
-    display: none !important;
-  }
-}
-
-/* ===========================
-   DESKTOP ALIGN + UNSTICKY SIDEBAR
-   paste at VERY END of main.scss
-   =========================== */
-@media (min-width: 769px) {
-
-  /* 1) Make #main use the SAME left/right padding as masthead/title area */
-  /* (so sidebar left edge aligns with "Mengying Wang" on the top bar) */
-  #main {
-    max-width: 1400px !important;   /* keep your wide layout */
-    margin-left: auto !important;
-    margin-right: auto !important;
-
-    padding-left: 18px !important;  /* <-- adjust this if you want tighter/looser */
-    padding-right: 18px !important;
-  }
-
-  /* 2) Sidebar should scroll away with the page (NO sticky / NO fixed) */
-  .sidebar,
-  .sidebar.sticky {
-    position: static !important;
-    top: auto !important;
-    bottom: auto !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-  }
 }
 
 /* =========================================================
-   DESKTOP: STICKY SIDEBAR (FIXED LEFT) + ALIGN WITH MASTHEAD
-   Paste at VERY END of main.scss
+   LANDING HERO (desktop + mobile)
    ========================================================= */
-@media (min-width: 769px) {
+.landing-hero {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 44px;
+  align-items: start;
 
-  /* Align masthead + main container */
-  .masthead__inner-wrap,
-  #main {
-    max-width: 1400px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+.landing-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.landing-avatar {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 0; /* square like Yuecheng */
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.landing-meta {
+  margin-top: 18px;
+}
+
+.landing-bio {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 14px;
+}
+
+.landing-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.landing-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.landing-link i {
+  opacity: 0.95;
+}
+
+.landing-title {
+  margin-top: 0;
+}
+
+/* mobile: stack */
+@media (max-width: 768px) {
+  .landing-hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
-  /* Two-column layout so sidebar never overlaps content */
-  #main {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 32px !important;
+  .landing-left {
+    align-items: center;
+    text-align: center;
   }
 
-  /* Sidebar column width */
-  #main > .sidebar,
-  #main > .sidebar.sticky {
-    flex: 0 0 240px !important;
-    width: 240px !important;
-    max-width: 240px !important;
-
-    margin-left: 0 !important;
-    padding-left: 0 !important;
+  .landing-avatar {
+    width: 78vw;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
-  /* Content fills remaining space */
-  #main > .page,
-  #main > article.page {
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    width: auto !important;
-    max-width: none !important;
-  }
-
-  /* Make sidebar STICKY (fixed on left while scrolling) */
-  #main > .sidebar.sticky,
-  #main > .sidebar.sticky[style] {
-    position: sticky !important;   /* <- keep it fixed */
-    top: 110px !important;         /* <- adjust if you want (90~130) */
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-
-    z-index: 2 !important;
+  .landing-links {
+    justify-content: center;
   }
 }
