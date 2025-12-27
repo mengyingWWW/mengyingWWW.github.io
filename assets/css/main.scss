@@ -1175,3 +1175,72 @@ nav#site-nav.greedy-nav .navicon::after  { top:  7px !important; }
     max-width: none !important;
   }
 }
+
+/* =========================================================
+   DESKTOP ULTIMATE FIX:
+   Never allow sidebar to overlay content (JS sticky/fixed safe)
+   ========================================================= */
+@media (min-width: 769px) {
+
+  /* 1) Make main wider (shrink the “orange margins”) */
+  .page,
+  .page__inner-wrap,
+  #main {
+    max-width: 1400px !important;  /* 你想更宽就加到 1600 */
+  }
+
+  .page__inner-wrap {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  /* 2) HARD STOP: sidebar must NOT be fixed/sticky on desktop */
+  #main > .sidebar.sticky,
+  #main > .sidebar {
+    position: static !important;   /* 这句是关键：彻底不脱离文档流 */
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    z-index: 0 !important;
+  }
+
+  /* 3) Use a clean 2-column layout */
+  #main {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 28px !important;
+  }
+
+  /* Sidebar width */
+  #main > .sidebar {
+    flex: 0 0 240px !important;
+    width: 240px !important;
+    max-width: 240px !important;
+  }
+
+  /* Content fills the rest */
+  #main > .page,
+  #main > article.page {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  /* 4) EXTRA SAFETY:
+        If some JS still forces sidebar fixed, reserve space anyway */
+  #main > .page,
+  #main > article.page {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  @supports (position: sticky) {
+    /* reserve space only when sidebar tries to detach */
+    #main {
+      padding-left: 0 !important;
+    }
+  }
+}
