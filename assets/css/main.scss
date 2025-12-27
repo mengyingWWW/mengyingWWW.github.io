@@ -2,7 +2,7 @@
 ---
 
 /*
- * main.scss (LANDING + PORTFOLIO GRID — CLEAN STABLE)
+ * main.scss (LANDING + PORTFOLIO GRID — STABLE + NAV WHITEBOX FIX)
  * Note: first two lines are required by Jekyll.
  */
 
@@ -59,7 +59,7 @@ button[aria-label*="Toggle"] {
 }
 
 /* =========================================================
-   MASTHEAD: no white blocks, keep components working
+   MASTHEAD BASE: transparent background
    ========================================================= */
 .masthead,
 .masthead__inner-wrap,
@@ -85,7 +85,7 @@ nav#site-nav.greedy-nav {
   text-decoration: none !important;
 }
 
-/* kill ONLY the dropdown bubble triangle */
+/* kill ONLY the dropdown bubble triangle (keep dropdown itself) */
 nav#site-nav.greedy-nav .hidden-links:before,
 nav#site-nav.greedy-nav .hidden-links:after {
   content: none !important;
@@ -158,6 +158,7 @@ nav#site-nav.greedy-nav .hidden-links:after {
   nav#site-nav.greedy-nav > button .navicon::before { top: -7px !important; }
   nav#site-nav.greedy-nav > button .navicon::after  { top:  7px !important; }
 
+  /* IMPORTANT: keep dropdown background (do not override!) */
   nav#site-nav.greedy-nav .hidden-links {
     left: 12px !important;
     right: 12px !important;
@@ -209,9 +210,7 @@ nav#site-nav.greedy-nav .hidden-links:after {
   display: block;
 }
 
-.landing-meta {
-  margin-top: 14px;
-}
+.landing-meta { margin-top: 14px; }
 
 .landing-bio {
   font-size: 0.95rem;
@@ -237,7 +236,6 @@ nav#site-nav.greedy-nav .hidden-links:after {
 }
 
 .landing-link i { opacity: 0.95; }
-
 .landing-title { margin-top: 0; }
 
 @media (max-width: 768px) {
@@ -251,9 +249,6 @@ nav#site-nav.greedy-nav .hidden-links:after {
 
 /* =========================================================
    PORTFOLIO CARD GRID (YUNXIANG-LIKE)
-   - Desktop: 3 columns
-   - iPad/Tablet: 2 columns
-   - Mobile: 1 column
    ========================================================= */
 .portfolio-grid {
   display: grid;
@@ -264,15 +259,10 @@ nav#site-nav.greedy-nav .hidden-links:after {
 }
 
 @media (max-width: 1024px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-
 @media (max-width: 640px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
+  .portfolio-grid { grid-template-columns: 1fr; }
 }
 
 .portfolio-card {
@@ -310,9 +300,7 @@ nav#site-nav.greedy-nav .hidden-links:after {
   display: block;
 }
 
-.portfolio-body {
-  padding: 16px 16px 14px 16px;
-}
+.portfolio-body { padding: 16px 16px 14px 16px; }
 
 .portfolio-title {
   margin: 0 0 8px 0;
@@ -336,34 +324,30 @@ nav#site-nav.greedy-nav .hidden-links:after {
 .portfolio-tags .tag {
   display: inline-flex;
   align-items: center;
-
   font-size: 0.85rem;
   line-height: 1;
-
   padding: 8px 10px;
   border-radius: 999px;
-
   border: 1px solid rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.03);
   opacity: 0.95;
 }
 
 /* =========================================================
-   DESKTOP: TRUE CENTER + WIDER CONTENT (NO DRIFT)
+   DESKTOP: TRUE CENTER + WIDER CONTENT
+   (keep ONE version only to avoid conflicts)
    ========================================================= */
 @media (min-width: 1024px) {
 
-  /* widen outer containers consistently */
   .masthead__inner-wrap,
   #main {
-    max-width: 1600px !important;
+    max-width: 1760px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
 
-  /* unlock theme's inner wrap width & remove asymmetric padding */
   .page__inner-wrap {
     max-width: none !important;
     padding-left: 0 !important;
@@ -372,45 +356,59 @@ nav#site-nav.greedy-nav .hidden-links:after {
     margin-right: auto !important;
   }
 
-  /* make the real content block mathematically centered */
   .page__content {
-    max-width: 1600px !important;
+    max-width: 1760px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
 /* =========================================================
-   DESKTOP: TRUE CENTER + WIDER CONTENT (LESS SIDE GUTTERS)
+   FIX: REMOVE WHITE BOXES ONLY IN TOP NAV "VISIBLE LINKS"
+   - DO NOT touch .hidden-links (hamburger dropdown)
    ========================================================= */
-@media (min-width: 1024px) {
 
-  /* 1) widen outer containers */
-  .masthead__inner-wrap,
-  #main {
-    max-width: 1760px !important;    /* ← 1600 太保守就加到 1760/1800 */
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 12px !important;   /* ← 两侧“留白”主要来自这里：减小 */
-    padding-right: 12px !important;
-  }
-
-  /* 2) unlock inner wrap */
-  .page__inner-wrap {
-    max-width: none !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  /* 3) widen the real content block */
-  .page__content {
-    max-width: 1760px !important;    /* ← 跟上面一致 */
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 0 !important;      /* ← 防止主题再加左右 padding */
-    padding-right: 0 !important;
-  }
+/* 1) kill any background/gradient on desktop visible menu items */
+#site-nav.greedy-nav .visible-links > li,
+#site-nav.greedy-nav .visible-links > li > a {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
 }
 
+/* 2) IMPORTANT: nuke pseudo elements that draw pills/blocks */
+#site-nav.greedy-nav .visible-links > li > a::before,
+#site-nav.greedy-nav .visible-links > li > a::after,
+#site-nav.greedy-nav .visible-links > li::before,
+#site-nav.greedy-nav .visible-links > li::after {
+  content: none !important;
+  display: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* 3) hover/focus states for TOP menu only (keep dropdown styles) */
+#site-nav.greedy-nav .visible-links > li > a:hover,
+#site-nav.greedy-nav .visible-links > li > a:focus,
+#site-nav.greedy-nav .visible-links > li > a:active {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 4) if theme adds a background on the li.masthead__menu-item wrapper */
+.masthead__menu-item {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+.masthead__menu-item::before,
+.masthead__menu-item::after {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
