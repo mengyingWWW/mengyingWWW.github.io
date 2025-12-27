@@ -413,3 +413,31 @@ nav#site-nav.greedy-nav .hidden-links:after {
     padding-right: 0 !important;
   }
 }
+
+/* =========================================================
+   FIX: REMOVE WHITE BOXES IN TOP NAV (masthead)
+   ========================================================= */
+.masthead,
+.masthead__inner-wrap,
+.masthead__menu,
+nav#site-nav.greedy-nav,
+nav#site-nav.greedy-nav .visible-links,
+nav#site-nav.greedy-nav .visible-links > li,
+nav#site-nav.greedy-nav .visible-links > li > a,
+nav#site-nav.greedy-nav .hidden-links,
+nav#site-nav.greedy-nav .hidden-links > li,
+nav#site-nav.greedy-nav .hidden-links > li > a,
+.masthead .site-title,
+.masthead .site-subtitle {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* hover/focus 也别变白 */
+nav#site-nav.greedy-nav a:hover,
+nav#site-nav.greedy-nav a:focus,
+nav#site-nav.greedy-nav a:active {
+  background: transparent !important;
+  background-color: transparent !important;
+}
