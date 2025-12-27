@@ -426,3 +426,14 @@ nav#site-nav.greedy-nav .hidden-links:after {
     display: none !important;   /* 双保险 */
   }
 }
+
+/* =========================================================
+   FIX: About / Landing links stay white (keep underline)
+   ========================================================= */
+.landing-right a {
+  color: #ffffff !important;
+}
+
+.landing-right a:visited {
+  color: #ffffff !important;
+}
