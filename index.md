@@ -34,7 +34,7 @@ title: ""
     <h2 class="landing-title">About</h2>
 
     <p>
-      Hi! I’m <strong>Mengying Wang</strong>, an HCI researcher interested in human–AI interaction,
+      Test 074 Hi! I’m <strong>Mengying Wang</strong>, an HCI researcher interested in human–AI interaction,
       learning sciences, and human factors.
     </p>
 
@@ -49,7 +49,6 @@ title: ""
 
 <section id="news">
 ## News
-- Test 073
 - 2025.10 — Teaching Assistant for HCDE 321 at UW.
 - 2025.08 — Research Assistant at City University of Hong Kong.
 </section>
