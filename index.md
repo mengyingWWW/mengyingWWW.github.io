@@ -35,40 +35,39 @@ title: ""
 
     <p>
     Test 081 Hi! I’m <strong>Mengying Wang</strong>, a first-year master’s student in the
-    <a href="LINK_TO_HCDE" target="_blank">Department of Human-Centered Design & Engineering (HCDE)</a>
+    <a href="https://www.hcde.washington.edu/" target="_blank">Department of Human-Centered Design & Engineering (HCDE)</a>
     at the
-    <a href="LINK_TO_UW" target="_blank">University of Washington</a>.
-  </p>
+    <a href="https://www.washington.edu/" target="_blank">University of Washington</a>.
+    </p>
 
-  <p>
-    My research interests lie at the intersection of
-    <strong>🧠 Human–AI Interaction</strong>,
-    <strong>📚 learning sciences</strong>, and
-    <strong>🧩 human factors</strong>,
-    with a focus on how AI systems shape human attention, reasoning, and behavior.
-  </p>
-
-  <p>
-    Previously, I worked as a Research Assistant in
-    <a href="LINK_TO_KNOWVISLAB" target="_blank">KnowVisLab</a>
-    at
-    <a href="LINK_TO_CITYU" target="_blank">City University of Hong Kong</a>,
-    advised by
-    <a href="LINK_TO_XIAOYU" target="_blank">Xiaoyu Zhang</a>,
-    where I contributed to research on AI-assisted reading and sensemaking systems,
-    focusing on experimental design, behavioral evaluation, and human-centered analysis of AI support.
-  </p>
-
-  <p>
-    At the beginning of my HCI research journey, I worked at
-    <a href="LINK_TO_TSINGHUA" target="_blank">Tsinghua University</a>
-    with
-    <a href="LINK_TO_XIN_ZHANG" target="_blank">Xin Zhang</a>,
-    <a href="LINK_TO_WEIXIN" target="_blank">Weixin Huang</a>, and
-    <a href="LINK_TO_NING_ZHU" target="_blank">Ning Zhu</a>
-    on human-centered studies of behavior and perception in built environments,
-    which later shaped my interest in HCI.
-  </p>
+    <p>
+      My research interests lie at the intersection of
+      <strong>🧠 Human–AI Interaction</strong>,
+      <strong>📚 learning sciences</strong>, and
+      <strong>🧩 human factors</strong>,
+      with a focus on how AI systems shape human attention, reasoning, and behavior.
+    </p>
+  
+    <p>
+      Previously, I worked as a Research Assistant in KnowVisLab
+      at
+      <a href="https://www.cityu.edu.hk/en" target="_blank">City University of Hong Kong</a>,
+      advised by
+      <a href="https://xiaoyu-zhang-betsy.github.io/homepage/" target="_blank">Xiaoyu Zhang</a>,
+      where I contributed to research on AI-assisted reading and sensemaking systems,
+      focusing on experimental design, behavioral evaluation, and human-centered analysis of AI support.
+    </p>
+  
+    <p>
+      At the beginning of my HCI research journey, I worked at
+      <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a>
+      with
+      <a href="https://scholar.google.com/citations?user=ZXXlX3UAAAAJ&hl=zh-CN" target="_blank">Xin Zhang</a>,
+      <a href="https://scholar.google.com/citations?user=2NEA088AAAAJ&hl=zh-CN" target="_blank">Weixin Huang</a>, and
+      <a href="https://dusp.mit.edu/spurs-fellows/ning-zhu" target="_blank">Ning Zhu</a>
+      on human-centered studies of behavior and perception in built environments,
+      which later shaped my interest in HCI.
+    </p>
   </div>
 </section>
 
