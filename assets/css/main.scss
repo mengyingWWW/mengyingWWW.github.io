@@ -386,3 +386,18 @@ nav#site-nav.greedy-nav .hidden-links:after {
     max-width: none !important;     /* ← 解锁默认 800px 限制 */
   }
 }
+
+/* =========================================================
+   WIDEN DEFAULT CONTENT WIDTH (Minimal Mistakes core)
+   ========================================================= */
+@media (min-width: 1024px) {
+  .page__inner-wrap {
+    max-width: 1400px !important;  /* ← 原来大约是 800–900 */
+  }
+}
+@media (min-width: 1024px) {
+  .page__inner-wrap,
+  .landing-hero {
+    max-width: 1400px !important;
+  }
+}
