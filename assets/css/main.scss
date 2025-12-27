@@ -424,3 +424,22 @@ nav#site-nav.greedy-nav .hidden-links:after {
   }
 
 }
+
+/* =========================================================
+   FIX LANDING CENTERING (DESKTOP)
+   ========================================================= */
+@media (min-width: 1024px) {
+
+  /* Remove asymmetric padding from inner wrapper */
+  .page__inner-wrap {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Re-center content safely */
+  .page__content {
+    max-width: 1600px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
