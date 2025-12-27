@@ -1,8 +1,5 @@
----
----
-
 /*
- * main.scss (LANDING VERSION - NO DESKTOP SIDEBAR)
+ * main.scss (LANDING SINGLE-COLUMN STABLE VERSION)
  * Note: first two lines are required by Jekyll.
  */
 
@@ -47,7 +44,7 @@ html { scroll-behavior: smooth; }
 section { scroll-margin-top: 6rem; }
 section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 
-/* hide theme toggle */
+/* Hide theme toggle */
 .theme-toggle,
 .toggle-theme,
 .masthead__menu-item--theme,
@@ -58,8 +55,14 @@ button[aria-label*="Toggle"] {
   display: none !important;
 }
 
+/* Remove duplicated author name in sidebar (in case other pages use it) */
+.sidebar .author__name,
+.sidebar.sticky .author__name {
+  display: none !important;
+}
+
 /* =========================================================
-   MASTHEAD: no white blocks, keep components working
+   MASTHEAD: keep clean (no white blocks), keep components working
    ========================================================= */
 .masthead,
 .masthead__inner-wrap,
@@ -85,7 +88,7 @@ nav#site-nav.greedy-nav {
   text-decoration: none !important;
 }
 
-/* kill ONLY the dropdown bubble triangle */
+/* Kill ONLY the dropdown bubble triangle */
 nav#site-nav.greedy-nav .hidden-links:before,
 nav#site-nav.greedy-nav .hidden-links:after {
   content: none !important;
@@ -93,14 +96,91 @@ nav#site-nav.greedy-nav .hidden-links:after {
 }
 
 /* =========================================================
-   PAGE WIDTH (desktop)
-   - reduce left/right empty gutters
+   LANDING PAGE (desktop + mobile)
+   - single column
+   - centered circle avatar
+   - bio one line
+   - links in one row
+   ========================================================= */
+
+.landing #main {
+  display: block !important; /* IMPORTANT: never use 2-column layout on landing */
+}
+
+.landing .sidebar,
+.landing .sidebar.sticky {
+  display: none !important;  /* safety: hide sidebar if theme tries to render it */
+}
+
+.landing .page,
+.landing article.page,
+.landing .page__inner-wrap,
+.landing .page__content {
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.landing .page__inner-wrap {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+/* Hero block */
+.landing-hero {
+  margin-top: 10px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.landing-avatar {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.landing-avatar img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 999px; /* circle */
+  display: block;
+}
+
+.landing-bio {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0 auto 10px;
+  opacity: 0.95;
+}
+
+.landing-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap; /* small screens: wrap but stays centered */
+  margin: 0 auto 10px;
+}
+
+.landing-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+}
+
+.landing-links i {
+  opacity: 0.95;
+}
+
+/* =========================================================
+   DESKTOP NAV: title left, menu right + container width
    ========================================================= */
 @media (min-width: 769px) {
-  .masthead__inner-wrap,
-  .page__inner-wrap,
-  .archive__wrap,
-  #main {
+
+  .masthead__inner-wrap {
     max-width: 1400px !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
@@ -108,8 +188,6 @@ nav#site-nav.greedy-nav .hidden-links:after {
     margin-right: auto !important;
   }
 
-  /* NAV: title left, menu right (keep your previous behavior) */
-  .masthead__inner-wrap { max-width: 100% !important; }
   .masthead__menu { width: 100% !important; }
 
   nav#site-nav.greedy-nav {
@@ -117,14 +195,17 @@ nav#site-nav.greedy-nav .hidden-links:after {
     align-items: center !important;
     width: 100% !important;
   }
+
   nav#site-nav.greedy-nav .visible-links {
     display: flex !important;
     align-items: center !important;
     width: 100% !important;
   }
+
   nav#site-nav.greedy-nav .visible-links > li.masthead__menu-item--lg {
     margin-right: auto !important;
   }
+
   nav#site-nav.greedy-nav .visible-links > li {
     margin-left: 0.35rem !important;
     margin-right: 0.35rem !important;
@@ -133,7 +214,7 @@ nav#site-nav.greedy-nav .hidden-links:after {
 
 /* =========================================================
    MOBILE / iPad (<=768px)
-   - hamburger black pill + 3 lines
+   - Hamburger black pill + 3 lines (keep what you already like)
    ========================================================= */
 @media (max-width: 768px) {
 
@@ -143,10 +224,12 @@ nav#site-nav.greedy-nav .hidden-links:after {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+
     background: rgba(0,0,0,0.88) !important;
     border: 1px solid rgba(255,255,255,0.25) !important;
     border-radius: 12px !important;
     padding: 10px 12px !important;
+
     opacity: 1 !important;
     visibility: visible !important;
     box-shadow: none !important;
@@ -157,8 +240,9 @@ nav#site-nav.greedy-nav .hidden-links:after {
     display: inline-block !important;
     width: 22px !important;
     height: 2px !important;
-    background: #fff !important; /* middle bar */
+    background: #fff !important;
   }
+
   nav#site-nav.greedy-nav > button .navicon::before,
   nav#site-nav.greedy-nav > button .navicon::after {
     content: "" !important;
@@ -169,6 +253,7 @@ nav#site-nav.greedy-nav .hidden-links:after {
     background: #fff !important;
     display: block !important;
   }
+
   nav#site-nav.greedy-nav > button .navicon::before { top: -7px !important; }
   nav#site-nav.greedy-nav > button .navicon::after  { top:  7px !important; }
 
@@ -176,6 +261,7 @@ nav#site-nav.greedy-nav .hidden-links:after {
     left: 12px !important;
     right: 12px !important;
     width: auto !important;
+
     background: rgba(0,0,0,0.92) !important;
     border: 1px solid rgba(255,255,255,0.18) !important;
     border-radius: 12px !important;
@@ -187,89 +273,10 @@ nav#site-nav.greedy-nav .hidden-links:after {
     -webkit-text-fill-color: #ffffff !important;
     background: transparent !important;
   }
-}
 
-/* =========================================================
-   LANDING HERO (desktop + mobile)
-   ========================================================= */
-.landing-hero {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 44px;
-  align-items: start;
-
-  padding-top: 12px;
-  padding-bottom: 20px;
-}
-
-.landing-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.landing-avatar {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 0; /* square like Yuecheng */
-  border: 1px solid rgba(255,255,255,0.18);
-}
-
-.landing-meta {
-  margin-top: 18px;
-}
-
-.landing-bio {
-  font-size: 0.95rem;
-  opacity: 0.9;
-  margin-bottom: 14px;
-}
-
-.landing-links {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.landing-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none !important;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-.landing-link i {
-  opacity: 0.95;
-}
-
-.landing-title {
-  margin-top: 0;
-}
-
-/* mobile: stack */
-@media (max-width: 768px) {
-  .landing-hero {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .landing-left {
-    align-items: center;
-    text-align: center;
-  }
-
-  .landing-avatar {
-    width: 78vw;
-    max-width: 360px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
-
-  .landing-links {
-    justify-content: center;
+  /* Landing avatar size on small screens */
+  .landing-avatar img {
+    width: 220px;
+    height: 220px;
   }
 }
