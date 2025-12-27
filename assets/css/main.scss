@@ -368,3 +368,21 @@ nav#site-nav.greedy-nav .hidden-links:after {
   background: rgba(255,255,255,0.03);
   opacity: 0.95;
 }
+
+/* =========================================================
+   WIDEN MAIN CONTENT (DESKTOP ONLY)
+   ========================================================= */
+@media (min-width: 1024px) {
+
+  /* main content container */
+  #main {
+    max-width: 1600px !important;   /* ← 关键：整体变宽 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* inner page wrapper (default is too narrow) */
+  .page__inner-wrap {
+    max-width: none !important;     /* ← 解锁默认 800px 限制 */
+  }
+}
