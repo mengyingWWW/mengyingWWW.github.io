@@ -34,14 +34,41 @@ title: ""
     <h2 class="landing-title">About</h2>
 
     <p>
-      Test 080 Hi! I’m <strong>Mengying Wang</strong>, an HCI researcher interested in human–AI interaction,
-      learning sciences, and human factors.
-    </p>
+    Test 081 Hi! I’m <strong>Mengying Wang</strong>, a first-year master’s student in the
+    <a href="LINK_TO_HCDE" target="_blank">Department of Human-Centered Design & Engineering (HCDE)</a>
+    at the
+    <a href="LINK_TO_UW" target="_blank">University of Washington</a>.
+  </p>
 
-    <p>
-      I am currently a Research Assistant at the University of Washington and City University of Hong Kong.
-      My work focuses on designing and evaluating AI-assisted systems for learning and creative tasks.
-    </p>
+  <p>
+    My research interests lie at the intersection of
+    <strong>🧠 Human–AI Interaction</strong>,
+    <strong>📚 learning sciences</strong>, and
+    <strong>🧩 human factors</strong>,
+    with a focus on how AI systems shape human attention, reasoning, and behavior.
+  </p>
+
+  <p>
+    Previously, I worked as a Research Assistant in
+    <a href="LINK_TO_KNOWVISLAB" target="_blank">KnowVisLab</a>
+    at
+    <a href="LINK_TO_CITYU" target="_blank">City University of Hong Kong</a>,
+    advised by
+    <a href="LINK_TO_XIAOYU" target="_blank">Xiaoyu Zhang</a>,
+    where I contributed to research on AI-assisted reading and sensemaking systems,
+    focusing on experimental design, behavioral evaluation, and human-centered analysis of AI support.
+  </p>
+
+  <p>
+    At the beginning of my HCI research journey, I worked at
+    <a href="LINK_TO_TSINGHUA" target="_blank">Tsinghua University</a>
+    with
+    <a href="LINK_TO_XIN_ZHANG" target="_blank">Xin Zhang</a>,
+    <a href="LINK_TO_WEIXIN" target="_blank">Weixin Huang</a>, and
+    <a href="LINK_TO_NING_ZHU" target="_blank">Ning Zhu</a>
+    on human-centered studies of behavior and perception in built environments,
+    which later shaped my interest in HCI.
+  </p>
   </div>
 </section>
 
