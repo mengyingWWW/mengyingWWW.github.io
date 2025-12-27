@@ -49,7 +49,7 @@ title: ""
 
 <section id="news">
 ## News
-- Test 067
+- Test 068
 - 2025.10 — Teaching Assistant for HCDE 321 at UW.
 - 2025.08 — Research Assistant at City University of Hong Kong.
 </section>
