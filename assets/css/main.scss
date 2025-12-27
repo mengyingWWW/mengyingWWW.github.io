@@ -190,49 +190,60 @@ nav#site-nav.greedy-nav .hidden-links:after {
 }
 
 /* =========================================================
-   LANDING HERO (desktop + mobile)
+   LANDING HERO (desktop + mobile) — SINGLE COLUMN CENTERED
    ========================================================= */
-.landing-hero {
+.landing-hero{
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 44px;
+  grid-template-columns: 1fr;   /* ✅ 桌面也单栏 */
+  gap: 18px;
   align-items: start;
-
+  justify-items: center;        /* ✅ 居中 */
   padding-top: 12px;
   padding-bottom: 20px;
+  text-align: center;
 }
 
-.landing-left {
+/* 让 landing-left/landing-right 都居中堆叠 */
+.landing-left{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
-.landing-avatar {
+.landing-right{
+  width: 100%;
+  max-width: 900px;             /* About 段落宽度更好看 */
+}
+
+/* ✅ 圆形头像居中（桌面也一样） */
+.landing-avatar{
   width: 280px;
   height: 280px;
   object-fit: cover;
-  border-radius: 0; /* square like Yuecheng */
+  border-radius: 999px;         /* ✅ 圆形 */
   border: 1px solid rgba(255,255,255,0.18);
+  display: block;
 }
 
-.landing-meta {
-  margin-top: 18px;
+/* bio + links 都居中 */
+.landing-meta{
+  margin-top: 14px;
 }
 
-.landing-bio {
+.landing-bio{
   font-size: 0.95rem;
   opacity: 0.9;
   margin-bottom: 14px;
 }
 
-.landing-links {
+.landing-links{
   display: flex;
+  justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
 }
 
-.landing-link {
+.landing-link{
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -242,34 +253,16 @@ nav#site-nav.greedy-nav .hidden-links:after {
   box-shadow: none !important;
 }
 
-.landing-link i {
-  opacity: 0.95;
-}
+.landing-link i{ opacity: 0.95; }
 
-.landing-title {
-  margin-top: 0;
-}
+.landing-title{ margin-top: 0; }
 
-/* mobile: stack */
-@media (max-width: 768px) {
-  .landing-hero {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .landing-left {
-    align-items: center;
-    text-align: center;
-  }
-
-  .landing-avatar {
+/* mobile：基本保持你现在的逻辑，只把头像大小更自适应 */
+@media (max-width: 768px){
+  .landing-avatar{
     width: 78vw;
     max-width: 360px;
     height: auto;
     aspect-ratio: 1 / 1;
-  }
-
-  .landing-links {
-    justify-content: center;
   }
 }
