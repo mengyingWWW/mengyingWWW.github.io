@@ -379,3 +379,37 @@ nav#site-nav.greedy-nav .hidden-links:after {
     margin-right: auto !important;
   }
 }
+
+/* =========================================================
+   DESKTOP: TRUE CENTER + WIDER CONTENT (LESS SIDE GUTTERS)
+   ========================================================= */
+@media (min-width: 1024px) {
+
+  /* 1) widen outer containers */
+  .masthead__inner-wrap,
+  #main {
+    max-width: 1760px !important;    /* ← 1600 太保守就加到 1760/1800 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 12px !important;   /* ← 两侧“留白”主要来自这里：减小 */
+    padding-right: 12px !important;
+  }
+
+  /* 2) unlock inner wrap */
+  .page__inner-wrap {
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 3) widen the real content block */
+  .page__content {
+    max-width: 1760px !important;    /* ← 跟上面一致 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;      /* ← 防止主题再加左右 padding */
+    padding-right: 0 !important;
+  }
+}
