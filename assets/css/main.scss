@@ -387,34 +387,8 @@ nav#site-nav.greedy-nav .hidden-links:after {
   }
 }
 
-/* =========================================================
-   WIDEN DEFAULT CONTENT WIDTH (Minimal Mistakes core)
-   ========================================================= */
-@media (min-width: 1024px) {
-  .page__inner-wrap {
-    max-width: 1600px !important;  /* ← 原来大约是 800–900 */
-  }
-}
-@media (min-width: 1024px) {
-  .page__inner-wrap,
-  .landing-hero {
-    max-width: 1600px !important;
-  }
-}
 
-/* =========================================================
-   REMOVE SIDEBAR LAYOUT LOCK (DESKTOP)
-   ========================================================= */
-@media (min-width: 1024px) {
 
-  /* kill sidebar-based page layout */
-  .page {
-    width: 95% !important;
-    float: none !important;
-    margin: 0 auto !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
 
   /* ensure content can span full width */
   article.page,
@@ -442,4 +416,39 @@ nav#site-nav.greedy-nav .hidden-links:after {
     margin-left: auto !important;
     margin-right: auto !important;
   }
+}
+
+/* =========================================================
+   DESKTOP LAYOUT: TRUE CENTER + WIDER CONTENT
+   (Paste at VERY END, and remove conflicting patches above)
+   ========================================================= */
+@media (min-width: 1024px) {
+
+  /* 1) widen the overall site container (masthead + main) */
+  .masthead__inner-wrap,
+  #main {
+    max-width: 1600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* 2) remove theme's inner wrap width lock + asymmetric padding */
+  .page__inner-wrap {
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 3) ensure the actual content block is mathematically centered */
+  .page__content {
+    max-width: 1600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 4) IMPORTANT: do NOT use width:95% on .page/.page__content (causes drift) */
 }
