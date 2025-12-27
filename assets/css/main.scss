@@ -441,3 +441,25 @@ nav#site-nav.greedy-nav a:active {
   background: transparent !important;
   background-color: transparent !important;
 }
+
+/* =========================================================
+   FIX: HARD KILL MASTHEAD WHITE BOXES (STABLE)
+   ========================================================= */
+
+/* kill ALL menu item backgrounds */
+#site-nav.greedy-nav,
+#site-nav.greedy-nav ul,
+#site-nav.greedy-nav li,
+#site-nav.greedy-nav a {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* kill hover / focus states injected by theme */
+#site-nav.greedy-nav a:hover,
+#site-nav.greedy-nav a:focus,
+#site-nav.greedy-nav a:active {
+  background: transparent !important;
+  background-color: transparent !important;
+}
