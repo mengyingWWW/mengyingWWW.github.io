@@ -418,3 +418,32 @@ nav#site-nav.greedy-nav .hidden-links:after {
     display: none !important;
   }
 }
+
+/* ===========================
+   DESKTOP ALIGN + UNSTICKY SIDEBAR
+   paste at VERY END of main.scss
+   =========================== */
+@media (min-width: 769px) {
+
+  /* 1) Make #main use the SAME left/right padding as masthead/title area */
+  /* (so sidebar left edge aligns with "Mengying Wang" on the top bar) */
+  #main {
+    max-width: 1400px !important;   /* keep your wide layout */
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding-left: 18px !important;  /* <-- adjust this if you want tighter/looser */
+    padding-right: 18px !important;
+  }
+
+  /* 2) Sidebar should scroll away with the page (NO sticky / NO fixed) */
+  .sidebar,
+  .sidebar.sticky {
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+}
