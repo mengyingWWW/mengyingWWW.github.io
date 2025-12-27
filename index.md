@@ -15,8 +15,9 @@ title: ""
       <div class="landing-bio">MS.HCDE @UW | B.Eng @Tsinghua</div>
 
       <div class="landing-links">
-        <a class="landing-link" href="mailto:{{ site.author.email | default: '' }}">
-          <i class="fas fa-envelope" aria-hidden="true"></i><span>Email</span>
+        <a class="landing-link" href="mailto:mengyw9@uw.edu">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span>mengyw9(at)uw(dot)edu</span>
         </a>
 
         <a class="landing-link" href="https://github.com/{{ site.author.github | default: '' }}">
