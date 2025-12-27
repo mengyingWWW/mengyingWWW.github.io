@@ -34,7 +34,7 @@ title: ""
     <h2 class="landing-title">About</h2>
 
     <p>
-      Test 077 Hi! I’m <strong>Mengying Wang</strong>, an HCI researcher interested in human–AI interaction,
+      Test 078 Hi! I’m <strong>Mengying Wang</strong>, an HCI researcher interested in human–AI interaction,
       learning sciences, and human factors.
     </p>
 
