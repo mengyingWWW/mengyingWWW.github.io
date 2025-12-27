@@ -2,7 +2,7 @@
 ---
 
 /*
- * main.scss (LANDING VERSION - NO DESKTOP SIDEBAR)
+ * main.scss (LANDING + PORTFOLIO GRID — CLEAN STABLE)
  * Note: first two lines are required by Jekyll.
  */
 
@@ -93,22 +93,9 @@ nav#site-nav.greedy-nav .hidden-links:after {
 }
 
 /* =========================================================
-   PAGE WIDTH (desktop)
-   - reduce left/right empty gutters
+   NAV LAYOUT (desktop): title left, menu right
    ========================================================= */
 @media (min-width: 769px) {
-  .masthead__inner-wrap,
-  .page__inner-wrap,
-  .archive__wrap,
-  #main {
-    max-width: 1400px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  /* NAV: title left, menu right (keep your previous behavior) */
   .masthead__inner-wrap { max-width: 100% !important; }
   .masthead__menu { width: 100% !important; }
 
@@ -132,8 +119,7 @@ nav#site-nav.greedy-nav .hidden-links:after {
 }
 
 /* =========================================================
-   MOBILE / iPad (<=768px)
-   - hamburger black pill + 3 lines
+   MOBILE / iPad (<=768px): hamburger black pill + 3 lines
    ========================================================= */
 @media (max-width: 768px) {
 
@@ -157,7 +143,7 @@ nav#site-nav.greedy-nav .hidden-links:after {
     display: inline-block !important;
     width: 22px !important;
     height: 2px !important;
-    background: #fff !important; /* middle bar */
+    background: #fff !important;
   }
   nav#site-nav.greedy-nav > button .navicon::before,
   nav#site-nav.greedy-nav > button .navicon::after {
@@ -192,58 +178,55 @@ nav#site-nav.greedy-nav .hidden-links:after {
 /* =========================================================
    LANDING HERO (desktop + mobile) — SINGLE COLUMN CENTERED
    ========================================================= */
-.landing-hero{
+.landing-hero {
   display: grid;
-  grid-template-columns: 1fr;   /* ✅ 桌面也单栏 */
+  grid-template-columns: 1fr;
   gap: 18px;
   align-items: start;
-  justify-items: center;        /* ✅ 居中 */
+  justify-items: center;
   padding-top: 12px;
   padding-bottom: 20px;
   text-align: center;
 }
 
-/* 让 landing-left/landing-right 都居中堆叠 */
-.landing-left{
+.landing-left {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.landing-right{
+.landing-right {
   width: 100%;
-  max-width: 900px;             /* About 段落宽度更好看 */
+  max-width: 900px;
 }
 
-/* ✅ 圆形头像居中（桌面也一样） */
-.landing-avatar{
+.landing-avatar {
   width: 280px;
   height: 280px;
   object-fit: cover;
-  border-radius: 999px;         /* ✅ 圆形 */
+  border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.18);
   display: block;
 }
 
-/* bio + links 都居中 */
-.landing-meta{
+.landing-meta {
   margin-top: 14px;
 }
 
-.landing-bio{
+.landing-bio {
   font-size: 0.95rem;
   opacity: 0.9;
   margin-bottom: 14px;
 }
 
-.landing-links{
+.landing-links {
   display: flex;
   justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
 }
 
-.landing-link{
+.landing-link {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -253,13 +236,12 @@ nav#site-nav.greedy-nav .hidden-links:after {
   box-shadow: none !important;
 }
 
-.landing-link i{ opacity: 0.95; }
+.landing-link i { opacity: 0.95; }
 
-.landing-title{ margin-top: 0; }
+.landing-title { margin-top: 0; }
 
-/* mobile：基本保持你现在的逻辑，只把头像大小更自适应 */
-@media (max-width: 768px){
-  .landing-avatar{
+@media (max-width: 768px) {
+  .landing-avatar {
     width: 78vw;
     max-width: 360px;
     height: auto;
@@ -273,7 +255,6 @@ nav#site-nav.greedy-nav .hidden-links:after {
    - iPad/Tablet: 2 columns
    - Mobile: 1 column
    ========================================================= */
-
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -282,14 +263,12 @@ nav#site-nav.greedy-nav .hidden-links:after {
   margin-bottom: 34px;
 }
 
-/* iPad / tablet */
 @media (max-width: 1024px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* mobile */
 @media (max-width: 640px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
@@ -319,7 +298,7 @@ nav#site-nav.greedy-nav .hidden-links:after {
 
 .portfolio-cover {
   width: 100%;
-  aspect-ratio: 16 / 9; /* yunxiang 那种横向封面 */
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: rgba(255,255,255,0.03);
 }
@@ -370,61 +349,11 @@ nav#site-nav.greedy-nav .hidden-links:after {
 }
 
 /* =========================================================
-   WIDEN MAIN CONTENT (DESKTOP ONLY)
+   DESKTOP: TRUE CENTER + WIDER CONTENT (NO DRIFT)
    ========================================================= */
 @media (min-width: 1024px) {
 
-  /* main content container */
-  #main {
-    max-width: 1600px !important;   /* ← 关键：整体变宽 */
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  /* inner page wrapper (default is too narrow) */
-  .page__inner-wrap {
-    max-width: none !important;     /* ← 解锁默认 800px 限制 */
-  }
-}
-
-
-
-
-  /* ensure content can span full width */
-  article.page,
-  .page__content {
-    max-width: none !important;
-    width: 95% !important;
-  }
-
-}
-
-/* =========================================================
-   FIX LANDING CENTERING (DESKTOP)
-   ========================================================= */
-@media (min-width: 1024px) {
-
-  /* Remove asymmetric padding from inner wrapper */
-  .page__inner-wrap {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  /* Re-center content safely */
-  .page__content {
-    max-width: 1600px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-}
-
-/* =========================================================
-   DESKTOP LAYOUT: TRUE CENTER + WIDER CONTENT
-   (Paste at VERY END, and remove conflicting patches above)
-   ========================================================= */
-@media (min-width: 1024px) {
-
-  /* 1) widen the overall site container (masthead + main) */
+  /* widen outer containers consistently */
   .masthead__inner-wrap,
   #main {
     max-width: 1600px !important;
@@ -434,7 +363,7 @@ nav#site-nav.greedy-nav .hidden-links:after {
     padding-right: 16px !important;
   }
 
-  /* 2) remove theme's inner wrap width lock + asymmetric padding */
+  /* unlock theme's inner wrap width & remove asymmetric padding */
   .page__inner-wrap {
     max-width: none !important;
     padding-left: 0 !important;
@@ -443,12 +372,10 @@ nav#site-nav.greedy-nav .hidden-links:after {
     margin-right: auto !important;
   }
 
-  /* 3) ensure the actual content block is mathematically centered */
+  /* make the real content block mathematically centered */
   .page__content {
     max-width: 1600px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
-
-  /* 4) IMPORTANT: do NOT use width:95% on .page/.page__content (causes drift) */
 }
