@@ -9,7 +9,7 @@ title: ""
 
 <section class="landing-hero" aria-label="Landing">
   <div class="landing-left">
-    <img class="landing-avatar" src="{{ site.author.avatar | relative_url }}" alt="Mengying Wang portrait"/>
+    <img class="landing-avatar" src="/images/profilePic.png" alt="Mengying Wang portrait"/>
 
     <div class="landing-meta">
       <div class="landing-bio">MS.HCDE @UW | B.Eng @Tsinghua</div>
@@ -49,6 +49,7 @@ title: ""
 
 <section id="news">
 ## News
+- Test 065
 - 2025.10 — Teaching Assistant for HCDE 321 at UW.
 - 2025.08 — Research Assistant at City University of Hong Kong.
 </section>
