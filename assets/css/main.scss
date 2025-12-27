@@ -2,7 +2,7 @@
 ---
 
 /*
- * main.scss
+ * main.scss (CLEAN STABLE VERSION)
  * Note: first two lines are required by Jekyll.
  */
 
@@ -43,12 +43,11 @@
 /* =========================================================
    GLOBAL
    ========================================================= */
-
 html { scroll-behavior: smooth; }
 section { scroll-margin-top: 6rem; }
 section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 
-/* Hide theme toggle */
+/* hide theme toggle */
 .theme-toggle,
 .toggle-theme,
 .masthead__menu-item--theme,
@@ -59,84 +58,143 @@ button[aria-label*="Toggle"] {
   display: none !important;
 }
 
-/* Sidebar: remove duplicated name everywhere */
+/* remove duplicated author name everywhere */
 .sidebar .author__name,
 .sidebar.sticky .author__name {
   display: none !important;
 }
 
 /* =========================================================
-   DESKTOP (>=769px)
-   - Title left, menu right
-   - No white blocks in masthead (incl CV)
-   - Remove greedy-nav dropdown "triangle"
-   - Sidebar: avatar+bio centered; meta/links left
+   MASTHEAD: no white blocks, keep components working
+   (DO NOT globally kill ::before/::after)
    ========================================================= */
+.masthead,
+.masthead__inner-wrap,
+.masthead__menu,
+nav#site-nav.greedy-nav {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
 
+.masthead a,
+.masthead a:visited,
+.masthead .site-title,
+.masthead .site-subtitle {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.masthead a:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
+}
+
+/* kill ONLY the dropdown bubble triangle (the usual culprit) */
+nav#site-nav.greedy-nav .hidden-links:before,
+nav#site-nav.greedy-nav .hidden-links:after {
+  content: none !important;
+  display: none !important;
+}
+
+/* =========================================================
+   DESKTOP (>=769px)
+   Goal:
+   - Reduce left/right empty gutters
+   - Sidebar stays on the left, NEVER overlays content
+   - Content fills remaining width
+   ========================================================= */
 @media (min-width: 769px) {
 
-  /* ---- layout: title left, menu right ---- */
-  .masthead__inner-wrap { max-width: 100%; }
-  .masthead__menu { width: 100%; }
+  /* Make page wider + shrink outer gutters */
+  .masthead__inner-wrap,
+  .page__inner-wrap,
+  .archive__wrap,
+  #main {
+    max-width: 1400px !important;      /* 想更宽就 1500/1600 */
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* NAV: title left, menu right */
+  .masthead__inner-wrap { max-width: 100% !important; }
+  .masthead__menu { width: 100% !important; }
 
   nav#site-nav.greedy-nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
   }
-
   nav#site-nav.greedy-nav .visible-links {
-    display: flex;
-    align-items: center;
-    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
   }
-
   nav#site-nav.greedy-nav .visible-links > li.masthead__menu-item--lg {
-    margin-right: auto;
+    margin-right: auto !important;
   }
-
   nav#site-nav.greedy-nav .visible-links > li {
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
+    margin-left: 0.35rem !important;
+    margin-right: 0.35rem !important;
   }
 
-  /* ---- kill white blocks in masthead items ---- */
-  .masthead,
-  .masthead__inner-wrap,
-  .masthead__menu,
-  nav#site-nav.greedy-nav,
-  nav#site-nav.greedy-nav ul,
-  nav#site-nav.greedy-nav li,
-  nav#site-nav.greedy-nav a {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
+  /* ===== THE IMPORTANT PART: stable two-column layout ===== */
+  #main {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 32px !important;
   }
 
-  .masthead a,
-  .masthead a:visited,
-  .masthead .site-title,
-  .masthead .site-subtitle {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
+  /* disable float layout so it cannot overlap */
+  #main > .sidebar,
+  #main > .sidebar.sticky,
+  #main > .page,
+  #main > article.page,
+  .page__inner-wrap {
+    float: none !important;
   }
 
-  .masthead a:hover {
-    background: transparent !important;
-    background-color: transparent !important;
-    text-decoration: none !important;
+  /* Sidebar fixed width */
+  #main > .sidebar,
+  #main > .sidebar.sticky {
+    flex: 0 0 240px !important;
+    width: 240px !important;
+    max-width: 240px !important;
   }
 
-  /* ---- IMPORTANT: only remove greedy-nav dropdown bubble triangle (desktop) ---- */
-  nav#site-nav.greedy-nav .hidden-links:before,
-  nav#site-nav.greedy-nav .hidden-links:after {
-    content: none !important;
-    display: none !important;
+  /* CRITICAL: kill JS “fixed sticky sidebar” inline styles */
+  #main > .sidebar.sticky,
+  #main > .sidebar.sticky[style] {
+    position: static !important;      /* must be in normal flow */
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    z-index: 0 !important;
   }
 
-  /* ---- sidebar desktop alignment ---- */
+  /* Content fills remaining width */
+  #main > .page,
+  #main > article.page {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  .page__inner-wrap {
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Sidebar desktop visual alignment (your preference from before) */
   .sidebar .author__avatar {
     float: none !important;
     display: flex !important;
@@ -151,11 +209,8 @@ button[aria-label*="Toggle"] {
 
   /* meta + links left aligned */
   .sidebar .author__content { text-align: left !important; }
-
   .sidebar .author__urls-wrapper,
-  .sidebar .author__urls {
-    text-align: left !important;
-  }
+  .sidebar .author__urls { text-align: left !important; }
 
   .sidebar .author__urls {
     display: block !important;
@@ -174,350 +229,90 @@ button[aria-label*="Toggle"] {
 
 /* =========================================================
    MOBILE / iPad (<=768px)
-   - Hamburger black background
-   - Sidebar stacked & centered:
-       avatar -> bio -> contacts (ONE ROW centered)
-   - Prevent "bio + contacts in same line"
+   Goal:
+   - Hamburger black pill + 3 lines
+   - Sidebar stacked centered
+   - Bio / school / address / email / github / linkedin each one line centered
+   - Sidebar NEVER overlays正文
    ========================================================= */
-
 @media (max-width: 768px) {
 
-  /* --- Sidebar must NOT float; force full width --- */
+  /* prevent overlay: everything normal flow */
+  #main,
+  .page,
+  article.page,
+  .page__content {
+    float: none !important;
+    width: 100% !important;
+    clear: both !important;
+  }
+
   .sidebar,
   .sidebar.sticky {
+    position: static !important;
     float: none !important;
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 auto !important;
+    margin: 0 auto 56px !important;  /* 给正文留空间，绝不压正文 */
+    clear: both !important;
   }
 
-  /* --- Hamburger button: visible + black pill --- */
+  /* Hamburger button style */
   nav#site-nav.greedy-nav { position: relative; }
-
   nav#site-nav.greedy-nav > button {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-
     background: rgba(0,0,0,0.88) !important;
     border: 1px solid rgba(255,255,255,0.25) !important;
     border-radius: 12px !important;
     padding: 10px 12px !important;
-
-    box-shadow: none !important;
     opacity: 1 !important;
     visibility: visible !important;
+    box-shadow: none !important;
   }
 
-  nav#site-nav.greedy-nav > button .navicon,
-  nav#site-nav.greedy-nav > button .navicon:before,
-  nav#site-nav.greedy-nav > button .navicon:after {
-    background: #ffffff !important;
+  /* Ensure 3-line hamburger */
+  nav#site-nav.greedy-nav > button .navicon {
+    position: relative !important;
+    display: inline-block !important;
+    width: 22px !important;
+    height: 2px !important;
+    background: #fff !important;
   }
+  nav#site-nav.greedy-nav > button .navicon::before,
+  nav#site-nav.greedy-nav > button .navicon::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    background: #fff !important;
+    display: block !important;
+  }
+  nav#site-nav.greedy-nav > button .navicon::before { top: -7px !important; }
+  nav#site-nav.greedy-nav > button .navicon::after  { top:  7px !important; }
 
-  /* dropdown not clipped */
+  /* dropdown panel */
   nav#site-nav.greedy-nav .hidden-links {
     left: 12px !important;
     right: 12px !important;
     width: auto !important;
-    max-width: none !important;
-
     background: rgba(0,0,0,0.92) !important;
     border: 1px solid rgba(255,255,255,0.18) !important;
     border-radius: 12px !important;
     padding: 10px 12px !important;
   }
-
   nav#site-nav.greedy-nav .hidden-links a {
-    display: block !important;
-    white-space: normal !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
     background: transparent !important;
   }
 
-  /* --- Remove Follow button --- */
+  /* remove Follow button */
   .author__urls-wrapper button,
   .author__urls-wrapper .btn {
     display: none !important;
-  }
-
-  /* --- Avatar: force ONE full row & centered --- */
-  .sidebar .author__avatar,
-  .sidebar.sticky .author__avatar {
-    float: none !important;
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    margin: 0px auto 10px !important; /* 想再往上：改成 -6px auto 10px */
-  }
-
-  .sidebar .author__avatar img,
-  .sidebar.sticky .author__avatar img {
-    display: block !important;
-    margin: 0 auto !important;
-    width: 180px !important;
-    max-width: 70vw !important;
-    height: auto !important;
-    border-radius: 50% !important;
-  }
-
-  /* --- Author content becomes a centered column (prevents drifting) --- */
-  .sidebar .author__content,
-  .sidebar.sticky .author__content {
-    float: none !important;
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    text-align: center !important;
-    padding: 0 12px !important;
-  }
-
-  /* --- Bio MUST be its own full row under avatar --- */
-  .sidebar .author__bio,
-  .sidebar.sticky .author__bio {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin: 10px auto 10px !important;
-    clear: both !important;
-  }
-
-  /* --- Contacts wrapper: full row under bio --- */
-  .sidebar .author__urls-wrapper,
-  .sidebar.sticky .author__urls-wrapper {
-    width: 100% !important;
-    max-height: none !important;
-    overflow: visible !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-
-    display: flex !important;
-    justify-content: center !important;
-  }
-
-  /* --- UL: one centered row (can wrap if needed, but stays centered) --- */
-  .sidebar ul.author__urls,
-  .sidebar ul.author__urls.social-icons,
-  .sidebar.sticky ul.author__urls,
-  .sidebar.sticky ul.author__urls.social-icons {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;            /* 关键：小屏不够就换行，但仍居中 */
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 12px 18px !important;
-
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .sidebar ul.author__urls li,
-  .sidebar.sticky ul.author__urls li {
-    display: inline-flex !important;
-    margin: 0 !important;
-    padding: 0 !important;
-
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .sidebar ul.author__urls li a,
-  .sidebar.sticky ul.author__urls li a {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-  }
-
-  /* kill any bubble triangles around author urls */
-  .sidebar .author__urls-wrapper:before,
-  .sidebar .author__urls-wrapper:after,
-  .sidebar .author__urls:before,
-  .sidebar .author__urls:after,
-  .sidebar.sticky .author__urls-wrapper:before,
-  .sidebar.sticky .author__urls-wrapper:after,
-  .sidebar.sticky .author__urls:before,
-  .sidebar.sticky .author__urls:after {
-    content: none !important;
-    display: none !important;
-  }
-
-  /* IMPORTANT: stop theme default forcing links to block (which makes them vertical) */
-  .author__urls a { display: inline-flex !important; }
-}
-/* =========================================================
-   FINAL PATCH (PASTE AS THE VERY LAST THING IN main.scss)
-   1) Kill the triangle above CV (pseudo-element triangle in masthead/nav)
-   2) Mobile: avatar + bio/school/address/email/github/linkedin stacked centered
-   3) Back-to-top: fixed bottom-right white triangle + label "Back to top"
-   ========================================================= */
-
-
-/* ---------------------------------------------------------
-   1) KILL the annoying triangle near CV (pseudo-elements)
-   We only nuke pseudo-elements inside masthead/nav so it
-   won't affect your main content.
-   --------------------------------------------------------- */
-.masthead *::before,
-.masthead *::after,
-nav#site-nav *::before,
-nav#site-nav *::after,
-.greedy-nav *::before,
-.greedy-nav *::after {
-  /* This kills triangles/bubbles made by CSS */
-  content: none !important;
-  display: none !important;
-}
-
-/* Also ensure masthead links never paint a background block */
-.masthead a,
-.masthead a:visited,
-.masthead a:hover,
-.masthead a:active,
-.masthead a:focus {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-
-/* ---------------------------------------------------------
-   3) Back-to-top button: bottom-right, white triangle + label
-   IMPORTANT: CSS cannot create a clickable link out of thin air.
-   This styles the existing back-to-top element if present.
-   --------------------------------------------------------- */
-
-/* target common back-to-top patterns */
-.back-to-top,
-a.back-to-top,
-a[href="#top"],
-a[href="#page-top"],
-a[href="#main"],
-a[href="#"] {
-  position: fixed !important;
-  right: 18px !important;
-  bottom: 18px !important;
-  left: auto !important;
-  top: auto !important;
-  z-index: 9999 !important;
-
-  width: 44px !important;
-  height: 44px !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  background: rgba(0,0,0,0.55) !important;
-  border: 1px solid rgba(255,255,255,0.25) !important;
-  border-radius: 12px !important;
-
-  text-decoration: none !important;
-  box-shadow: none !important;
-}
-
-/* Make the triangle white (works for icon-font / svg / pseudo) */
-.back-to-top svg,
-a.back-to-top svg,
-a[href="#top"] svg,
-a[href="#page-top"] svg,
-a[href="#main"] svg {
-  fill: #fff !important;
-}
-
-.back-to-top i,
-a.back-to-top i,
-a[href="#top"] i,
-a[href="#page-top"] i,
-a[href="#main"] i {
-  color: #fff !important;
-}
-
-/* If triangle is drawn by pseudo element on the link itself */
-.back-to-top::before,
-a.back-to-top::before,
-a[href="#top"]::before,
-a[href="#page-top"]::before,
-a[href="#main"]::before {
-  content: "" !important;
-  display: block !important;
-  width: 0 !important;
-  height: 0 !important;
-  border-left: 9px solid transparent !important;
-  border-right: 9px solid transparent !important;
-  border-bottom: 14px solid #fff !important; /* white triangle */
-}
-
-/* label under the button */
-.back-to-top::after,
-a.back-to-top::after,
-a[href="#top"]::after,
-a[href="#page-top"]::after,
-a[href="#main"]::after {
-  content: "Back to top" !important;
-  display: block !important;
-
-  position: absolute !important;
-  top: calc(100% + 8px) !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-
-  font-size: 12px !important;
-  line-height: 1 !important;
-  color: #fff !important;
-  white-space: nowrap !important;
-
-  opacity: 0.95 !important;
-}
-
-/* Mobile tap area a bit more comfortable */
-@media (max-width: 768px) {
-  .back-to-top,
-  a.back-to-top,
-  a[href="#top"],
-  a[href="#page-top"],
-  a[href="#main"],
-  a[href="#"] {
-    right: 14px !important;
-    bottom: 14px !important;
-  }
-}
-
-
-/* ---------------------------------------------------------
-   2) MOBILE: force everything under avatar to be stacked centered
-   (bio, school, address, email, github, linkedin)
-   --------------------------------------------------------- */
-@media (max-width: 768px) {
-
-  /* stop floats causing "bio drifts to the right" */
-  .sidebar,
-  .sidebar.sticky,
-  .author__avatar,
-  .author__content,
-  .author__urls-wrapper {
-    float: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
   }
 
   /* avatar centered */
@@ -525,26 +320,16 @@ a[href="#main"]::after {
   .sidebar.sticky .author__avatar {
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
-
-    /* move up a bit */
-    margin: -12px 0 14px 0 !important;
+    margin: -12px auto 12px !important;
+    float: none !important;
+    width: 100% !important;
   }
-
   .sidebar .author__avatar img,
   .sidebar.sticky .author__avatar img {
-    display: block !important;
-    margin: 0 auto !important;
     width: 180px !important;
     max-width: 70vw !important;
-    height: auto !important;
     border-radius: 50% !important;
-  }
-
-  /* hide duplicated sidebar name */
-  .sidebar .author__name,
-  .sidebar.sticky .author__name {
-    display: none !important;
+    height: auto !important;
   }
 
   /* content column centered */
@@ -553,93 +338,74 @@ a[href="#main"]::after {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-
     text-align: center !important;
     padding: 0 12px !important;
+    float: none !important;
+    width: 100% !important;
   }
 
-  /* bio centered (one line) */
+  /* bio single row */
   .sidebar .author__bio,
   .sidebar.sticky .author__bio {
     width: 100% !important;
+    margin: 6px 0 12px !important;
     text-align: center !important;
-    margin: 6px 0 12px 0 !important;
+    clear: both !important;
   }
 
-  /* remove Follow button */
-  .sidebar .author__urls-wrapper button,
-  .sidebar .author__urls-wrapper .btn,
-  .sidebar.sticky .author__urls-wrapper button,
-  .sidebar.sticky .author__urls-wrapper .btn {
-    display: none !important;
-  }
-
-  /* links wrapper: no background box/bubble */
+  /* urls wrapper */
   .sidebar .author__urls-wrapper,
   .sidebar.sticky .author__urls-wrapper {
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
     padding: 0 !important;
-    margin: 0 !important;
-    text-align: center !important;
-    max-height: none !important;
-    overflow: visible !important;
+    margin: 0 auto !important;
+    float: none !important;
   }
 
-  /* UL becomes vertical list (each item is a row) */
+  /* one per line */
   .sidebar ul.author__urls,
   .sidebar ul.author__urls.social-icons,
   .sidebar.sticky ul.author__urls,
   .sidebar.sticky ul.author__urls.social-icons {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
     list-style: none !important;
-
+    padding: 0 !important;
+    margin: 0 auto !important;
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
   }
 
-  /* each LI centered row */
   .sidebar ul.author__urls li,
   .sidebar.sticky ul.author__urls li {
-    display: block !important;
     width: 100% !important;
-    margin: 10px 0 !important;
-    padding: 0 !important;
     text-align: center !important;
-
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-
-    justify-content: center !important;
-    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* anchor centered inline-flex (icon + label) */
   .sidebar ul.author__urls li a,
   .sidebar.sticky ul.author__urls li a {
     display: inline-flex !important;
-    justify-content: center !important;
     align-items: center !important;
+    justify-content: center !important;
     gap: 10px !important;
-
-    margin: 0 auto !important;
-    padding: 0 !important;
-
+    white-space: nowrap !important;
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
-
-    white-space: nowrap !important;
     text-decoration: none !important;
   }
 
-  /* kill any bubble pseudo-elements in sidebar urls */
+  /* kill bubbles around urls only */
   .sidebar .author__urls-wrapper::before,
   .sidebar .author__urls-wrapper::after,
   .sidebar ul.author__urls::before,
@@ -650,597 +416,5 @@ a[href="#main"]::after {
   .sidebar.sticky ul.author__urls::after {
     content: none !important;
     display: none !important;
-  }
-}
-
-/* ===========================
-   HOTFIX: mobile overlap + hamburger 3 lines
-   paste AFTER your current last line
-   =========================== */
-
-@media (max-width: 768px) {
-  /* 1) Stop sidebar from floating over content (no sticky/absolute) */
-  .sidebar,
-  .sidebar.sticky,
-  .author__urls-wrapper,
-  .author__content {
-    position: static !important;
-    top: auto !important;
-  }
-
-  /* Force sidebar to take space and separate from main content */
-  .sidebar,
-  .sidebar.sticky {
-    margin-bottom: 28px !important;
-    padding-bottom: 10px !important;
-  }
-
-  /* Sometimes the wrapper is absolutely positioned by theme */
-  .sidebar .author__urls-wrapper,
-  .sidebar.sticky .author__urls-wrapper {
-    position: static !important;
-    height: auto !important;
-    max-height: none !important;
-  }
-}
-
-/* 2) Restore hamburger icon (navicon uses ::before/::after for 3 bars) */
-nav#site-nav.greedy-nav .navicon::before,
-nav#site-nav.greedy-nav .navicon::after {
-  content: "" !important;
-  display: block !important;
-  position: absolute !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 2px !important;
-  background: #fff !important;
-}
-
-nav#site-nav.greedy-nav .navicon {
-  background: #fff !important; /* middle bar */
-  height: 2px !important;
-}
-
-nav#site-nav.greedy-nav .navicon::before { top: -7px !important; }
-nav#site-nav.greedy-nav .navicon::after  { top:  7px !important; }
-
-/* ===========================
-   FINAL HOTFIX (paste at VERY END)
-   1) Mobile: stop author links overlaying page content
-   2) Restore hamburger 3-line icon (.navicon uses pseudo-elements)
-   =========================== */
-
-/* ---------- 1) MOBILE: make the author links wrapper NOT-collapsible ---------- */
-@media (max-width: 768px) {
-
-  /* sidebar must be in normal flow */
-  .sidebar,
-  .sidebar.sticky {
-    position: static !important;
-    float: none !important;
-    width: 100% !important;
-    clear: both !important;
-  }
-
-  /* IMPORTANT: this is the collapsible container in the theme */
-  .sidebar .author__urls-wrapper,
-  .sidebar.sticky .author__urls-wrapper {
-    display: block !important;
-    position: static !important;
-    height: auto !important;
-    max-height: none !important;     /* <- kills "collapsed" height */
-    overflow: visible !important;    /* <- allow content to take space */
-    margin-top: 10px !important;
-    margin-bottom: 18px !important;  /* <- creates separation from正文 */
-    padding: 0 !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    background: transparent !important;
-  }
-
-  /* you said you want: bio / school / address / email / github / linkedin each on ONE line, centered */
-  .sidebar .author__urls,
-  .sidebar .author__urls.social-icons,
-  .sidebar.sticky .author__urls,
-  .sidebar.sticky .author__urls.social-icons {
-    display: flex !important;
-    flex-direction: column !important;   /* <- one per line */
-    align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 10px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .sidebar .author__urls li,
-  .sidebar .author__urls a,
-  .sidebar.sticky .author__urls li,
-  .sidebar.sticky .author__urls a {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: static !important;
-    float: none !important;
-    width: auto !important;
-    margin: 0 !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    text-decoration: none !important;
-  }
-}
-
-/* ---------- 2) HAMBURGER: restore 3 bars even if pseudo-elements were nuked ---------- */
-#site-nav.greedy-nav button .navicon {
-  position: relative !important;
-  display: inline-block !important;
-  width: 22px !important;
-  height: 2px !important;              /* middle bar thickness */
-  background: #fff !important;         /* middle bar */
-}
-
-#site-nav.greedy-nav button .navicon::before,
-#site-nav.greedy-nav button .navicon::after {
-  content: "" !important;
-  position: absolute !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 2px !important;
-  background: #fff !important;
-  display: block !important;
-}
-
-#site-nav.greedy-nav button .navicon::before { top: -7px !important; }
-#site-nav.greedy-nav button .navicon::after  { top:  7px !important; }
-
-/* ===========================
-   FINAL FIX v2 (paste at VERY END)
-   Fix:
-   1) Mobile: sidebar must push main content down (no overlay)
-   2) Mobile: restore hamburger (3 lines) + black rounded background
-   =========================== */
-
-@media (max-width: 768px) {
-
-  /* --- A) STOP OVERLAP: force both columns become normal flow blocks --- */
-  /* These are the common content wrappers in Minimal Mistakes */
-  #main,
-  .page,
-  .page__content,
-  .archive,
-  .archive__item,
-  .initial-content,
-  article.page {
-    float: none !important;
-    width: 100% !important;
-    clear: both !important;
-  }
-
-  /* Sidebar must also be a normal block and contribute height */
-  .sidebar,
-  .sidebar.sticky {
-    position: static !important;
-    float: none !important;
-    width: 100% !important;
-    clear: both !important;
-    z-index: 0 !important;
-    margin-bottom: 28px !important; /* <- key: create real space before正文 */
-  }
-
-  /* Make sure author blocks are not floating */
-  .sidebar .author__avatar,
-  .sidebar .author__content,
-  .sidebar .author__urls-wrapper,
-  .sidebar.sticky .author__avatar,
-  .sidebar.sticky .author__content,
-  .sidebar.sticky .author__urls-wrapper {
-    float: none !important;
-    clear: both !important;
-  }
-
-  /* Also add a little top space before正文（防止任何情况下贴太近） */
-  article.page {
-    padding-top: 14px !important;
-  }
-
-  /* --- B) HAMBURGER: 3 lines + black rounded square background --- */
-  nav#site-nav.greedy-nav > button {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    background: rgba(0,0,0,0.85) !important; /* black background */
-    border: 1px solid rgba(255,255,255,0.25) !important;
-    border-radius: 12px !important;
-    padding: 10px 12px !important;
-    box-shadow: none !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  nav#site-nav.greedy-nav > button .navicon {
-    position: relative !important;
-    display: inline-block !important;
-    width: 22px !important;
-    height: 2px !important;      /* middle bar */
-    background: #fff !important; /* middle bar color */
-  }
-
-  nav#site-nav.greedy-nav > button .navicon::before,
-  nav#site-nav.greedy-nav > button .navicon::after {
-    content: "" !important;      /* override any content:none */
-    position: absolute !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 2px !important;
-    background: #fff !important;
-    display: block !important;
-  }
-  nav#site-nav.greedy-nav > button .navicon::before { top: -7px !important; }
-  nav#site-nav.greedy-nav > button .navicon::after  { top:  7px !important; }
-}
-
-/* --- tiny extra spacing to prevent last link (LinkedIn) touching正文 --- */
-@media (max-width: 768px) {
-  .sidebar,
-  .sidebar.sticky {
-    margin-bottom: 52px !important; /* 原来 28px，直接加大 */
-  }
-
-  /* 再保险：links 区块本身也加一点底部 padding */
-  .sidebar .author__urls-wrapper,
-  .sidebar.sticky .author__urls-wrapper {
-    padding-bottom: 18px !important;
-  }
-}
-/* ===============================
-   MOBILE: stop sidebar overlaying page content
-   (fix LinkedIn line covering正文)
-   =============================== */
-@media (max-width: 768px) {
-
-  /* 1) Sidebar 必须在正常文档流里，占位把正文顶下去 */
-  .sidebar,
-  .sidebar.sticky {
-    position: relative !important;   /* 干掉 sticky/absolute 造成的覆盖 */
-    top: auto !important;
-    clear: both !important;          /* 干掉 float 影响 */
-    float: none !important;
-    width: 100% !important;
-    margin: 0 auto 40px !important;  /* 给正文留出足够空间 */
-  }
-
-  /* 2) Sidebar 里面的内容别再 float，统一 block 居中堆叠 */
-  .sidebar .author__avatar,
-  .sidebar .author__content,
-  .sidebar .author__urls-wrapper {
-    float: none !important;
-    clear: both !important;
-    width: 100% !important;
-  }
-
-  /* 3) 正文强制在 sidebar 下面开始渲染（关键） */
-  .page__content,
-  .archive__item,
-  .page {
-    clear: both !important;
-  }
-
-  /* 4) 再保险：正文再往下挪一点点 */
-  .page__content {
-    margin-top: 18px !important;
-  }
-}
-
-/* =========================================================
-   DESKTOP WIDTH TUNING (append at VERY END)
-   Goal:
-   - Reduce left/right empty gutters
-   - Sidebar visually closer to left edge
-   - Main content uses more width
-   ========================================================= */
-
-@media (min-width: 769px) {
-
-  /* 1) Make the whole page container wider + reduce side padding */
-  .masthead__inner-wrap,
-  .page__inner-wrap,
-  .archive__wrap {
-    max-width: 1400px !important;   /* 想更宽：1500px；更窄：1280px */
-    padding-left: 18px !important;  /* 两侧留白 */
-    padding-right: 18px !important;
-  }
-
-  /* 2) Reduce extra padding inside the main layout */
-  .page,
-  .archive {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  /* 3) Sidebar: remove any extra left indentation */
-  .sidebar {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-  }
-
-  /* 4) Main content: remove extra right padding so it can “stretch” */
-  .page__content {
-    padding-right: 0 !important;
-  }
-}
-
-/* =========================================================
-   DESKTOP LAYOUT WIDTH FIX
-   ========================================================= */
-@media (min-width: 769px) {
-
-  /* 1. 整个页面允许更宽 */
-  .page,
-  .page__inner-wrap,
-  .archive,
-  .archive__inner-wrap {
-    max-width: 1400px !important; /* 原来大约 1200 */
-  }
-
-  /* 2. Sidebar 用固定宽度，不用百分比 */
-  .sidebar,
-  .sidebar.sticky {
-    width: 220px !important;   /* 稳定、可控 */
-    flex: 0 0 220px !important;
-    margin-right: 32px !important;
-  }
-
-  /* 3. 正文吃掉剩余空间 */
-  .page__content,
-  .archive__item,
-  article.page {
-    max-width: none !important;
-    width: 100% !important;
-  }
-}
-
-/* =========================================================
-   FIX OVER-WIDE ORANGE AREA (#main)
-   ========================================================= */
-@media (min-width: 769px) {
-
-  /* 1. 收紧 main 本身的宽度 */
-  #main {
-    max-width: 1400px;          /* 控制橙色总宽度 */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 24px;         /* 原来这里非常大 */
-    padding-right: 24px;
-  }
-
-  /* 2. 让 page 不再自己限制宽度 */
-  .page,
-  .page__inner-wrap,
-  article.page {
-    max-width: none !important;
-    width: 100%;
-  }
-}
-
-/* =========================================================
-   FINAL DESKTOP LAYOUT PATCH (prevents sidebar overlay)
-   - Make #main a 2-column flex layout
-   - Sidebar fixed width, content fills remaining space
-   ========================================================= */
-@media (min-width: 769px) {
-
-  /* Two-column layout */
-  #main {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 36px !important;            /* 你想更紧凑就改小，比如 24px */
-  }
-
-  /* Kill old float-based layout so it can't overlap */
-  .sidebar,
-  .sidebar.sticky,
-  .page,
-  article.page,
-  .page__inner-wrap {
-    float: none !important;
-  }
-
-  /* Sidebar column */
-  .sidebar,
-  .sidebar.sticky {
-    flex: 0 0 240px !important;      /* sidebar 宽度：想窄就 220px，想宽就 260px */
-    width: 240px !important;
-    max-width: 240px !important;
-    align-self: flex-start !important;
-  }
-
-  /* Content column */
-  .page,
-  article.page {
-    flex: 1 1 auto !important;
-    width: auto !important;
-    max-width: none !important;
-    min-width: 0 !important;         /* 防止长内容把布局撑炸 */
-  }
-
-  .page__inner-wrap {
-    width: 100% !important;
-    max-width: none !important;
-  }
-}
-
-
-/* =========================================================
-   FINAL DESKTOP LAYOUT PATCH (prevents sidebar overlay)
-   - Make #main a 2-column flex layout
-   - Sidebar fixed width, content fills remaining space
-   ========================================================= */
-@media (min-width: 769px) {
-
-  /* Two-column layout */
-  #main {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 36px !important;            /* 你想更紧凑就改小，比如 24px */
-  }
-
-  /* Kill old float-based layout so it can't overlap */
-  .sidebar,
-  .sidebar.sticky,
-  .page,
-  article.page,
-  .page__inner-wrap {
-    float: none !important;
-  }
-
-  /* Sidebar column */
-  .sidebar,
-  .sidebar.sticky {
-    flex: 0 0 240px !important;      /* sidebar 宽度：想窄就 220px，想宽就 260px */
-    width: 240px !important;
-    max-width: 240px !important;
-    align-self: flex-start !important;
-  }
-
-  /* Content column */
-  .page,
-  article.page {
-    flex: 1 1 auto !important;
-    width: auto !important;
-    max-width: none !important;
-    min-width: 0 !important;         /* 防止长内容把布局撑炸 */
-  }
-
-  .page__inner-wrap {
-    width: 100% !important;
-    max-width: none !important;
-  }
-}
-
-/* =========================================================
-   DESKTOP: stop JS "fixed sticky sidebar" from overlaying content
-   and use a clean 2-column flex layout
-   ========================================================= */
-@media (min-width: 769px) {
-
-  /* 1) Two-column layout */
-  #main {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 28px !important;      /* 想更窄就改小 */
-  }
-
-  /* 2) Undo old float/susy layout that conflicts */
-  #main > .sidebar,
-  #main > .page,
-  #main > article.page,
-  .page__inner-wrap {
-    float: none !important;
-  }
-
-  /* 3) CRITICAL: override the JS-fixed sticky sidebar */
-  #main > .sidebar.sticky {
-    position: sticky !important;  /* 把 fixed 拉回 sticky，避免盖正文 */
-    top: 110px !important;        /* 让它从 masthead 下方开始吸顶；可微调 90~130 */
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    width: 240px !important;      /* sidebar 宽度 */
-    max-width: 240px !important;
-    z-index: 1 !important;
-  }
-
-  #main > .sidebar {
-    flex: 0 0 240px !important;
-    width: 240px !important;
-    max-width: 240px !important;
-  }
-
-  /* 4) Content fills remaining space */
-  #main > .page,
-  #main > article.page {
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    width: auto !important;
-    max-width: none !important;
-  }
-
-  .page__inner-wrap {
-    width: 100% !important;
-    max-width: none !important;
-  }
-}
-
-/* =========================================================
-   DESKTOP ULTIMATE FIX:
-   Never allow sidebar to overlay content (JS sticky/fixed safe)
-   ========================================================= */
-@media (min-width: 769px) {
-
-  /* 1) Make main wider (shrink the “orange margins”) */
-  .page,
-  .page__inner-wrap,
-  #main {
-    max-width: 1400px !important;  /* 你想更宽就加到 1600 */
-  }
-
-  .page__inner-wrap {
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-  }
-
-  /* 2) HARD STOP: sidebar must NOT be fixed/sticky on desktop */
-  #main > .sidebar.sticky,
-  #main > .sidebar {
-    position: static !important;   /* 这句是关键：彻底不脱离文档流 */
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    z-index: 0 !important;
-  }
-
-  /* 3) Use a clean 2-column layout */
-  #main {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 28px !important;
-  }
-
-  /* Sidebar width */
-  #main > .sidebar {
-    flex: 0 0 240px !important;
-    width: 240px !important;
-    max-width: 240px !important;
-  }
-
-  /* Content fills the rest */
-  #main > .page,
-  #main > article.page {
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    width: auto !important;
-    max-width: none !important;
-  }
-
-  /* 4) EXTRA SAFETY:
-        If some JS still forces sidebar fixed, reserve space anyway */
-  #main > .page,
-  #main > article.page {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-  }
-
-  @supports (position: sticky) {
-    /* reserve space only when sidebar tries to detach */
-    #main {
-      padding-left: 0 !important;
-    }
   }
 }
