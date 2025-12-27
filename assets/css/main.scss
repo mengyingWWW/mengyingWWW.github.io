@@ -392,12 +392,12 @@ nav#site-nav.greedy-nav .hidden-links:after {
    ========================================================= */
 @media (min-width: 1024px) {
   .page__inner-wrap {
-    max-width: 1400px !important;  /* ← 原来大约是 800–900 */
+    max-width: 1600px !important;  /* ← 原来大约是 800–900 */
   }
 }
 @media (min-width: 1024px) {
   .page__inner-wrap,
   .landing-hero {
-    max-width: 1400px !important;
+    max-width: 1600px !important;
   }
 }
