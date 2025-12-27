@@ -37,11 +37,7 @@ title: ""
     Test 082 Hi! I’m <strong>Mengying Wang</strong>, a first-year master’s student in the
     <a href="https://www.hcde.washington.edu/" target="_blank">Department of Human-Centered Design & Engineering (HCDE)</a>
     at the
-    <a href="https://www.washington.edu/" target="_blank">University of Washington</a>.
-    </p>
-
-    <p>
-      My research interests lie at the intersection of
+    <a href="https://www.washington.edu/" target="_blank">University of Washington</a>. My research interests lie at the intersection of
       <strong>🧠 Human–AI Interaction</strong>,
       <strong>📚 learning sciences</strong>, and
       <strong>🧩 human factors</strong>,
@@ -49,7 +45,7 @@ title: ""
     </p>
   
     <p>
-      Previously, I worked as a Research Assistant in KnowVisLab
+      I was a Research Assistant in KnowVisLab
       at
       <a href="https://www.cityu.edu.hk/en" target="_blank">City University of Hong Kong</a>,
       advised by
