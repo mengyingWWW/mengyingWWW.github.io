@@ -437,3 +437,14 @@ nav#site-nav.greedy-nav .hidden-links:after {
 .landing-right a:visited {
   color: #ffffff !important;
 }
+
+/* =========================================================
+   UNIFY HR STYLE (match masthead divider)
+   ========================================================= */
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--global-border-color);
+  opacity: 1;
+  margin: 2.5rem 0;
+}
