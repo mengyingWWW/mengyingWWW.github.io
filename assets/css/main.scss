@@ -412,3 +412,17 @@ nav#site-nav.greedy-nav .hidden-links:after {
   background-image: none !important;
   box-shadow: none !important;
 }
+
+/* =========================================================
+   FIX: remove white blocks from DESKTOP top nav only
+   (caused by .greedy-nav .visible-links a::before)
+   ========================================================= */
+@media (min-width: 769px) {
+  #site-nav.greedy-nav .visible-links a::before {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    content: none !important;   /* 直接让伪元素不存在 */
+    display: none !important;   /* 双保险 */
+  }
+}
