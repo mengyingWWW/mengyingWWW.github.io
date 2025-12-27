@@ -401,3 +401,26 @@ nav#site-nav.greedy-nav .hidden-links:after {
     max-width: 1600px !important;
   }
 }
+
+/* =========================================================
+   REMOVE SIDEBAR LAYOUT LOCK (DESKTOP)
+   ========================================================= */
+@media (min-width: 1024px) {
+
+  /* kill sidebar-based page layout */
+  .page {
+    width: 95% !important;
+    float: none !important;
+    margin: 0 auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* ensure content can span full width */
+  article.page,
+  .page__content {
+    max-width: none !important;
+    width: 95% !important;
+  }
+
+}
