@@ -34,22 +34,23 @@ title: ""
   <div class="landing-right">
     <h2 class="landing-title">About</h2>
 
-    <hr class="about-rule">
-    
     <div class="about-body">
       <p>
-        Test 085 Hi! I’m <strong>Mengying Wang</strong>, a first-year master’s student in the
-        <a href="https://www.hcde.washington.edu/" target="_blank">Department of Human-Centered Design & Engineering (HCDE)</a>
+        Hi! I’m <strong>Mengying Wang</strong>, a first-year master’s student in the
+        <a href="https://www.hcde.washington.edu/" target="_blank">
+          Department of Human-Centered Design & Engineering (HCDE)
+        </a>
         at the
-        <a href="https://www.washington.edu/" target="_blank">University of Washington</a>. My research interests lie at the intersection of
+        <a href="https://www.washington.edu/" target="_blank">
+          University of Washington
+        </a>.
+        My research interests lie at the intersection of
         <strong>🧠 Human–AI Interaction</strong>,
         <strong>📚 learning sciences</strong>, and
         <strong>🧩 human factors</strong>,
         with a focus on how AI systems shape human attention, reasoning, and behavior.
       </p>
     </div>
-    
-    <hr class="about-rule">
   
     
   </div>
