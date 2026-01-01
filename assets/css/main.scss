@@ -453,3 +453,13 @@ hr {
 
 .about-body { margin: 2rem 0; }  /* 上下距离相等的关键 */
 .about-body p { margin: 0; }     /* 干掉 p 默认上下 margin */
+/* About 标题不要自带分割线（避免和 about-rule 叠加） */
+.landing-right .landing-title {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.landing-right .landing-title::after {
+  content: none !important;
+  display: none !important;
+}
