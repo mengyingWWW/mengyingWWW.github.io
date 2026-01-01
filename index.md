@@ -55,9 +55,6 @@ title: ""
     
   </div>
 </section>
-
-<hr>
-
 <section id="news">
 ## News
 - 2025.10 — Teaching Assistant for HCDE 321 at UW.
