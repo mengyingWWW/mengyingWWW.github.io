@@ -448,3 +448,8 @@ hr {
   opacity: 1;
   margin: 2.5rem 0;
 }
+
+.about-rule { margin: 0; }
+
+.about-body { margin: 2rem 0; }  /* 上下距离相等的关键 */
+.about-body p { margin: 0; }     /* 干掉 p 默认上下 margin */
