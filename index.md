@@ -58,8 +58,19 @@ title: ""
 <section id="news">
   <h2 class="section-title">News</h2>
   <ul class="section-list">
-    <li><strong>2025.10</strong> — Teaching Assistant for HCDE 321 at UW.</li>
-    <li><strong>2025.08</strong> — Research Assistant at City University of Hong Kong.</li>
+    <p>🎓 <strong>[2025.10]</strong> I started my first quarter as both a student and a Teaching Assistant for HCDE321 at University of Washington</p>
+  
+    <p>🧠 <strong>[2025.06]</strong> I joined KnowVis Lab at City University of Hong Kong (School of Creative Media) as a Research Assistant — see you in Hong Kong!</p>
+  
+    <p>📬 <strong>[2025.03]</strong> I was admitted to the M.S. program in Human-Centered Design & Engineering (HCDE) at the University of Washington — Seattle in the fall!</p>
+  
+    <p>🎮 <strong>[2024.06]</strong> I accepted a UX Design Internship offer at NetEase Games in Hangzhou.</p>
+  
+    <p>🧠 <strong>[2023.07]</strong> I joined Tsinghua Future Lab to work on interdisciplinary design and research projects.</p>
+  
+    <p>🎓 <strong>[2023.01]</strong> I studied at the National University of Singapore as a visiting exchange student.</p>
+  
+    <p>🎓 <strong>[2020.09]</strong> I began my undergraduate studies at the School of Architecture, Tsinghua University.</p>
   </ul>
 </section>
 
