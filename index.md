@@ -58,19 +58,14 @@ title: ""
 <section id="news">
   <h2 class="section-title">News</h2>
   <ul class="section-list">
-    <p>🎓 <strong>[2025.10]</strong> I started my first quarter as both a student and a Teaching Assistant for HCDE321 at University of Washington</p>
-  
-    <p>🧠 <strong>[2025.06]</strong> I joined KnowVis Lab at City University of Hong Kong (School of Creative Media) as a Research Assistant — see you in Hong Kong!</p>
-  
-    <p>📬 <strong>[2025.03]</strong> I was admitted to the M.S. program in Human-Centered Design & Engineering (HCDE) at the University of Washington — Seattle in the fall!</p>
-  
-    <p>🎮 <strong>[2024.06]</strong> I accepted a UX Design Internship offer at NetEase Games in Hangzhou.</p>
-  
-    <p>🧠 <strong>[2023.07]</strong> I joined Tsinghua Future Lab to work on interdisciplinary design and research projects.</p>
-  
-    <p>🎓 <strong>[2023.01]</strong> I studied at the National University of Singapore as a visiting exchange student.</p>
-  
-    <p>🎓 <strong>[2020.09]</strong> I began my undergraduate studies at the School of Architecture, Tsinghua University.</p>
+    <p>[2025.10] I began my first quarter at the University of Washington as both a master’s student and a Teaching Assistant for HCDE 321.</p>
+    <p>[2025.06] I joined the KnowVis Lab at City University of Hong Kong (School of Creative Media) as a Research Assistant.</p>
+    <p>[2025.06] I graduated from Tsinghua University with a Bachelor of Engineering degree. </p>
+    <p>[2025.03] I was admitted to the master's program in Human-Centered Design & Engineering (HCDE) at the University of Washington.</p>
+    <p>[2024.06] I worked as a UX Designer Intern at NetEase Games in Hangzhou this summer.</p>
+    <p>[2023.07] I worked as a Designer Intern at Tsinghua Future Lab this summer.</p>
+    <p>[2023.01] I exchanged at the National University of Singapore.</p>
+    <p>[2020.09] I began my undergraduate studies at Tsinghua University.</p>
   </ul>
 </section>
 
