@@ -56,9 +56,11 @@ title: ""
   </div>
 </section>
 <section id="news">
-## News
-- 2025.10 — Teaching Assistant for HCDE 321 at UW.
-- 2025.08 — Research Assistant at City University of Hong Kong.
+  <h2 class="section-title">News</h2>
+  <ul class="section-list">
+    <li><strong>2025.10</strong> — Teaching Assistant for HCDE 321 at UW.</li>
+    <li><strong>2025.08</strong> — Research Assistant at City University of Hong Kong.</li>
+  </ul>
 </section>
 
 <section id="publications">
