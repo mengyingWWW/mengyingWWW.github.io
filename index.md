@@ -171,14 +171,23 @@ submission to Artificial Intelligence in Education (AIED 2026).</strong></p>
 <section id="teaching">
   <h2 class="section-title">Teaching</h2>
 
-  <table class="teaching-table">
-    <tr>
-      <td><strong>Teaching Assistant (UW)</strong>: HCDE 321 Professional Portfolio</td>
-      <td class="teaching-term">Undergraduate, Winter 2026</td>
-    </tr>
-    <tr>
-      <td><strong>Teaching Assistant (UW)</strong>: HCDE 321 Professional Portfolio</td>
-      <td class="teaching-term">Undergraduate, Fall 2025</td>
-    </tr>
-  </table>
+  <div class="teaching-list">
+    <div class="teaching-item">
+      <div class="teaching-left">
+        <strong>Teaching Assistant (UW)</strong>: HCDE 321 Professional Portfolio
+      </div>
+      <div class="teaching-right">
+        Undergraduate, Winter 2026
+      </div>
+    </div>
+
+    <div class="teaching-item">
+      <div class="teaching-left">
+        <strong>Teaching Assistant (UW)</strong>: HCDE 321 Professional Portfolio
+      </div>
+      <div class="teaching-right">
+        Undergraduate, Fall 2025
+      </div>
+    </div>
+  </div>
 </section>
