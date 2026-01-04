@@ -72,7 +72,7 @@ title: ""
 <section id="publications">
   <h2 class="section-title">Publications</h2>
   <ul class="section-list">
-    <p>[2026.01]  Yi Xu, Mengying Wang, Xinyue Jiao, Fei Xue and Xiaoyu Zhang. 2026. How Much AI Interaction is Effective for
+    <p>[2026.01]  Yi Xu, <strong> Mengying Wang </strong>, Xinyue Jiao, Fei Xue and Xiaoyu Zhang. 2026. How Much AI Interaction is Effective for
 Reading? An Eye-Tracking Study on Cognitive Load, Engagement, and Reading Patterns. <strong>Manuscript in preparation for
 submission to Artificial Intelligence in Education (AIED 2026).</strong></p>
   </ul>
