@@ -58,7 +58,7 @@ title: ""
 <section id="news">
   <h2 class="section-title">News</h2>
   <ul class="section-list">
-    <p>[2025.10] I began my first quarter at the University of Washington as both a master’s student and a Teaching Assistant for HCDE 321.</p>
+    <p>[2025.09] I began my first quarter at UW as both a master’s student and a Teaching Assistant for HCDE 321.</p>
     <p>[2025.06] I joined the KnowVis Lab at City University of Hong Kong (School of Creative Media) as a Research Assistant.</p>
     <p>[2025.06] I graduated from Tsinghua University with a Bachelor of Engineering degree. </p>
     <p>[2025.03] I was admitted to the master's program in Human-Centered Design & Engineering (HCDE) at the University of Washington.</p>
