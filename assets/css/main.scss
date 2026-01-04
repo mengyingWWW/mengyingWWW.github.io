@@ -481,3 +481,23 @@ hr {
 .section-list li {
   margin: 0.4rem 0;
 }
+/* =========================================================
+   Teaching table (Xiaoyu-style: left item + right term)
+   ========================================================= */
+.teaching-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+}
+
+.teaching-table td {
+  padding: 6px 0;
+  vertical-align: top;
+}
+
+.teaching-table .teaching-term {
+  text-align: right;
+  white-space: nowrap;
+  padding-left: 16px;
+  opacity: 0.9;
+}
