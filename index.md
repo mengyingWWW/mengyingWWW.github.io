@@ -59,7 +59,7 @@ title: ""
   <h2 class="section-title">News</h2>
   <ul class="section-list">
     <p>[2025.09] I began my first quarter at UW as both a master’s student and a Teaching Assistant for HCDE 321.</p>
-    <p>[2025.06] I joined the KnowVis Lab at City University of Hong Kong (School of Creative Media) as a Research Assistant, advised by <a href="https://xiaoyu-zhang-betsy.github.io/homepage/" target="_blank">Xiaoyu Zhang</a>.</p>
+    <p>[2025.06] I joined the KnowVis Lab at <a href="https://www.scm.cityu.edu.hk/en" target="_blank">City University of Hong Kong (School of Creative Media)</a> as a Research Assistant, advised by <a href="https://xiaoyu-zhang-betsy.github.io/homepage/" target="_blank">Xiaoyu Zhang</a>.</p>
     <p>[2025.06] I graduated from Tsinghua University with a Bachelor of Engineering degree. </p>
     <p>[2025.03] I was admitted to the master's program in <a href="https://www.hcde.washington.edu/" target="_blank">Human-Centered Design & Engineering (HCDE)</a> at the University of Washington.</p>
     <p>[2024.06] I worked as a UX Designer Intern at <a href="https://www.neteasegames.com/" target="_blank">NetEase Games</a> in Hangzhou this summer.</p>
