@@ -36,7 +36,7 @@ title: ""
 
     <div class="about-body">
       <p>
-        Test 092 Hi! I’m <strong>Mengying Wang</strong>, a first-year master’s student in the
+        Test 093 Hi! I’m <strong>Mengying Wang</strong>, a first-year master’s student in the
         <a href="https://www.hcde.washington.edu/" target="_blank">
           Department of Human-Centered Design & Engineering (HCDE)
         </a>
@@ -72,7 +72,7 @@ title: ""
 <section id="publications">
   <h2 class="section-title">Publications</h2>
   <ul class="section-list">
-    <p>[2025.09]  Yi Xu , Mengying Wang, Xinyue Jiao, Fei Xue and Xiaoyu Zhang. 2026. How Much AI Interaction is Effective for
+    <p>[2026.01]  Yi Xu, Mengying Wang, Xinyue Jiao, Fei Xue and Xiaoyu Zhang. 2026. How Much AI Interaction is Effective for
 Reading? An Eye-Tracking Study on Cognitive Load, Engagement, and Reading Patterns. <strong>Manuscript in preparation for
 submission to Artificial Intelligence in Education (AIED 2026).</strong></p>
   </ul>
