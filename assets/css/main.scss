@@ -482,22 +482,43 @@ hr {
   margin: 0.4rem 0;
 }
 /* =========================================================
-   Teaching table (Xiaoyu-style: left item + right term)
+   TEACHING (no table, no grid)
    ========================================================= */
-.teaching-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 0.75rem;
+
+.teaching-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
 }
 
-.teaching-table td {
-  padding: 6px 0;
-  vertical-align: top;
+.teaching-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
 }
 
-.teaching-table .teaching-term {
-  text-align: right;
+.teaching-left {
+  font-size: 1rem;          /* 👈 和正文一样 */
+  line-height: 1.6;
+}
+
+.teaching-right {
+  font-size: 1rem;          /* 👈 不再变小 */
+  line-height: 1.6;
   white-space: nowrap;
-  padding-left: 16px;
-  opacity: 0.9;
+  opacity: 0.85;
+}
+
+/* mobile 自动换行 */
+@media (max-width: 640px) {
+  .teaching-item {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .teaching-right {
+    opacity: 0.7;
+  }
 }
