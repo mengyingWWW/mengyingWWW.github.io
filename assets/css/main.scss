@@ -465,13 +465,19 @@ hr {
 }
 
 
-/* =========================================================
-   Section headings (match About style, but left-aligned)
-   ========================================================= */
-.page__content section > h2 {
-  font-size: 1.6rem;        /* 和 About 一致 */
-  font-weight: 700;
-  text-align: left;         /* 👈 关键差异 */
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+/* Section headings: match About vibe, left-aligned */
+.section-title {
+  font-size: 2rem;          /* 你 About 现在看起来更像 2rem 而不是 1.6 */
+  font-weight: 800;
+  text-align: left;
+  margin: 3rem 0 1.5rem 0;
+}
+
+/* list spacing (optional) */
+.section-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.section-list li {
+  margin: 0.4rem 0;
 }
