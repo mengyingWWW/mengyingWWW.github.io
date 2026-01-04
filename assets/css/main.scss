@@ -463,3 +463,15 @@ hr {
   content: none !important;
   display: none !important;
 }
+
+
+/* =========================================================
+   Section headings (match About style, but left-aligned)
+   ========================================================= */
+.page__content section > h2 {
+  font-size: 1.6rem;        /* 和 About 一致 */
+  font-weight: 700;
+  text-align: left;         /* 👈 关键差异 */
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
