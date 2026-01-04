@@ -169,6 +169,8 @@ submission to Artificial Intelligence in Education (AIED 2026).</strong></p>
 </section>
 
 <section id="teaching">
-## Teaching
-- Teaching Assistant, HCDE 321 (University of Washington).
+  <h2 class="section-title">Teaching</h2>
+  <ul class="section-list">
+    <p> blablabla </p>
+  </ul>
 </section>
