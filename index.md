@@ -96,7 +96,6 @@ submission to Artificial Intelligence in Education (AIED 2026).</strong></p>
       <div class="portfolio-tags">
         <span class="tag">HCI</span>
         <span class="tag">AI</span>
-        <span class="tag">Study</span>
       </div>
     </div>
   </div>
