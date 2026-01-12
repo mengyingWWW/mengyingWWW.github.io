@@ -564,3 +564,8 @@ hr {
 body[class*="projects"] .page__inner-wrap {
   padding-top: 2.8rem;  /* 你可以在 1.6rem~3rem 微调 */
 }
+
+/* Only for project pages: prevent masthead overlay */
+body.project-page {
+  padding-top: 165px !important; /* 你可以 140~190px 微调 */
+}
