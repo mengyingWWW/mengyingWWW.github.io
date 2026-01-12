@@ -137,37 +137,57 @@ submission to Artificial Intelligence in Education (AIED 2026).</strong></p>
 </div>
 
 ### Design-oriented
-
 <div class="portfolio-grid">
 
-  <a class="portfolio-card" href="#" aria-label="Project placeholder 4">
-    <div class="portfolio-cover">
-      <img src="/images/500x300.png" alt="Project cover placeholder">
-    </div>
-    <div class="portfolio-body">
-      <h3 class="portfolio-title">Project Title (Design)</h3>
-      <p class="portfolio-desc">Short description… (placeholder)</p>
-      <div class="portfolio-tags">
-        <span class="tag">UX</span>
-        <span class="tag">Prototype</span>
-        <span class="tag">Figma</span>
+  <div class="portfolio-item">
+    <a class="portfolio-card" href="#" aria-label="Project placeholder 1">
+      <div class="portfolio-cover">
+        <img src="/images/500x300.png" alt="Project cover placeholder">
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a class="portfolio-card" href="#" aria-label="Project placeholder 5">
-    <div class="portfolio-cover">
-      <img src="/images/500x300.png" alt="Project cover placeholder">
-    </div>
-    <div class="portfolio-body">
-      <h3 class="portfolio-title">Project Title (Design)</h3>
-      <p class="portfolio-desc">Short description… (placeholder)</p>
+    <div class="portfolio-meta">
+      <div class="portfolio-meta-title">Project Title (Research)</div>
       <div class="portfolio-tags">
-        <span class="tag">AR</span>
-        <span class="tag">Game</span>
+        <span class="tag">HCI</span>
+        <span class="tag">AI</span>
+        <span class="tag">Study</span>
       </div>
     </div>
-  </a>
+  </div>
+
+  <div class="portfolio-item">
+    <a class="portfolio-card" href="#" aria-label="Project placeholder 2">
+      <div class="portfolio-cover">
+        <img src="/images/500x300.png" alt="Project cover placeholder">
+      </div>
+    </a>
+
+    <div class="portfolio-meta">
+      <div class="portfolio-meta-title">Project Title (Research)</div>
+      <div class="portfolio-tags">
+        <span class="tag">XR</span>
+        <span class="tag">Data</span>
+        <span class="tag">Methods</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-item">
+    <a class="portfolio-card" href="#" aria-label="Project placeholder 3">
+      <div class="portfolio-cover">
+        <img src="/images/500x300.png" alt="Project cover placeholder">
+      </div>
+    </a>
+
+    <div class="portfolio-meta">
+      <div class="portfolio-meta-title">Project Title (Research)</div>
+      <div class="portfolio-tags">
+        <span class="tag">ML</span>
+        <span class="tag">Visualization</span>
+      </div>
+    </div>
+  </div>
 
 </div>
 
