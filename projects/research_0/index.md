@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Project Title (Research)"
+title: "Made in Flushing"
 permalink: /projects/research_0/
 author_profile: false
 toc: true
@@ -88,3 +88,4 @@ Use bullets first (readable), then short paragraph.
 
 ## Citation
 If you want a BibTeX block later, we can add it here.
+
