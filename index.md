@@ -85,7 +85,7 @@ submission to Artificial Intelligence in Education (AIED 2026).</strong></p>
 <div class="portfolio-grid">
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="#" aria-label="Project placeholder 1">
+    <a class="portfolio-card" href="/projects/research_0/" aria-label="Project placeholder 1">
       <div class="portfolio-cover">
         <img src="/images/500x300.png" alt="Project cover placeholder">
       </div>
