@@ -81,7 +81,7 @@ submission to Artificial Intelligence in Education (AIED 2026).</strong></p>
 <section id="portfolio">
   <h2 class="section-title">Portfolio</h2>
 
-### Research-oriented
+<h3 class="portfolio-subtitle">Research-oriented</h3>
 <div class="portfolio-grid">
 
   <div class="portfolio-item">
@@ -136,7 +136,7 @@ submission to Artificial Intelligence in Education (AIED 2026).</strong></p>
 
 </div>
 
-### Design-oriented
+<h3 class="portfolio-subtitle">Design-oriented</h3>
 <div class="portfolio-grid">
 
   <div class="portfolio-item">
