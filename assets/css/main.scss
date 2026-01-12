@@ -557,3 +557,10 @@ hr {
   margin: 1.2rem 0 0.9rem 0;
   color: #fff;
 }
+
+/* =========================================================
+   FIX: only project pages (/projects/...) add top padding
+   ========================================================= */
+body[class*="projects"] .page__inner-wrap {
+  padding-top: 2.2rem;  /* 你可以在 1.6rem~3rem 微调 */
+}
