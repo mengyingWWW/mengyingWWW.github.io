@@ -12,7 +12,7 @@ classes: project-page
 <!-- ===== Hero ===== -->
 <div style="max-width: 980px; margin: 0 auto;">
   <p style="opacity: 0.85; margin-top: 0;">
-    <strong>Status:</strong> test01 Manuscript in preparation · <strong>Role:</strong> Research Assistant · <strong>Timeline:</strong> 2025–2026
+    <strong>Status:</strong> test02 Manuscript in preparation · <strong>Role:</strong> Research Assistant · <strong>Timeline:</strong> 2025–2026
   </p>
 
   <img src="/projects/research_0/assets/cover.png" alt="Project cover" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid rgba(255,255,255,0.18);"/>
@@ -89,6 +89,7 @@ Use bullets first (readable), then short paragraph.
 
 ## Citation
 If you want a BibTeX block later, we can add it here.
+
 
 
 
