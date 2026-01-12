@@ -92,7 +92,7 @@ submission to Artificial Intelligence in Education (AIED 2026).</strong></p>
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Made in Flushing</div>
+      <div class="portfolio-meta-title">test00 Made in Flushing</div>
       <div class="portfolio-tags">
         <span class="tag">Data Visualization</span>
         <span class="tag">Machine Learning</span>
