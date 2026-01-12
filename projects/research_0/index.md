@@ -6,6 +6,7 @@ author_profile: false
 toc: true
 toc_label: "Contents"
 toc_sticky: true
+classes: project-page
 ---
 
 <!-- ===== Hero ===== -->
@@ -88,6 +89,7 @@ Use bullets first (readable), then short paragraph.
 
 ## Citation
 If you want a BibTeX block later, we can add it here.
+
 
 
 
