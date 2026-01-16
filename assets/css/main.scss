@@ -575,3 +575,11 @@ body.project-page {
 .project-page #main {
   padding-top: 140px;   /* 先用 140px，之后按你实际 masthead height 微调 */
 }
+
+
+/* =========================================================
+   PROJECT PAGES: avoid masthead covering page title
+   ========================================================= */
+.project-page .page__inner-wrap > header {
+  padding-top: 140px;   /* 根据 masthead 高度调整，126px → 140px 很合适 */
+}
