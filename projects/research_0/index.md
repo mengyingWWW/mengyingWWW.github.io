@@ -7,7 +7,7 @@ toc: true
 toc_label: "Contents"
 toc_sticky: true
 header:
-  image: /projects/research_0/assets/cover.png
+  image: /projects/research_0/assets/coverPlaceholder.png
 ---
 
 <!-- =========================
@@ -60,7 +60,7 @@ Write 2–4 sentences:
 
 <div style="max-width: 980px; margin: 1.5rem auto;">
   <img
-    src="/projects/research_0/assets/fig-setup.png"
+    src="/projects/research_0/assets/coverPlaceholder.png"
     alt="Study setup figure"
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);" />
   <p style="opacity: 0.85; margin-top: 10px;">
@@ -84,7 +84,7 @@ Use bullets first (readable), then short paragraph.
 
 <div style="max-width: 980px; margin: 1.5rem auto;">
   <img
-    src="/projects/research_0/assets/fig-results.png"
+    src="/projects/research_0/assets/coverPlaceholder.png"
     alt="Results figure"
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);" />
   <p style="opacity: 0.85; margin-top: 10px;">
@@ -105,3 +105,4 @@ Use bullets first (readable), then short paragraph.
 
 ## Citation
 If you want a BibTeX block later, we can add it here.
+
