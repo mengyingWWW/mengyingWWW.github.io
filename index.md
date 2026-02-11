@@ -36,7 +36,7 @@ title: ""
 
     <div class="about-body">
       <p>
-        Test 099 Hi! I’m <strong>Mengying</strong>, a first-year master’s student in the
+        Test 100 Hi! I’m <strong>Mengying</strong>, a first-year master’s student in the
         <a href="https://www.hcde.washington.edu/" target="_blank">
           Department of Human-Centered Design & Engineering (HCDE)
         </a>
@@ -62,6 +62,7 @@ title: ""
     <p>[2025.06] I joined the KnowVis Lab at <a href="https://www.scm.cityu.edu.hk/en" target="_blank">City University of Hong Kong (School of Creative Media)</a> as a Research Assistant, advised by <a href="https://xiaoyu-zhang-betsy.github.io/homepage/" target="_blank">Xiaoyu Zhang</a>.</p>
     <p>[2025.06] I graduated from Tsinghua University with a Bachelor of Engineering degree. </p>
     <p>[2025.03] I was admitted to the master's program in <a href="https://www.hcde.washington.edu/" target="_blank">Human-Centered Design & Engineering (HCDE)</a> at the University of Washington.</p>
+    <p>[2024.12] I collaborated with <a href="https://www.arch.tsinghua.edu.cn/info/Building%20Science%20and%20Technology/1801" target="_blank">Weixin Huang</a> and <a href="https://dusp.mit.edu/spurs-fellows/ning-zhu" target="_blank">Ning Zhu</a> at the School of Architecture, Tsinghua University, on architectural behavioral research.</p>
     <p>[2024.06] I worked as a UX Designer Intern at <a href="https://www.neteasegames.com/" target="_blank">NetEase Games</a> in Hangzhou this summer.</p>
     <p>[2023.07] I worked as a Designer Intern at <a href="https://thfl.tsinghua.edu.cn/en/" target="_blank">The Future Laboratary, Tsinghua University</a> this summer.</p>
     <p>[2023.01] I exchanged at the <a href="https://nus.edu.sg/" target="_blank">National University of Singapore</a>.</p>
@@ -72,9 +73,9 @@ title: ""
 <section id="publications">
   <h2 class="section-title">Publications</h2>
   <ul class="section-list">
-    <p>[2026.01]  Yi Xu, <strong> Mengying Wang </strong>, Xinyue Jiao, Fei Xue and Xiaoyu Zhang. 2026. How Much AI Interaction is Effective for
-Reading? An Eye-Tracking Study on Cognitive Load, Engagement, and Reading Patterns. <strong>Manuscript in preparation for
-submission to Artificial Intelligence in Education (AIED 2026).</strong></p>
+    <p>[2026.01] Yi Xu, <strong>Mengying Wang</strong>, Xinyue Jiao, Fei Xue, and Xiaoyu Zhang. 2026. 
+How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI for Scientific Literacy Reading. 
+<strong>Manuscript under review at the International Journal of Artificial Intelligence in Education (IJAIED).</strong></p>
   </ul>
 </section>
 
