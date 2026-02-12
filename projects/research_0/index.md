@@ -135,6 +135,7 @@ overshadows the diverse cultural integration shaped by not only Chinese, Korean,
 elements and their integration with other cultural features, offering new insights into Flushing’s complex identity.
 
 ## Purpose
-![Figure placeholder]({{ '/projects/research_0/assets/Frame 3.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 10.png' | relative_url }})
 
 *Figure 1. Placeholder caption.*
+
