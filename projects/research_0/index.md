@@ -125,7 +125,7 @@ toc_sticky: true
     <div class="kv-item">
       <div class="k">Role</div>
       <div class="v">
-        33.3% conceptual design;<br/>
+        33.3% Conceptual Design;<br/>
         100% Street View Data Crawling;<br/>
         100% Visual & Gustatory ML Analysis;<br/>
         100% Data Visualization.
@@ -231,6 +231,7 @@ Figure 8. Data Visualization of Gustatory Cultural Elements in Flushing
 <p class="figure-caption">
 Figure 9. Final Data Visualization
 </p>
+
 
 
 
