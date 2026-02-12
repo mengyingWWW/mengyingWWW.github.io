@@ -103,18 +103,18 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   </div>
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="#" aria-label="Project placeholder 2">
+    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 2">
       <div class="portfolio-cover">
-        <img src="/images/500x300.png" alt="Project cover placeholder">
+        <img src="/images/Frame 12.png" alt="Project cover placeholder">
       </div>
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Project Title (Research)</div>
+      <div class="portfolio-meta-title">The Living Data</div>
       <div class="portfolio-tags">
-        <span class="tag">XR</span>
-        <span class="tag">Data</span>
-        <span class="tag">Methods</span>
+        <span class="tag">Human Factors</span>
+        <span class="tag">Behavioral Study</span>
+        <span class="tag">Data Set Synthesis</span>
       </div>
     </div>
   </div>
