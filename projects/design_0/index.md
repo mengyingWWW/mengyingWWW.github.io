@@ -103,7 +103,7 @@ toc_sticky: true
 
   <!-- Cover image -->
   <img
-    src="{{ '/projects/design_0/assets/Frame 24.png' | relative_url }}"
+    src="{{ '/projects/design_0/asset/Frame 24.png' | relative_url }}"
     alt="Project cover"
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
@@ -154,7 +154,7 @@ toc_sticky: true
 
 <h2>Background</h2>
 
-![Figure placeholder]({{ '/projects/design_0/assets/Frame 25.png' | relative_url }})
+![Figure placeholder]({{ '/projects/design_0/asset/Frame 25.png' | relative_url }})
 
 <p class="figure-caption">
   Figure 1. Comparison Between Constrained VS Unconstrained Human Behavior Datasets.
@@ -208,6 +208,7 @@ Figure 5. Motion Setting Process
 <p class="figure-caption">
 Figure 6. Dataset Examples
 </p>
+
 
 
 
