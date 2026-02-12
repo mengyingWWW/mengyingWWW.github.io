@@ -103,7 +103,7 @@ toc_sticky: true
 
   <!-- Cover image -->
   <img
-    src="{{ '/projects/research_1/assets/Frame 17.png' | relative_url }}"
+    src="{{ '/projects/research_1/assets1/Frame 17.png' | relative_url }}"
     alt="Project cover"
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
@@ -170,7 +170,7 @@ In the early experiment, we performed point cloud scanning of public areas in ea
 achieving millimeter-level precision. Based on the point cloud models, the data was refined and organized to construct virtual residential scenarios
 that closely resemble real-life settings.
 
-![Figure placeholder]({{ '/projects/research_1/assets/Frame 19.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_1/assets1/Frame 19.png' | relative_url }})
 
 <p class="figure-caption">
 Figure 2. The Process from Real Living Scenes to Unreal Engine Scenes.
@@ -178,7 +178,7 @@ Figure 2. The Process from Real Living Scenes to Unreal Engine Scenes.
 
 
 <h2>Scene Mapping</h2>
-![Figure placeholder]({{ '/projects/research_1/assets/Frame 20.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_1/assets1/Frame 20.png' | relative_url }})
 
 <p class="figure-caption">
 Figure 3. Mapping from Real Scenes to Unreal Engine Scenes.
@@ -186,7 +186,7 @@ Figure 3. Mapping from Real Scenes to Unreal Engine Scenes.
 
 
 <h2>Camera Settings</h2>
-![Figure placeholder]({{ '/projects/research_1/assets/Frame 21.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_1/assets1/Frame 21.png' | relative_url }})
 
 <p class="figure-caption">
 Figure 4. Camera Settings in Unreal Engine
@@ -194,7 +194,7 @@ Figure 4. Camera Settings in Unreal Engine
 
 
 <h2>Motion Settings</h2>
-![Figure placeholder]({{ '/projects/research_1/assets/Frame 22.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_1/assets1/Frame 22.png' | relative_url }})
 
 <p class="figure-caption">
 Figure 5. Motion Setting Process
@@ -206,11 +206,12 @@ Figure 5. Motion Setting Process
   Synthetic Dataset
 </p>
 
-![Figure placeholder]({{ '/projects/research_1/assets/Frame 23.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_1/assets1/Frame 23.png' | relative_url }})
 
 <p class="figure-caption">
 Figure 6. Dataset Examples
 </p>
+
 
 
 
