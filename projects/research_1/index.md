@@ -103,7 +103,7 @@ toc_sticky: true
 
   <!-- Cover image -->
   <img
-    src="{{ '/projects/research_0/assets/Frame 1.png' | relative_url }}"
+    src="{{ '/projects/research_0/assets/Frame 17.png' | relative_url }}"
     alt="Project cover"
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
@@ -118,7 +118,8 @@ toc_sticky: true
     </div>
 
     <div class="kv-item">
-      <div class="k">Unreal Engine</div>
+      <div class="k">Tool</div>
+      <div class="v">Unreal Engine</div>
       <div class="v">C++</div>
     </div>
 
@@ -155,10 +156,10 @@ toc_sticky: true
 
 <h2>Background</h2>
 <p class="section-subtitle">
-  Flushing as a thriving Chinatown & multicultural urban hub
+  Constrained Human Behavior Dataset VS Unconstrained Human Behavior Dataset
 </p>
 
-![Figure placeholder]({{ '/projects/research_0/assets/Frame 2.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_0/assets1/Frame 18.png' | relative_url }})
 
 <p class="figure-caption">
   Figure 1. Historical Timeline of Flushing.
@@ -231,6 +232,7 @@ Figure 8. Data Visualization of Gustatory Cultural Elements in Flushing
 <p class="figure-caption">
 Figure 9. Final Data Visualization
 </p>
+
 
 
 
