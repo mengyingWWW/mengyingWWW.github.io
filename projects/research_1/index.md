@@ -154,6 +154,7 @@ toc_sticky: true
   <hr style="margin: 2rem 0;">
 </div>
 
+
 <h2>Background</h2>
 <p class="section-subtitle">
   Constrained Human Behavior Dataset VS Unconstrained Human Behavior Dataset
@@ -162,76 +163,55 @@ toc_sticky: true
 ![Figure placeholder]({{ '/projects/research_0/assets1/Frame 18.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 1. Historical Timeline of Flushing.
+  Figure 1. Comparison Between Constrained VS Unconstrained Human Behavior Datasets.
 </p>
 
-Flushing, located in Queens, New York, is a diverse neighborhood with a rich history that has shaped its cultural character. While Flushing’s rich history has cultivated deep multicultural fusion, it is predominantly recognized today as one of the world’s largest Chinatown. This dominant perception often overshadows the diverse cultural integration shaped by not only Chinese, Korean, and Indian communities, but also earlier influences from European colonizers and other immigrant groups. Our research aims to fill this gap by applying machine learning to study the multisensory composition of Chinese elements and their integration with other cultural features, offering new insights into Flushing’s complex identity.
 
-<h2>Purpose</h2>
-<p class="section-subtitle">
-  Studying multisensory Chinese elements via machine learning
-</p>
+<h2>Field Scanning to Scene Building</h2>
 
-![Figure placeholder]({{ '/projects/research_0/assets/Frame 10.png' | relative_url }})
+In the early experiment, we performed point cloud scanning of public areas in each residence, such as the living room, dining room, and kitchen,
+achieving millimeter-level precision. Based on the point cloud models, the data was refined and organized to construct virtual residential scenarios
+that closely resemble real-life settings.
+
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 19.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 2. Cultural Elements Identified in Street Views.
+Figure 2. The Process from Real Living Scenes to Unreal Engine Scenes.
 </p>
 
 
-This project investigates how cultural identity can be quantified through visual, auditory, and gustatory signals in urban environments. By integrating image segmentation, OCR, sound classification, and NLP-based analysis, we model how cultural expressions manifest spatially and sensorially within Flushing.
-
-<h2>Visual Chinese Elements in Flushing</h2>
-![Figure placeholder]({{ '/projects/research_0/assets/Frame 3.png' | relative_url }})
+<h2>Scene Mapping</h2>
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 20.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 3. Visual Element Analysis Pipeline from Street View Images
+Figure 3. Mapping from Real Scenes to Unreal Engine Scenes.
 </p>
 
 
-![Figure placeholder]({{ '/projects/research_0/assets/Frame 4.png' | relative_url }})
+<h2>Camera Settings</h2>
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 21.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 4. Data Visualization of Visual Cultural Elements in Flushing
+Figure 5. Camera Settings in Unreal Engine
 </p>
 
 
-<h2>Aural Chinese Elements in Flushing</h2>
-![Figure placeholder]({{ '/projects/research_0/assets/Frame 5.png' | relative_url }})
+<h2>Motion Settings</h2>
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 22.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 5. Aural Element Analysis Pipeline from Street Audio
+Figure 7. Motion Setting Process
 </p>
 
 
-![Figure placeholder]({{ '/projects/research_0/assets/Frame 6.png' | relative_url }})
+<h2>Output</h2>
 
-<p class="figure-caption">
-Figure 6. Data Visualization of Aural Cultural Elements in Flushing
-</p>
-
-
-<h2>Gustatory Chinese Elements in Flushing</h2>
-![Figure placeholder]({{ '/projects/research_0/assets/Frame 7.png' | relative_url }})
-
-<p class="figure-caption">
-Figure 7. Gustatory Element Analysis Pipeline from Google Maps Reviews
-</p>
-
-
-![Figure placeholder]({{ '/projects/research_0/assets/Frame 8.png' | relative_url }})
-
-<p class="figure-caption">
-Figure 8. Data Visualization of Gustatory Cultural Elements in Flushing
-</p>
-
-
-<h2>Multi-sensory Chinese Elements & Multi-cultural Fusion in Flushing</h2>
 ![Figure placeholder]({{ '/projects/research_0/assets/Frame 9.png' | relative_url }})
 
 <p class="figure-caption">
 Figure 9. Final Data Visualization
 </p>
+
 
 
 
