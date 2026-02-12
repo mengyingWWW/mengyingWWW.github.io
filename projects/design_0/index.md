@@ -222,6 +222,22 @@ Figure 3. Placeholder.
 Figure 3. Placeholder.
 </p>
 
+![Figure placeholder]({{ '/projects/design_0/asset/Frame 32.png' | relative_url }})
+
+<p class="figure-caption">
+Figure 3. Placeholder.
+</p>
+
+<h2>Front-end Interfaces</h2>
+
+blablablaplaceholder
+
+![Figure placeholder]({{ '/projects/design_0/asset/Frame 33.png' | relative_url }})
+
+<p class="figure-caption">
+Figure 3. Placeholder.
+</p>
+
 
 
 
