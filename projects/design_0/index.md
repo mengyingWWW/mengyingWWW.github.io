@@ -103,52 +103,49 @@ toc_sticky: true
 
   <!-- Cover image -->
   <img
-    src="{{ '/projects/research_1/assets1/Frame 17.png' | relative_url }}"
+    src="{{ '/projects/design_0/assets/Frame 24.png' | relative_url }}"
     alt="Project cover"
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
 
-  <h1 class="project-title">The Living Data</h1>
+  <h1 class="project-title">Permission to the Forbidden</h1>
 
   <!-- 4-column info blocks -->
   <div class="kv-grid">
     <div class="kv-item">
-      <div class="k">Team</div>
-      <div class="v">Junkai An</div>
+      <div class="k">Individual Work</div>
     </div>
 
     <div class="kv-item">
       <div class="k">Tool</div>
-      <div class="v">Unreal Engine</div>
-      <div class="v">C++</div>
+      <div class="v">Unity (AR Core)</div>
+      <div class="v">C#</div>
+      <div class="v">Figma</div>
     </div>
 
     <div class="kv-item">
       <div class="k">Role</div>
       <div class="v">
-        50% Action Dataset Optimization;<br/>
-        50% System Packaging;<br/>
-        33.3% Data Quality Validation;<br/>
-        100% Camera Setting.
+        100% AR Game Planning and Developing;<br/>
+        100% Front-end User Interface.<br/>
       </div>
     </div>
 
     <div class="kv-item">
       <div class="k">Timeline</div>
-      <div class="v">Sep 2024 – Dec 2024</div>
+      <div class="v">Jun 2024 – Oct 2024</div>
     </div>
   </div>
 
   <!-- Tags -->
   <div class="tag-row">
-    <span class="tag">Human Factors</span>
-    <span class="tag">Behavioral Study</span>
-    <span class="tag">Data Synthesis</span>
+    <span class="tag">AR Game Developing</span>
+    <span class="tag">UI UX Design</span>
   </div>
 
   <!-- Intro paragraph -->
   <p class="lede">
-    The behavioral datasets have broad applications across multiple fields; however, they still face limitations in data collection, scene constraints, scale, and cost. Data synthesis is gaining increasing attention due to its ability to provide more diverse, cost-effective, and targeted data. Our research aims to overcome the limitations of existing datasets by using Unreal Engine to synthesize an unconstrained behavioral dataset within a residential environment, aiming to provide a general template applicable across various scenarios in human living behavior studies.
+    A gamified augmented reality (AR) game offers an immersive historical tour of the Forbidden City in Beijing. Players choose different dynastic periods, follow plotdriven AR paths, and complete tasks to learn about historical stories. Players play as historical roles, exploring stories, artifacts, and ancient architecture from a firstperson view. By the journey’s end, players will have a deeper understanding of the Forbidden City. With multi-timeline, multi-view, and multi-route options, the game makes exploring history of the Forbidden City both engaging and educational.
   </p>
 
   <hr style="margin: 2rem 0;">
@@ -157,7 +154,7 @@ toc_sticky: true
 
 <h2>Background</h2>
 
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 18.png' | relative_url }})
+![Figure placeholder]({{ '/projects/design_0/assets/Frame 25.png' | relative_url }})
 
 <p class="figure-caption">
   Figure 1. Comparison Between Constrained VS Unconstrained Human Behavior Datasets.
@@ -211,6 +208,7 @@ Figure 5. Motion Setting Process
 <p class="figure-caption">
 Figure 6. Dataset Examples
 </p>
+
 
 
 
