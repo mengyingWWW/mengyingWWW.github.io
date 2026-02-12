@@ -27,8 +27,8 @@ toc_sticky: true
   </p>
 
   <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px;">
-    <span class="tag">#Machine Learning</span>
-    <span class="tag">#Data Visualization</span>
+    <span class="tag"> # Machine Learning</span>
+    <span class="tag"> # Data Visualization</span>
   </div>
 
   <p style="margin-top: 18px; font-size: 1.05rem; line-height: 1.75;">
@@ -55,6 +55,7 @@ elements and their integration with other cultural features, offering new insigh
 ![Figure placeholder]({{ '/projects/research_0/assets/Frame 3.png' | relative_url }})
 
 *Figure 1. Placeholder caption.*
+
 
 
 
