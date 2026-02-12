@@ -148,11 +148,10 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Project Title (Research)</div>
+      <div class="portfolio-meta-title">Permission to the Forbidden</div>
       <div class="portfolio-tags">
-        <span class="tag">HCI</span>
-        <span class="tag">AI</span>
-        <span class="tag">Study</span>
+        <span class="tag">AR Game Development</span>
+        <span class="tag">UI UX Design</span>
       </div>
     </div>
   </div>
