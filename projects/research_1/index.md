@@ -108,46 +108,46 @@ toc_sticky: true
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
 
-  <h1 class="project-title">Made in Flushing</h1>
+  <h1 class="project-title">The Living Data</h1>
 
   <!-- 4-column info blocks -->
   <div class="kv-grid">
     <div class="kv-item">
       <div class="k">Team</div>
-      <div class="v">Hu Rong, Mo Di</div>
+      <div class="v">Junkai An</div>
     </div>
 
     <div class="kv-item">
-      <div class="k">Tool</div>
-      <div class="v">Python</div>
+      <div class="k">Unreal Engine</div>
+      <div class="v">C++</div>
     </div>
 
     <div class="kv-item">
       <div class="k">Role</div>
       <div class="v">
-        33.3% Conceptual Design;<br/>
-        100% Street View Data Crawling;<br/>
-        100% Visual & Gustatory ML Analysis;<br/>
-        100% Data Visualization.
+        50% Action Dataset Optimization;<br/>
+        50% System Packaging;<br/>
+        33.3% Data Quality Validation;<br/>
+        100% Camera Setting.
       </div>
     </div>
 
     <div class="kv-item">
       <div class="k">Timeline</div>
-      <div class="v">Aug 2024 – Oct 2024</div>
+      <div class="v">Sep 2024 – Dec 2024</div>
     </div>
   </div>
 
   <!-- Tags -->
   <div class="tag-row">
-    <span class="tag">Machine Learning</span>
-    <span class="tag">Data Visualization</span>
-    <span class="tag">Multisensory Analysis</span>
+    <span class="tag">Human Factors</span>
+    <span class="tag">Behavioral Study</span>
+    <span class="tag">Data Synthesis</span>
   </div>
 
   <!-- Intro paragraph -->
   <p class="lede">
-    Flushing is one of the world’s largest Chinatowns, with a rich and woven cultural history. This project studies Chinese elements in Flushing through a multisensory lens—using street view texts, audios from walking tour videos, and food as cultural symbols. It also explores how diverse cultures merge, highlighting what makes Flushing a diverse community. We use machine learning to assess the proportions of Chinese and other cultures across visual, aural, and gustatory dimensions, then we use data visualization to show the coexistence of Chinese and other cultures across these three sensory dimensions.
+    The behavioral datasets have broad applications across multiple fields; however, they still face limitations in data collection, scene constraints, scale, and cost. Data synthesis is gaining increasing attention due to its ability to provide more diverse, cost-effective, and targeted data. Our research aims to overcome the limitations of existing datasets by using Unreal Engine to synthesize an unconstrained behavioral dataset within a residential environment, aiming to provide a general template applicable across various scenarios in human living behavior studies.
   </p>
 
   <hr style="margin: 2rem 0;">
@@ -231,6 +231,7 @@ Figure 8. Data Visualization of Gustatory Cultural Elements in Flushing
 <p class="figure-caption">
 Figure 9. Final Data Visualization
 </p>
+
 
 
 
