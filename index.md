@@ -88,7 +88,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   <div class="portfolio-item">
     <a class="portfolio-card" href="/projects/research_0/" aria-label="Project placeholder 1">
       <div class="portfolio-cover">
-        <img src="/images/Frame 11.png" alt="Project cover placeholder">
+        <img src="/images/Cover_research0.png" alt="Project cover placeholder">
       </div>
     </a>
 
@@ -105,7 +105,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   <div class="portfolio-item">
     <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 2">
       <div class="portfolio-cover">
-        <img src="/images/Frame 12.png" alt="Project cover placeholder">
+        <img src="/images/Cover_research1" alt="Project cover placeholder">
       </div>
     </a>
 
@@ -143,7 +143,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   <div class="portfolio-item">
     <a class="portfolio-card" href="#" aria-label="Project placeholder 1">
       <div class="portfolio-cover">
-        <img src="/images/500x300.png" alt="Project cover placeholder">
+        <img src="/images/Cover_design0" alt="Project cover placeholder">
       </div>
     </a>
 
