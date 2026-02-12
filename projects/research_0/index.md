@@ -114,7 +114,7 @@ toc_sticky: true
   <div class="kv-grid">
     <div class="kv-item">
       <div class="k">Team</div>
-      <div class="v">Hu Rong, Mo Di</div>
+      <div class="v">Rong Hu, Di Mo</div>
     </div>
 
     <div class="kv-item">
@@ -231,6 +231,7 @@ Figure 8. Data Visualization of Gustatory Cultural Elements in Flushing
 <p class="figure-caption">
 Figure 9. Final Data Visualization
 </p>
+
 
 
 
