@@ -114,7 +114,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
       <div class="portfolio-tags">
         <span class="tag">Human Factors</span>
         <span class="tag">Behavioral Study</span>
-        <span class="tag">Data Set Synthesis</span>
+        <span class="tag">Dataset Synthesis</span>
       </div>
     </div>
   </div>
