@@ -152,62 +152,78 @@ toc_sticky: true
 </div>
 
 
-<h2>Background</h2>
+<h2>Problems</h2>
+
+blablabla placeholder
 
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 25.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 1. Comparison Between Constrained VS Unconstrained Human Behavior Datasets.
+  Figure 1. Placeholder.
 </p>
 
 
-<h2>Field Scanning to Scene Building</h2>
+<h2>Strategy</h2>
 
-In the early experiment, we performed point cloud scanning of public areas in each residence, such as the living room, dining room, and kitchen,
-achieving millimeter-level precision. Based on the point cloud models, the data was refined and organized to construct virtual residential scenarios
-that closely resemble real-life settings.
+blablablaplaceholder
 
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 19.png' | relative_url }})
+![Figure placeholder]({{ '/projects/design_0/asset/Frame 26.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 2. The Process from Real Living Scenes to Unreal Engine Scenes.
+Figure 2. Placeholder.
 </p>
 
 
-<h2>Scene Mapping</h2>
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 20.png' | relative_url }})
+<h2>Goal</h2>
+
+blablablaplaceholder
+
+![Figure placeholder]({{ '/projects/design_0/asset/Frame 27.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 3. Mapping from Real Scenes to Unreal Engine Scenes.
+Figure 3. Placeholder.
 </p>
 
 
-<h2>Camera Settings</h2>
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 21.png' | relative_url }})
+<h2>Game Assets</h2>
+
+blablablaplaceholder
+
+![Figure placeholder]({{ '/projects/design_0/asset/Frame 28.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 4. Camera Settings in Unreal Engine
+Figure 3. Placeholder.
 </p>
 
+<h2>Game Planning of Chapter 1</h2>
 
-<h2>Motion Settings</h2>
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 22.png' | relative_url }})
+blablablaplaceholder
+
+![Figure placeholder]({{ '/projects/design_0/asset/Frame 29.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 5. Motion Setting Process
+Figure 3. Placeholder.
 </p>
 
 
-<h2>Output</h2>
-<p class="section-subtitle">
-  Synthetic Dataset
-</p>
+<h2>Techflow</h2>
 
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 23.png' | relative_url }})
+blablablaplaceholder
+
+![Figure placeholder]({{ '/projects/design_0/asset/Frame 30.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 6. Dataset Examples
+Figure 3. Placeholder.
 </p>
+
+![Figure placeholder]({{ '/projects/design_0/asset/Frame 31.png' | relative_url }})
+
+<p class="figure-caption">
+Figure 3. Placeholder.
+</p>
+
+
+
 
 
 
