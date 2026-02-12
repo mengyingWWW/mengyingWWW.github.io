@@ -120,7 +120,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   </div>
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="#" aria-label="Project placeholder 3">
+    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 3">
       <div class="portfolio-cover">
         <img src="/images/500x300.png" alt="Project cover placeholder">
       </div>
@@ -157,7 +157,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   </div>
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="#" aria-label="Project placeholder 2">
+    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 2">
       <div class="portfolio-cover">
         <img src="/images/500x300.png" alt="Project cover placeholder">
       </div>
@@ -174,7 +174,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   </div>
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="#" aria-label="Project placeholder 3">
+    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 3">
       <div class="portfolio-cover">
         <img src="/images/500x300.png" alt="Project cover placeholder">
       </div>
@@ -194,7 +194,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
 <div class="portfolio-grid">
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="#" aria-label="Project placeholder 1">
+    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 1">
       <div class="portfolio-cover">
         <img src="/images/500x300.png" alt="Project cover placeholder">
       </div>
@@ -211,7 +211,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   </div>
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="#" aria-label="Project placeholder 2">
+    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 2">
       <div class="portfolio-cover">
         <img src="/images/500x300.png" alt="Project cover placeholder">
       </div>
@@ -228,7 +228,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   </div>
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="#" aria-label="Project placeholder 3">
+    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 3">
       <div class="portfolio-cover">
         <img src="/images/500x300.png" alt="Project cover placeholder">
       </div>
