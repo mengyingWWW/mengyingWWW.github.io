@@ -46,8 +46,8 @@ title: ""
         </a>.
         My research interests lie at the intersection of
         <strong>🧠 Human–AI Interaction</strong>,
-        <strong>📚 learning sciences</strong>, and
-        <strong>🧩 human factors</strong>,
+        <strong>📚 Learning Sciences</strong>, and
+        <strong>🧩 Human Factors</strong>,
         with a focus on how AI systems shape human attention, reasoning, and behavior.
       </p>
     </div>
@@ -141,7 +141,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
 <div class="portfolio-grid">
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="#" aria-label="Project placeholder 1">
+    <a class="portfolio-card" href="/projects/design_0/" aria-label="Project placeholder 1">
       <div class="portfolio-cover">
         <img src="/images/Cover_design0.png" alt="Project cover placeholder">
       </div>
