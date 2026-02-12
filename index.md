@@ -93,10 +93,11 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">test00 Made in Flushing</div>
+      <div class="portfolio-meta-title">Made in Flushing</div>
       <div class="portfolio-tags">
         <span class="tag">Data Visualization</span>
         <span class="tag">Machine Learning</span>
+        <span class="tag">Multisensory Analysis</span>
       </div>
     </div>
   </div>
