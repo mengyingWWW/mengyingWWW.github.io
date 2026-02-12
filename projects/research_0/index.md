@@ -78,7 +78,7 @@ toc_sticky: true
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
 
-  <h1 class="project-title">Made in Flushing</h1>
+  <h1 class="project-title">Made in Flushing test1</h1>
 
   <!-- 4-column info blocks -->
   <div class="kv-grid">
@@ -138,4 +138,5 @@ elements and their integration with other cultural features, offering new insigh
 ![Figure placeholder]({{ '/projects/research_0/assets/Frame 10.png' | relative_url }})
 
 *Figure 1. Placeholder caption.*
+
 
