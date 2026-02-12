@@ -27,8 +27,8 @@ toc_sticky: true
   </p>
 
   <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px;">
-    <span class="tag">Machine Learning</span>
-    <span class="tag">Data Visualization</span>
+    <span class="tag">#Machine Learning</span>
+    <span class="tag">#Data Visualization</span>
   </div>
 
   <p style="margin-top: 18px; font-size: 1.05rem; line-height: 1.75;">
@@ -41,20 +41,20 @@ of Chinese and other cultures across visual, aural, and gustatory dimensions, th
 we use data visualization to show the coexistence of Chinese and other cultures
 across these three sensory dimensions.
   </p>
-
   <hr style="margin: 2rem 0;">
 </div>
 
-## Problem
-Write 2–4 sentences:
-- What problem are you addressing?
-- Why does it matter in HCI / learning sciences / human factors?
-- What is missing in prior work?
+## Background
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 2.png' | relative_url }})
+Flushing, located in Queens, New York, is a diverse neighborhood with a rich history that has shaped its cultural character. While Flushing’s rich history has cultivated deep multicultural fusion, it is predominantly recognized today as one of the world’s largest Chinatown. This dominant perception often
+overshadows the diverse cultural integration shaped by not only Chinese, Korean, and Indian communities, but also earlier influences from European colonizers and other immigrant groups. Our research aims to fill this gap by applying machine learning to study the multisensory composition of Chinese
+elements and their integration with other cultural features, offering new insights into Flushing’s complex identity.
 
-## Approach
+## Purpose
 
-![Figure placeholder]({{ '/projects/research_0/assets/coverPlaceholder.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 3.png' | relative_url }})
 
 *Figure 1. Placeholder caption.*
+
 
 
