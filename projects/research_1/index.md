@@ -192,7 +192,7 @@ Figure 3. Mapping from Real Scenes to Unreal Engine Scenes.
 ![Figure placeholder]({{ '/projects/research_0/assets/Frame 21.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 5. Camera Settings in Unreal Engine
+Figure 4. Camera Settings in Unreal Engine
 </p>
 
 
@@ -200,17 +200,21 @@ Figure 5. Camera Settings in Unreal Engine
 ![Figure placeholder]({{ '/projects/research_0/assets/Frame 22.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 7. Motion Setting Process
+Figure 5. Motion Setting Process
 </p>
 
 
 <h2>Output</h2>
+<p class="section-subtitle">
+  Synthetic Dataset
+</p>
 
-![Figure placeholder]({{ '/projects/research_0/assets/Frame 9.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 23.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 9. Final Data Visualization
+Figure 6. Dataset Examples
 </p>
+
 
 
 
