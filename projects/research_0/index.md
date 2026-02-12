@@ -108,7 +108,7 @@ toc_sticky: true
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
 
-  <h1 class="project-title">Made in Flushing test4</h1>
+  <h1 class="project-title">Made in Flushing</h1>
 
   <!-- 4-column info blocks -->
   <div class="kv-grid">
@@ -231,6 +231,7 @@ Figure 8. Data Visualization of Gustatory Cultural Elements in Flushing
 <p class="figure-caption">
 Figure 9. Final Data Visualization
 </p>
+
 
 
 
