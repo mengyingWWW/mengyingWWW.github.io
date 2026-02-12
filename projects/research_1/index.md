@@ -156,9 +156,6 @@ toc_sticky: true
 
 
 <h2>Background</h2>
-<p class="section-subtitle">
-  Constrained Human Behavior Dataset VS Unconstrained Human Behavior Dataset
-</p>
 
 ![Figure placeholder]({{ '/projects/research_1/assets1/Frame 18.png' | relative_url }})
 
@@ -214,6 +211,7 @@ Figure 5. Motion Setting Process
 <p class="figure-caption">
 Figure 6. Dataset Examples
 </p>
+
 
 
 
