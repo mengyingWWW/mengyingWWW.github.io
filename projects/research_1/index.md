@@ -1,7 +1,7 @@
 ---
 layout: single
 title: ""
-permalink: /projects/research_0/
+permalink: /projects/research_1/
 author_profile: false
 toc: true
 toc_label: "Contents"
@@ -231,6 +231,7 @@ Figure 8. Data Visualization of Gustatory Cultural Elements in Flushing
 <p class="figure-caption">
 Figure 9. Final Data Visualization
 </p>
+
 
 
 
