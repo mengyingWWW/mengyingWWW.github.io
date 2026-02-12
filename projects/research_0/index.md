@@ -100,7 +100,7 @@ toc_sticky: true
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
 
-  <h1 class="project-title">Made in Flushing test2</h1>
+  <h1 class="project-title">Made in Flushing test3</h1>
 
   <!-- 4-column info blocks -->
   <div class="kv-grid">
@@ -172,3 +172,26 @@ Flushing, located in Queens, New York, is a diverse neighborhood shaped by centu
 *Figure 2. Cultural elements identified in street views.*
 
 This project investigates how cultural identity can be quantified through visual, auditory, and gustatory signals in urban environments. By integrating image segmentation, OCR, sound classification, and NLP-based analysis, we model how cultural expressions manifest spatially and sensorially within Flushing.
+
+<h2>Visual Chinese Elements in Flushing</h2>
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 3.png' | relative_url }})
+*Figure 3. Procession of visual elements in street views*
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 4.png' | relative_url }})
+*Figure 4. Data visualization of visual cultural elements in Flushing*
+
+<h2>Aural Chinese Elements in Flushing</h2>
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 5.png' | relative_url }})
+*Figure 5. Procession of aural elements in street videos*
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 6.png' | relative_url }})
+*Figure 6. Data visualization of aural cultural elements in Flushing*
+
+<h2>Gustatory Chinese Elements in Flushing</h2>
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 7.png' | relative_url }})
+*Figure 7. Procession of gustatory elements in Google map comments*
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 8.png' | relative_url }})
+*Figure 8. Data visualization of gustatory cultural elements in Flushing*
+
+<h2>Multi-sensory Chinese Elements & Multi-cultural Fusion in Flushing</h2>
+![Figure placeholder]({{ '/projects/research_0/assets/Frame 9.png' | relative_url }})
+*Figure 9. Final data visualization*
+
