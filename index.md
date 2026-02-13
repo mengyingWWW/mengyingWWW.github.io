@@ -148,7 +148,11 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
 <div class="portfolio-grid">
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 1">
+    <a class="portfolio-card" 
+       href="https://parkipedia.my.canva.site/research-findings" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Parkipedia project">
       <div class="portfolio-cover">
         <img src="/images/500x300.png" alt="Project cover placeholder">
       </div>
