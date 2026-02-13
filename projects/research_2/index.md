@@ -215,8 +215,71 @@ blablabla placeholder
 </p>
 
 <h2>Results & Findings</h2>
+
 <p class="section-subtitle">
   Clean & Transform Data
 </p>
+blablabla placeholder.
 
+<p class="section-subtitle">
+  Measures
+</p>
+blablabla placeholder.
 
+<p class="section-subtitle">
+  Sample Characteristics
+</p>
+
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 57.png' | relative_url }})
+
+<p class="figure-caption">
+  Figure 6. blablabla placeholder.
+</p>
+
+<p class="section-subtitle">
+  Descriptive Stats for Indices by Version
+</p>
+
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 58.png' | relative_url }})
+
+<p class="figure-caption">
+  Figure 7. blablabla placeholder.
+</p>
+
+<p class="section-subtitle">
+  Boxplots: Indices by Version
+</p>
+
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 60.png' | relative_url }})
+
+<p class="figure-caption">
+  Figure 8. blablabla placeholder.
+</p>
+
+<p class="section-subtitle">
+  One-Way ANOVAS
+</p>
+
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 61.png' | relative_url }})
+
+<p class="figure-caption">
+  Figure 9. blablabla placeholder.
+</p>
+
+<p class="section-subtitle">
+  Post-hoc Tukey Comparisons
+</p>
+
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 62.png' | relative_url }})
+
+<p class="figure-caption">
+  Figure 10. blablabla placeholder.
+</p>
+
+<h2>Qualitative Data</h2>
+
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 63.png' | relative_url }})
+
+<h2>Discussion</h2>
+
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 64.png' | relative_url }})
