@@ -154,7 +154,9 @@ toc_sticky: true
     A Healing Journey is an interactive experience combining VR scenes and Arduino interactive installations, supported by the VR Lab at Tsinghua University’s School of Architecture. Designed to support campus stress relief through movement-based emotional engagement, the project uses Interactional Transference Theory to guide participants through choreographed movements in VR. With N'Space plug-in and Unreal Engine, participants’ actions prompt real-time responses in both the VR Lab's visual feedback and physical installations, creating a synchronized, soothing
 experience.
   </p>
-  *Special thanks to Archifiction.Inc for their invaluable device support and collaboration on this project.*
+  <p>
+  <em>Special thanks to Archifiction. Inc for their invaluable device support and collaboration on this project.</em>
+  </p>
 
   <hr style="margin: 2rem 0;">
 </div>
@@ -279,6 +281,7 @@ The exploded view reveals the constructive logic of the installation, demonstrat
 <p class="figure-caption">
   Figure 13. From Prototype to Full-Scale Installation.
 </p>
+
 
 
 
