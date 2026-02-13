@@ -103,7 +103,7 @@ toc_sticky: true
 
   <!-- Cover image -->
   <img
-    src="{{ '/projects/research_1/assets1/Frame 17.png' | relative_url }}"
+    src="{{ '/projects/research_2/assets/Frame 48.png' | relative_url }}"
     alt="Project cover"
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
@@ -153,7 +153,7 @@ toc_sticky: true
 
   <!-- Intro paragraph -->
   <p class="lede">
-    The behavioral datasets have broad applications across multiple fields; however, they still face limitations in data collection, scene constraints, scale, and cost. Data synthesis is gaining increasing attention due to its ability to provide more diverse, cost-effective, and targeted data. Our research aims to overcome the limitations of existing datasets by using Unreal Engine to synthesize an unconstrained behavioral dataset within a residential environment, aiming to provide a general template applicable across various scenarios in human living behavior studies.
+    blablabla placeholder
   </p>
 
   <hr style="margin: 2rem 0;">
@@ -162,69 +162,22 @@ toc_sticky: true
 
 <h2>Background</h2>
 
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 18.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 49.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 1. Comparison Between Constrained VS Unconstrained Human Behavior Datasets.
+  Figure 1. Mayor Harrell & New Responsible AI Plan.
 </p>
 
 
-<h2>Field Scanning to Scene Building</h2>
+<h2>Research Question</h2>
 
-In the early experiment, we performed point cloud scanning of public areas in each residence, such as the living room, dining room, and kitchen,
-achieving millimeter-level precision. Based on the point cloud models, the data was refined and organized to construct virtual residential scenarios
-that closely resemble real-life settings.
+blablabla placeholder
 
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 19.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 50.png' | relative_url }})
 
-<p class="figure-caption">
-Figure 2. The Process from Real Living Scenes to Unreal Engine Scenes.
-</p>
+<h2>Hypothesis</h2>
 
-
-<h2>Scene Mapping</h2>
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 20.png' | relative_url }})
-
-<p class="figure-caption">
-Figure 3. Mapping from Real Scenes to Unreal Engine Scenes.
-</p>
-
-
-<h2>Camera Settings</h2>
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 21.png' | relative_url }})
-
-<p class="figure-caption">
-Figure 4. Camera Settings in Unreal Engine
-</p>
-
-
-<h2>Motion Settings</h2>
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 22.png' | relative_url }})
-
-<p class="figure-caption">
-Figure 5. Motion Setting Process
-</p>
-
-
-<h2>Output</h2>
-<p class="section-subtitle">
-  Synthetic Dataset
-</p>
-
-![Figure placeholder]({{ '/projects/research_1/assets1/Frame 23.png' | relative_url }})
-
-<p class="figure-caption">
-Figure 6. Dataset Examples
-</p>
-
-
-
-
-
-
-
-
-
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 51.png' | relative_url }})
 
 
 
