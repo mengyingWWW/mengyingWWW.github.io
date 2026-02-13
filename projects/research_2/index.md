@@ -179,9 +179,40 @@ blablabla placeholder
 
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 51.png' | relative_url }})
 
+<h2>Methods</h2>
 
+blablabla placeholder
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 52.png' | relative_url }})
 
+<p class="figure-caption">
+  Figure 2. blablabla placeholder.
+</p>
 
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 53.png' | relative_url }})
 
+<p class="figure-caption">
+  Figure 3. blablabla placeholder.
+</p>
 
+<h2>Design Prototypes</h2>
+
+blablabla placeholder (3 videos)
+
+<h2>Survey Design</h2>
+
+blablabla placeholder
+
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 55.png' | relative_url }})
+
+<p class="figure-caption">
+  Figure 4. blablabla placeholder.
+</p>
+
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 56.png' | relative_url }})
+
+<p class="figure-caption">
+  Figure 5. blablabla placeholder.
+</p>
+
+<h2>Results & Findings</h2>
 
