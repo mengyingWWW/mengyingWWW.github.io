@@ -155,7 +155,7 @@ toc_sticky: true
 <h2>Problems</h2>
 
 <p class="section-subtitle">
-  Limitations of third-person view in traditional tours
+  Limitations of Third-Person View in Traditional Tours
 </p>
 
 Traditional guided tours of cultural heritage sites, such as the Forbidden City, primarily rely on third-person narration and passive observation. While visitors can take photographs and access historical facts, the experience often lacks interaction, contextual understanding, and emotional engagement. This model limits the educational potential of heritage spaces, especially for diverse audiences with different cognitive and learning needs. The gap between visual spectacle and meaningful comprehension highlights the need for more interactive and embodied approaches to cultural learning.
@@ -181,7 +181,7 @@ Figure 2. AR Gamified Tour as a Mediating Mechanism Between Heritage Elements an
 <h2>Goal</h2>
 
 <p class="section-subtitle">
-  First-person view engagement with AR
+  First-Person View Engagement with AR
 </p>
 
 This design framework illustrates how first-person engagement is achieved through AR-based mapping, multi-timeline narratives, multimodal interaction (vision, audition, and physical interaction), and chapter-based historical storytelling.
@@ -220,7 +220,7 @@ Figure 5. Chapter 1 Route Map.
 <h2>Techflow</h2>
 
 <p class="section-subtitle">
-  Plot-driven AR Navigation
+  Plot-Driven AR Navigation
 </p>
 
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 30.png' | relative_url }})
@@ -244,6 +244,7 @@ Figure 6,7,8. Technical Pipeline.
 <p class="figure-caption">
 Figure 9. User Interface Design.
 </p>
+
 
 
 
