@@ -194,7 +194,7 @@ blablabla placeholder
   Figure 3. blablabla placeholder.
 </p>
 
-<h2>Design Prototypes</h2>
+<h2>Experimental Platform Prototypes</h2>
 
 blablabla placeholder (3 videos)
 
@@ -283,3 +283,4 @@ blablabla placeholder.
 <h2>Discussion</h2>
 
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 64.png' | relative_url }})
+
