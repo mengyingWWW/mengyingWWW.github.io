@@ -108,7 +108,7 @@ toc_sticky: true
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
 
-  <h1 class="project-title">Permission to the Forbidden</h1>
+  <h1 class="project-title">A Healing Journey</h1>
 
   <!-- 4-column info blocks -->
   <div class="kv-grid">
@@ -285,6 +285,7 @@ placeholder blabla
 <p class="figure-caption">
   Figure 13. Placeholder.
 </p>
+
 
 
 
