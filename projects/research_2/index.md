@@ -212,7 +212,7 @@ blablabla placeholder
   Figure 4. blablabla placeholder.
 </p>
 
-![Figure placeholder]({{ '/projects/research_2/assets/Frame 56-1.png' | relative_url }})
+![Figure placeholder]({{ '/projects/research_2/assets/Frame 56-2.png' | relative_url }})
 
 <p class="figure-caption">
   Figure 5. blablabla placeholder.
@@ -287,6 +287,7 @@ blablabla placeholder.
 <h2>Discussion</h2>
 
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 64.png' | relative_url }})
+
 
 
 
