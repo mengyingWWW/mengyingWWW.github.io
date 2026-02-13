@@ -153,7 +153,7 @@ toc_sticky: true
 
   <!-- Intro paragraph -->
   <p class="lede">
-    blablabla placeholder
+    **Civic Intelligence** originated from our participation in the [Community Innovation Hackathon](https://innovation-hub.seattle.gov/2025/10/28/community-innovation-pactathon-permitting/) hosted by the City of Seattle’s Innovation & Performance team. The event challenged participants to design AI-driven solutions that improve transparency and efficiency in the city’s construction permitting system using newly released public datasets. Building on the hackathon prototype, we further developed the project in collaboration with the HCDE516 course. Through coursework and iterative evaluation, we explored how AI assistance can support usability, trust, and decision-making in civic service workflows.
   </p>
 
   <hr style="margin: 2rem 0;">
@@ -283,6 +283,7 @@ blablabla placeholder.
 <h2>Discussion</h2>
 
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 64.png' | relative_url }})
+
 
 
 
