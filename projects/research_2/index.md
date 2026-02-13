@@ -284,3 +284,4 @@ blablabla placeholder.
 
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 64.png' | relative_url }})
 
+
