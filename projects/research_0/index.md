@@ -155,7 +155,7 @@ toc_sticky: true
 
 <h2>Background</h2>
 <p class="section-subtitle">
-  Flushing as a thriving Chinatown & multicultural urban hub
+  Flushing as a Thriving Chinatown & Multicultural Urban Hub
 </p>
 
 ![Figure placeholder]({{ '/projects/research_0/assets/Frame 2.png' | relative_url }})
@@ -168,7 +168,7 @@ Flushing, located in Queens, New York, is a diverse neighborhood with a rich his
 
 <h2>Purpose</h2>
 <p class="section-subtitle">
-  Studying multisensory Chinese elements via machine learning
+  Studying Multisensory Chinese Elements via Machine Learning
 </p>
 
 ![Figure placeholder]({{ '/projects/research_0/assets/Frame 10.png' | relative_url }})
@@ -231,6 +231,7 @@ Figure 8. Data Visualization of Gustatory Cultural Elements in Flushing
 <p class="figure-caption">
 Figure 9. Final Data Visualization
 </p>
+
 
 
 
