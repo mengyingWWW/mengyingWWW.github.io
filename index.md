@@ -122,15 +122,17 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   <div class="portfolio-item">
     <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 3">
       <div class="portfolio-cover">
-        <img src="/images/500x300.png" alt="Project cover placeholder">
+        <img src="/images/Cover_research2.png" alt="Project cover placeholder">
       </div>
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">HCDE516_PlaceHolder</div>
+      <div class="portfolio-meta-title">Civic Intelligence</div>
       <div class="portfolio-tags">
+        <span class="tag">Human–AI Interaction</span>
         <span class="tag">Experimental Research</span>
-        <span class="tag">AI Product</span>
+        <span class="tag">Civic Tech</span>
+        <span class="tag">Usability Evaluation</span>
       </div>
     </div>
   </div>
