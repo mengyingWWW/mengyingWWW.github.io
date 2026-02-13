@@ -231,7 +231,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
       <div class="portfolio-meta-title">Matter Matters (Jan, 2023)</div>
       <div class="portfolio-tags">
         <span class="tag">Computational Design</span>
-        <span class="tag">Data-Driven Design</span>
+        <span class="tag">3D Printing</span>
       </div>
     </div>
   </div>
