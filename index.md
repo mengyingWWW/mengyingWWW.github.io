@@ -24,7 +24,7 @@ title: ""
           <i class="fab fa-github" aria-hidden="true"></i><span>GitHub</span>
         </a>
 
-        <a class="landing-link" href="{{ site.author.linkedin | default: 'https://www.linkedin.com' }}">
+        <a class="landing-link" href="www.linkedin.com/in/mengying-www">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
         </a>
       </div>
