@@ -120,7 +120,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   </div>
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 3">
+    <a class="portfolio-card" href="/projects/research_2/" aria-label="Project placeholder 3">
       <div class="portfolio-cover">
         <img src="/images/Cover_research2.png" alt="Project cover placeholder">
       </div>
