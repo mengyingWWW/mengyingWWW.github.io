@@ -84,23 +84,26 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
 
 <h3 class="portfolio-subtitle">Research</h3>
 <div class="portfolio-grid">
-
+  
   <div class="portfolio-item">
-    <a class="portfolio-card" href="/projects/research_0/" aria-label="Project placeholder 1">
+    <a class="portfolio-card" href="/projects/research_2/" aria-label="Project placeholder 1">
       <div class="portfolio-cover">
-        <img src="/images/Cover_research0.png" alt="Project cover placeholder">
+        <img src="/images/Cover_research2.png" alt="Project cover placeholder">
       </div>
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Made in Flushing</div>
+      <div class="portfolio-meta-title">Civic Intelligence (Sep, 2025)</div>
       <div class="portfolio-tags">
-        <span class="tag">Data Visualization</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Multisensory Analysis</span>
+        <span class="tag">Human–AI Interaction</span>
+        <span class="tag">Experimental Research</span>
+        <span class="tag">Civic Tech</span>
+        <span class="tag">Usability Evaluation</span>
       </div>
     </div>
   </div>
+  
+
 
   <div class="portfolio-item">
     <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 2">
@@ -110,7 +113,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">The Living Data</div>
+      <div class="portfolio-meta-title">The Living Data (Sep, 2024)</div>
       <div class="portfolio-tags">
         <span class="tag">Human Factors</span>
         <span class="tag">Behavioral Study</span>
@@ -118,24 +121,26 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
       </div>
     </div>
   </div>
-
+  
   <div class="portfolio-item">
-    <a class="portfolio-card" href="/projects/research_2/" aria-label="Project placeholder 3">
+    <a class="portfolio-card" href="/projects/research_0/" aria-label="Project placeholder 3">
       <div class="portfolio-cover">
-        <img src="/images/Cover_research2.png" alt="Project cover placeholder">
+        <img src="/images/Cover_research0.png" alt="Project cover placeholder">
       </div>
     </a>
 
+    
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Civic Intelligence</div>
+      <div class="portfolio-meta-title">Made in Flushing (Aug, 2024)</div>
       <div class="portfolio-tags">
-        <span class="tag">Human–AI Interaction</span>
-        <span class="tag">Experimental Research</span>
-        <span class="tag">Civic Tech</span>
-        <span class="tag">Usability Evaluation</span>
+        <span class="tag">Data Visualization</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Multisensory Analysis</span>
       </div>
     </div>
   </div>
+
+  
 
 </div>
 
@@ -143,31 +148,31 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
 <div class="portfolio-grid">
 
   <div class="portfolio-item">
-    <a class="portfolio-card" href="/projects/design_0/" aria-label="Project placeholder 1">
-      <div class="portfolio-cover">
-        <img src="/images/Cover_design0.png" alt="Project cover placeholder">
-      </div>
-    </a>
-
-    <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Permission to the Forbidden</div>
-      <div class="portfolio-tags">
-        <span class="tag">AR Game Development</span>
-        <span class="tag">UI UX Design</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="portfolio-item">
-    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 2">
+    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 1">
       <div class="portfolio-cover">
         <img src="/images/500x300.png" alt="Project cover placeholder">
       </div>
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Parkipedia</div>
+      <div class="portfolio-meta-title">Parkipedia (Sep, 2025)</div>
       <div class="portfolio-tags">
+        <span class="tag">UI UX Design</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="portfolio-item">
+    <a class="portfolio-card" href="/projects/design_0/" aria-label="Project placeholder 2">
+      <div class="portfolio-cover">
+        <img src="/images/Cover_design0.png" alt="Project cover placeholder">
+      </div>
+    </a>
+
+    <div class="portfolio-meta">
+      <div class="portfolio-meta-title">Permission to the Forbidden (Jun, 2024)</div>
+      <div class="portfolio-tags">
+        <span class="tag">AR Game Development</span>
         <span class="tag">UI UX Design</span>
       </div>
     </div>
@@ -185,7 +190,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">A Healing Journey</div>
+      <div class="portfolio-meta-title">A Healing Journey (Nov, 2023)</div>
       <div class="portfolio-tags">
         <span class="tag">Behavioral Study</span>
         <span class="tag">Interactive Installation</span>
@@ -202,7 +207,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">The Echo</div>
+      <div class="portfolio-meta-title">The Echo (Jul, 2023)</div>
       <div class="portfolio-tags">
         <span class="tag">Gen AI</span>
         <span class="tag">Film Making</span>
@@ -218,7 +223,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Matter Matters</div>
+      <div class="portfolio-meta-title">Matter Matters (Jan, 2023)</div>
       <div class="portfolio-tags">
         <span class="tag">Computational Design</span>
         <span class="tag">Data-Driven Design</span>
