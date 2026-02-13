@@ -127,7 +127,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Project Title (Research)</div>
+      <div class="portfolio-meta-title">HCDE516_PlaceHolder</div>
       <div class="portfolio-tags">
         <span class="tag">ML</span>
         <span class="tag">Visualization</span>
@@ -164,7 +164,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Project Title (Research)</div>
+      <div class="portfolio-meta-title">Parkipedia</div>
       <div class="portfolio-tags">
         <span class="tag">XR</span>
         <span class="tag">Data</span>
@@ -201,7 +201,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Project Title (Research)</div>
+      <div class="portfolio-meta-title">A Healing Journey</div>
       <div class="portfolio-tags">
         <span class="tag">HCI</span>
         <span class="tag">AI</span>
@@ -218,7 +218,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Project Title (Research)</div>
+      <div class="portfolio-meta-title">The Echo</div>
       <div class="portfolio-tags">
         <span class="tag">XR</span>
         <span class="tag">Data</span>
@@ -235,7 +235,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     </a>
 
     <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Project Title (Research)</div>
+      <div class="portfolio-meta-title">Matter Matters</div>
       <div class="portfolio-tags">
         <span class="tag">ML</span>
         <span class="tag">Visualization</span>
