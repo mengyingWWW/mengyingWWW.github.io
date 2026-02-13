@@ -165,126 +165,121 @@ experience.
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 35.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 1. Placeholder.
+  Figure 1. Quantitative Analysis of Campus Anxiety and Intervention Opportunity.
 </p>
 
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 36.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 2. Placeholder.
+  Figure 2. System Architecture for Embodied VR Anxiety Intervention.
 </p>
 
 <h2>Strategy</h2>
 
-placeholder blabla
+This strategy framework integrates embodied dance movements, emotion mapping, and VR-based environmental design to create an interactive anxiety-relief experience. By synchronizing motion detection, sentiment analysis, and physical installation feedback through serial communication, the system connects user movement, immersive storytelling, and multisensory output into a coherent therapeutic loop.
 
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 37.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 3. Placeholder.
+  Figure 3. System Framework for an Embodied VR-Based Anxiety Intervention.
 </p>
 
 
 <h2>Technology</h2>
 
-placeholder blabla
+A multi-layered embodied interaction system connecting dance input, motion sensing, VR rendering, and physical installation feedback.
 
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 38.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 4. Placeholder.
+  Figure 4. Hardware–Software Integration for Embodied VR Interaction.
 </p>
 
 <h2>Body Motion & Emotion Analysis</h2>
 
-placeholder blabla
+Based on emotion categorization theory, different emotions are categorized by two axes: valence and arousal. Each emotion is then related
+to four basic movements, which will be further used in the dance moves. The strategy of behaviorism is taken into consideration in our dance
+moves design, indicating that emotions are both reactive to behavior and can be influenced by subsequent behavior.
 
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 39.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 5. Placeholder.
+  Figure 5. Body Motion & Emotion Mapping.
 </p>
 
 <h2>Dance Moves Design & Emotion Flow</h2>
 
-placeholder blabla
+The system organizes the experience into three embodied chapters (Relax, Energetic, Liberal), each associated with distinct motion patterns and emotional trajectories. Motion inputs from participants are mapped to affective states through keyframe analysis, triggering coordinated responses in both the VR environment and the physical installation. This closed-loop interaction translates bodily movement into spatial transformation and emotional modulation.
 
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 40.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 6. Placeholder.
+  Figure 6. Motion–Emotion Correspondence in the VR Interaction System.
 </p>
 
 
 <h2>VR Scene Correlation</h2>
 
-placeholder blabla
-
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 41.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 7. Placeholder.
+  Figure 7. VR Scenes in Three Chapters.
 </p>
 
 <h2>VR Lab Setup</h2>
 
-placeholder blabla
+The VR Lab is configured as an immersive projection space integrating motion detection, real-time rendering, and physical installation control. Motion detection cameras capture participants’ movements, which are processed in the technical control room and translated into synchronized visual projections and installation responses, forming a unified interactive environment.
 
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 42.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 8. Placeholder.
+  Figure 8. Tsinghua VR Lab.
 </p>
 
 <h2>Technical Interconnection</h2>
 
-placeholder blabla
+The system establishes a real-time body–environment interaction loop, where motion capture data is processed and transmitted to both VR rendering and Arduino-controlled installation mechanisms, enabling synchronized multimodal feedback.
 
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 43.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 9. Placeholder.
+  Figure 9. Technical Interconnection of the Body–Installation–VR System.
 </p>
 
 <h2>Installation Design</h2>
 
-placeholder blabla
+The exploded view reveals the constructive logic of the installation, demonstrating how motorized units, vertical supports, and joint connections collaboratively generate synchronized surface transformations.
 
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 44.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 10. Placeholder.
+  Figure 10. Assembly and Component Breakdown of the Kinetic Installation.
 </p>
 
 <h2>Material Testing</h2>
 
-placeholder blabla
-
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 45.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 11. Placeholder.
+  Figure 11. Material Testing Process.
 </p>
 
 <h2>User Journey Map</h2>
 
-placeholder blabla
-
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 46.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 12. Placeholder.
+  Figure 12.  Cross-Modal Interaction Timeline Across Three Experience Chapters.
 </p>
 
-<h2>Photos</h2>
-
-placeholder blabla
+<h2>Physical Prototyping & Deployment</h2>
 
 ![Figure placeholder]({{ '/projects/archive_0/assets/Frame 47.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 13. Placeholder.
+  Figure 13. From Prototype to Full-Scale Installation.
 </p>
+
 
 
 
