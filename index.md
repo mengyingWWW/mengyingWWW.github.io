@@ -154,7 +154,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
        rel="noopener noreferrer"
        aria-label="Parkipedia project">
       <div class="portfolio-cover">
-        <img src="/images/500x300.png" alt="Project cover placeholder">
+        <img src="/images/Cover_design1.png" alt="Project cover placeholder">
       </div>
     </a>
 
