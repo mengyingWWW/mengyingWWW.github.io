@@ -160,120 +160,131 @@ experience.
 </div>
 
 
-<h2>Problems</h2>
+<h2>Research Framework</h2>
 
-<p class="section-subtitle">
-  Limitations of Third-Person View in Traditional Tours
-</p>
-
-Traditional guided tours of cultural heritage sites, such as the Forbidden City, primarily rely on third-person narration and passive observation. While visitors can take photographs and access historical facts, the experience often lacks interaction, contextual understanding, and emotional engagement. This model limits the educational potential of heritage spaces, especially for diverse audiences with different cognitive and learning needs. The gap between visual spectacle and meaningful comprehension highlights the need for more interactive and embodied approaches to cultural learning.
-
-![Figure placeholder]({{ '/projects/design_0/asset/Frame 25.png' | relative_url }})
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 35.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 1. Tension Between Tourism, Education, and Engagement in Heritage Spaces
+  Figure 1. Placeholder.
 </p>
 
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 36.png' | relative_url }})
+
+<p class="figure-caption">
+  Figure 2. Placeholder.
+</p>
 
 <h2>Strategy</h2>
 
-This framework illustrates how an AR gamified tour mediates between historical elements and visitor engagement. By transforming on-site exploration into first-person interactive experiences, the strategy bridges heritage content with immersive, emotionally resonant user experience.
+placeholder blabla
 
-![Figure placeholder]({{ '/projects/design_0/asset/Frame 26.png' | relative_url }})
-
-<p class="figure-caption">
-Figure 2. AR Gamified Tour as a Mediating Mechanism Between Heritage Elements and Visitor Experience.
-</p>
-
-
-<h2>Goal</h2>
-
-<p class="section-subtitle">
-  First-Person View Engagement with AR
-</p>
-
-This design framework illustrates how first-person engagement is achieved through AR-based mapping, multi-timeline narratives, multimodal interaction (vision, audition, and physical interaction), and chapter-based historical storytelling.
-
-![Figure placeholder]({{ '/projects/design_0/asset/Frame 27.png' | relative_url }})
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 37.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 3. Goal-Oriented AR Experience Design from Site Mapping to Narrative Chapter Design.
+  Figure 3. Placeholder.
 </p>
 
 
-<h2>Game Assets</h2>
+<h2>Technology</h2>
 
-The numerous artifacts and intricate historical character relationships create a perfect foundation for vibrant game assets. In this AR-guided tour of the Forbidden City, players discover the stories behind these artifacts and connect historical events to real-world settings, bringing both the
-artifacts and characters vivid to life as they explore.
+placeholder blabla
 
-![Figure placeholder]({{ '/projects/design_0/asset/Frame 28.png' | relative_url }})
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 38.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 4. Game Assets.
+  Figure 4. Placeholder.
 </p>
 
-<h2>Game Planning of Chapter 1</h2>
+<h2>Body Motion & Emotion Analysis</h2>
 
-Taking Chapter 1’s game plan as an example, the player enters the game as a palace maid, experiencing one day during Renyin Palace Coup
-from a first-person perspective while collecting artifact cards along the way. At the chapter’s start, player is provided with a timeline-based route
-map using the ancient Chinese Zodiac timekeeping method, providing an overview of the tour and guiding them through tasks.
+placeholder blabla
 
-![Figure placeholder]({{ '/projects/design_0/asset/Frame 29.png' | relative_url }})
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 39.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 5. Chapter 1 Route Map.
+  Figure 5. Placeholder.
 </p>
 
+<h2>Dance Moves Design & Emotion Flow</h2>
 
-<h2>Techflow</h2>
+placeholder blabla
 
-<p class="section-subtitle">
-  Plot-Driven AR Navigation
-</p>
-
-![Figure placeholder]({{ '/projects/design_0/asset/Frame 30.png' | relative_url }})
-
-![Figure placeholder]({{ '/projects/design_0/asset/Frame 31.png' | relative_url }})
-
-![Figure placeholder]({{ '/projects/design_0/asset/Frame 32.png' | relative_url }})
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 40.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 6,7,8. Technical Pipeline.
+  Figure 6. Placeholder.
 </p>
 
-<h2>Front-end Interfaces</h2>
 
-<p class="section-subtitle">
-  Game user journey
-</p>
+<h2>VR Scene Correlation</h2>
 
-![Figure placeholder]({{ '/projects/design_0/asset/Frame 33.png' | relative_url }})
+placeholder blabla
+
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 41.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 9. User Interface Design.
+  Figure 7. Placeholder.
 </p>
 
+<h2>VR Lab Setup</h2>
 
+placeholder blabla
 
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 42.png' | relative_url }})
 
+<p class="figure-caption">
+  Figure 8. Placeholder.
+</p>
 
+<h2>Technical Interconnection</h2>
 
+placeholder blabla
 
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 43.png' | relative_url }})
 
+<p class="figure-caption">
+  Figure 9. Placeholder.
+</p>
 
+<h2>Installation Design</h2>
 
+placeholder blabla
 
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 44.png' | relative_url }})
 
+<p class="figure-caption">
+  Figure 10. Placeholder.
+</p>
 
+<h2>Material Testing</h2>
 
+placeholder blabla
 
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 45.png' | relative_url }})
 
+<p class="figure-caption">
+  Figure 11. Placeholder.
+</p>
 
+<h2>User Journey Map</h2>
 
+placeholder blabla
 
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 46.png' | relative_url }})
 
+<p class="figure-caption">
+  Figure 12. Placeholder.
+</p>
 
+<h2>Photos</h2>
 
+placeholder blabla
+
+![Figure placeholder]({{ '/projects/archive_0/assets/Frame 47.png' | relative_url }})
+
+<p class="figure-caption">
+  Figure 13. Placeholder.
+</p>
 
 
 
