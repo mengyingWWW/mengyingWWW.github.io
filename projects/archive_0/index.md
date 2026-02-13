@@ -1,7 +1,7 @@
 ---
 layout: single
 title: ""
-permalink: /projects/design_0/
+permalink: /projects/archive_0/
 author_profile: false
 toc: true
 toc_label: "Contents"
@@ -103,7 +103,7 @@ toc_sticky: true
 
   <!-- Cover image -->
   <img
-    src="{{ '/projects/design_0/asset/Frame 24.png' | relative_url }}"
+    src="{{ '/projects/archive_0/assets/Frame 34.png' | relative_url }}"
     alt="Project cover"
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
@@ -113,40 +113,52 @@ toc_sticky: true
   <!-- 4-column info blocks -->
   <div class="kv-grid">
     <div class="kv-item">
-      <div class="k">Individual Work</div>
+      <div class="k">Team</div>
+      <div class="v">
+        Xinyu Wang<br/>
+        Bella Sun<br/>
+        Rong Zhao<br/>
+      </div>
     </div>
 
     <div class="kv-item">
       <div class="k">Tool</div>
-      <div class="v">Unity (AR Core)</div>
-      <div class="v">C#</div>
-      <div class="v">Figma</div>
+      <div class="v">Arduino</div>
+      <div class="v">Unreal Engine</div>
+      <div class="v">Rhino</div>
+      <div class="v">Grasshopper</div>
+      <div class="v">N'Space Plug-in</div>
     </div>
 
     <div class="kv-item">
       <div class="k">Role</div>
       <div class="v">
-        100% AR Game Planning and Developing;<br/>
-        100% Front-end User Interface.<br/>
+        90% installation design;<br/>
+        80% installation fabrication;<br/>
+        50% conceptual design;<br/>
+        50% serial communication.
       </div>
     </div>
 
     <div class="kv-item">
       <div class="k">Timeline</div>
-      <div class="v">Jun 2024 – Oct 2024</div>
+      <div class="v">Nov 2023 – Jan 2024</div>
     </div>
   </div>
 
   <!-- Tags -->
   <div class="tag-row">
-    <span class="tag">AR Game Developing</span>
-    <span class="tag">UI UX Design</span>
+    <span class="tag">Behavioral Study</span>
+    <span class="tag">Interactive Installation</span>
+    <span class="tag">MR Development</span>
   </div>
 
   <!-- Intro paragraph -->
   <p class="lede">
-    A gamified augmented reality (AR) game offers an immersive historical tour of the Forbidden City in Beijing. Players choose different dynastic periods, follow plotdriven AR paths, and complete tasks to learn about historical stories. Players play as historical roles, exploring stories, artifacts, and ancient architecture from a firstperson view. By the journey’s end, players will have a deeper understanding of the Forbidden City. With multi-timeline, multi-view, and multi-route options, the game makes exploring history of the Forbidden City both engaging and educational.
+    A Healing Journey is an interactive experience combining VR scenes and Arduino interactive installations, supported by the VR Lab at Tsinghua University’s School of Architecture. Designed to support campus stress relief through movement-based emotional engagement, the project uses Interactional Transference Theory to guide participants through choreographed movements in VR. With N'Space plug-in and Unreal Engine, participants’ actions prompt real-time responses in both the VR Lab's visual feedback and physical installations, creating a synchronized, soothing
+experience.
   </p>
+  *Special thanks to Archifiction.Inc for their invaluable device support and collaboration on this project.*
 
   <hr style="margin: 2rem 0;">
 </div>
@@ -244,6 +256,7 @@ Figure 6,7,8. Technical Pipeline.
 <p class="figure-caption">
 Figure 9. User Interface Design.
 </p>
+
 
 
 
