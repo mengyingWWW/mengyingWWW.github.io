@@ -36,7 +36,7 @@ title: ""
 
     <div class="about-body">
       <p>
-        Test 100 Hi! I’m <strong>Mengying</strong>, a first-year master’s student in the
+        Hi! I’m <strong>Mengying</strong>, a first-year master’s student in the
         <a href="https://www.hcde.washington.edu/" target="_blank">
           Department of Human-Centered Design & Engineering (HCDE)
         </a>
@@ -105,7 +105,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
   <div class="portfolio-item">
     <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 2">
       <div class="portfolio-cover">
-        <img src="/images/Cover_research1.png" alt="Project cover placeholder">
+        <img src="/images/Cover_research1_1.png" alt="Project cover placeholder">
       </div>
     </a>
 
