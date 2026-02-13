@@ -129,8 +129,8 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     <div class="portfolio-meta">
       <div class="portfolio-meta-title">HCDE516_PlaceHolder</div>
       <div class="portfolio-tags">
-        <span class="tag">ML</span>
-        <span class="tag">Visualization</span>
+        <span class="tag">Experimental Research</span>
+        <span class="tag">AI Product</span>
       </div>
     </div>
   </div>
@@ -166,25 +166,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     <div class="portfolio-meta">
       <div class="portfolio-meta-title">Parkipedia</div>
       <div class="portfolio-tags">
-        <span class="tag">XR</span>
-        <span class="tag">Data</span>
-        <span class="tag">Methods</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="portfolio-item">
-    <a class="portfolio-card" href="/projects/research_1/" aria-label="Project placeholder 3">
-      <div class="portfolio-cover">
-        <img src="/images/500x300.png" alt="Project cover placeholder">
-      </div>
-    </a>
-
-    <div class="portfolio-meta">
-      <div class="portfolio-meta-title">Project Title (Research)</div>
-      <div class="portfolio-tags">
-        <span class="tag">ML</span>
-        <span class="tag">Visualization</span>
+        <span class="tag">UI UX Design</span>
       </div>
     </div>
   </div>
@@ -203,9 +185,9 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     <div class="portfolio-meta">
       <div class="portfolio-meta-title">A Healing Journey</div>
       <div class="portfolio-tags">
-        <span class="tag">HCI</span>
-        <span class="tag">AI</span>
-        <span class="tag">Study</span>
+        <span class="tag">Behavioral Study</span>
+        <span class="tag">Interactive Installation</span>
+        <span class="tag">MR Development</span>
       </div>
     </div>
   </div>
@@ -220,9 +202,8 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     <div class="portfolio-meta">
       <div class="portfolio-meta-title">The Echo</div>
       <div class="portfolio-tags">
-        <span class="tag">XR</span>
-        <span class="tag">Data</span>
-        <span class="tag">Methods</span>
+        <span class="tag">Gen AI</span>
+        <span class="tag">Film Making</span>
       </div>
     </div>
   </div>
@@ -237,8 +218,8 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
     <div class="portfolio-meta">
       <div class="portfolio-meta-title">Matter Matters</div>
       <div class="portfolio-tags">
-        <span class="tag">ML</span>
-        <span class="tag">Visualization</span>
+        <span class="tag">Computational Design</span>
+        <span class="tag">Data-Driven Design</span>
       </div>
     </div>
   </div>
