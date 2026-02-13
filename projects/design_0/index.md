@@ -154,6 +154,10 @@ toc_sticky: true
 
 <h2>Problems</h2>
 
+<p class="section-subtitle">
+  Limitations of third-person view in traditional tours
+</p>
+
 Traditional guided tours of cultural heritage sites, such as the Forbidden City, primarily rely on third-person narration and passive observation. While visitors can take photographs and access historical facts, the experience often lacks interaction, contextual understanding, and emotional engagement. This model limits the educational potential of heritage spaces, especially for diverse audiences with different cognitive and learning needs. The gap between visual spectacle and meaningful comprehension highlights the need for more interactive and embodied approaches to cultural learning.
 
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 25.png' | relative_url }})
@@ -165,78 +169,82 @@ Traditional guided tours of cultural heritage sites, such as the Forbidden City,
 
 <h2>Strategy</h2>
 
-blablablaplaceholder
+This framework illustrates how an AR gamified tour mediates between historical elements and visitor engagement. By transforming on-site exploration into first-person interactive experiences, the strategy bridges heritage content with immersive, emotionally resonant user experience.
 
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 26.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 2. Placeholder.
+Figure 2. AR Gamified Tour as a Mediating Mechanism Between Heritage Elements and Visitor Experience.
 </p>
 
 
 <h2>Goal</h2>
 
-blablablaplaceholder
+<p class="section-subtitle">
+  First-person view engagement with AR
+</p>
+
+This design framework illustrates how first-person engagement is achieved through AR-based mapping, multi-timeline narratives, multimodal interaction (vision, audition, and physical interaction), and chapter-based historical storytelling.
 
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 27.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 3. Placeholder.
+Figure 3. Goal-Oriented AR Experience Design from Site Mapping to Narrative Chapter Design.
 </p>
 
 
 <h2>Game Assets</h2>
 
-blablablaplaceholder
+The numerous artifacts and intricate historical character relationships create a perfect foundation for vibrant game assets. In this AR-guided tour of the Forbidden City, players discover the stories behind these artifacts and connect historical events to real-world settings, bringing both the
+artifacts and characters vivid to life as they explore.
 
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 28.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 3. Placeholder.
+Figure 4. Game Assets.
 </p>
 
 <h2>Game Planning of Chapter 1</h2>
 
-blablablaplaceholder
+Taking Chapter 1’s game plan as an example, the player enters the game as a palace maid, experiencing one day during Renyin Palace Coup
+from a first-person perspective while collecting artifact cards along the way. At the chapter’s start, player is provided with a timeline-based route
+map using the ancient Chinese Zodiac timekeeping method, providing an overview of the tour and guiding them through tasks.
 
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 29.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 3. Placeholder.
+Figure 5. Chapter 1 Route Map.
 </p>
 
 
 <h2>Techflow</h2>
 
-blablablaplaceholder
+<p class="section-subtitle">
+  Plot-driven AR Navigation
+</p>
 
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 30.png' | relative_url }})
 
-<p class="figure-caption">
-Figure 3. Placeholder.
-</p>
-
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 31.png' | relative_url }})
-
-<p class="figure-caption">
-Figure 3. Placeholder.
-</p>
 
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 32.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 3. Placeholder.
+Figure 6,7,8. Technical Pipeline.
 </p>
 
 <h2>Front-end Interfaces</h2>
 
-blablablaplaceholder
+<p class="section-subtitle">
+  Game user journey
+</p>
 
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 33.png' | relative_url }})
 
 <p class="figure-caption">
-Figure 3. Placeholder.
+Figure 9. User Interface Design.
 </p>
+
 
 
 
