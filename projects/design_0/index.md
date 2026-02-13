@@ -154,12 +154,12 @@ toc_sticky: true
 
 <h2>Problems</h2>
 
-blablabla placeholder
+Traditional guided tours of cultural heritage sites, such as the Forbidden City, primarily rely on third-person narration and passive observation. While visitors can take photographs and access historical facts, the experience often lacks interaction, contextual understanding, and emotional engagement. This model limits the educational potential of heritage spaces, especially for diverse audiences with different cognitive and learning needs. The gap between visual spectacle and meaningful comprehension highlights the need for more interactive and embodied approaches to cultural learning.
 
 ![Figure placeholder]({{ '/projects/design_0/asset/Frame 25.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 1. Placeholder.
+  Figure 1. Tension Between Tourism, Education, and Engagement in Heritage Spaces
 </p>
 
 
@@ -237,6 +237,7 @@ blablablaplaceholder
 <p class="figure-caption">
 Figure 3. Placeholder.
 </p>
+
 
 
 
