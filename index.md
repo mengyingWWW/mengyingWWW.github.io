@@ -149,7 +149,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
 
   <div class="portfolio-item">
     <a class="portfolio-card" 
-       href="https://parkipedia.my.canva.site/research-findings" 
+       href="https://parkipedia.my.canva.site" 
        target="_blank" 
        rel="noopener noreferrer"
        aria-label="Parkipedia project">
@@ -162,6 +162,7 @@ How Much AI is Enough? An Eye-Tracking Study on the Impact of Engagement with AI
       <div class="portfolio-meta-title">Parkipedia (Sep, 2025)</div>
       <div class="portfolio-tags">
         <span class="tag">UI UX Design</span>
+        <span class="tag">UX Research</span>
       </div>
     </div>
   </div>
