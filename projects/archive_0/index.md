@@ -114,11 +114,7 @@ toc_sticky: true
   <div class="kv-grid">
     <div class="kv-item">
       <div class="k">Team</div>
-      <div class="v">
-        Xinyu Wang<br/>
-        Bella Sun<br/>
-        Rong Zhao<br/>
-      </div>
+      <div class="v">Xinyu Wang, Bella Sun, Rong Zhao</div>
     </div>
 
     <div class="kv-item">
@@ -256,6 +252,7 @@ Figure 6,7,8. Technical Pipeline.
 <p class="figure-caption">
 Figure 9. User Interface Design.
 </p>
+
 
 
 
