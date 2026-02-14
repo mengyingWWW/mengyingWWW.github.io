@@ -166,6 +166,8 @@ toc_sticky: true
 
 <h2>Background</h2>
 
+In 2025, the City of Seattle launched its Responsible AI Plan (2025–2026) alongside a Community Innovation Hackathon series aimed at promoting transparent and accountable AI use in public services. Within this civic context, our project emerged as a response to real-world challenges in the city’s construction permitting system, exploring how human–AI collaboration can enhance usability, trust, and public sector decision-making.
+
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 49.png' | relative_url }})
 
 <p class="figure-caption">
@@ -175,32 +177,44 @@ toc_sticky: true
 
 <h2>Research Question</h2>
 
-blablabla placeholder
+While the hackathon prototype demonstrated the potential of AI-assisted permitting, it also raised important questions about the appropriate level of AI involvement in public-facing systems. This prompted a more structured investigation into how different degrees of AI integration influence user outcomes.
 
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 50.png' | relative_url }})
 
 <h2>Hypothesis</h2>
 
+Building on existing discussions around automation levels and human–AI collaboration, we examined how increasing system intelligence might reshape user experience in civic workflows. This perspective informed the directional hypothesis outlined below：
+
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 51.png' | relative_url }})
 
 <h2>Methods</h2>
 
-blablabla placeholder
+We designed a 3 (AI integration level) × 2 (user type: architects vs. residents) between-subject study. Participants were randomly assigned to one of three AI-assisted permit portal systems and completed three standardized permit application tasks. The final sample included 42 participants (12 architects, 30 residents). After completing the tasks, participants completed a 15-item survey (5 multi-select, 9 Likert-scale, 1 open-ended) measuring perceived usability, helpfulness, and task-related experience.
+
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 52.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 2. blablabla placeholder.
+  Figure 2. Experimental Methods.
 </p>
+
+The three system versions operationalized increasing levels of AI agency and personalization within identical task structures. While all participants completed the same three permit-related tasks, the type and depth of AI intervention varied systematically across conditions, enabling controlled comparison of AI involvement effects on user performance and perception.
 
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 53-1.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 3. blablabla placeholder.
+  Figure 3. Levels of AI Integration Across Permit Portal Tasks.
 </p>
 
 <h2>Experimental Platform Prototypes</h2>
 
-blablabla placeholder (3 videos)
+Video 1. Control Version (No AI Assistance)
+Participants completed the permit application workflow without AI support, manually performing time lookup, form entry, and pre-submission review.
+
+Video 2. Partial AI Assistance
+Participants received case-based time estimation, chatbot support during form filling, and automated review feedback.
+
+Video 3. Full AI Assistance
+Participants interacted with a fully integrated AI system providing personalized time estimation, autofill based on user information, and annotated AI review with documented sources.
 
 <h2>Survey Design</h2>
 
@@ -289,6 +303,7 @@ blablabla placeholder.
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 64.png' | relative_url }})
 
 <h2>Summary</h2>
+
 
 
 
