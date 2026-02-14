@@ -210,11 +210,41 @@ The three system versions operationalized increasing levels of AI agency and per
 Video 1. Control Version (No AI Assistance)
 Participants completed the permit application workflow without AI support, manually performing time lookup, form entry, and pre-submission review.
 
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2rem;">
+  <iframe 
+    src="https://player.vimeo.com/video/1164916970?title=0&byline=0&portrait=0"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
 Video 2. Partial AI Assistance
 Participants received case-based time estimation, chatbot support during form filling, and automated review feedback.
 
-Video 3. Full AI Assistance
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2rem;">
+  <iframe 
+    src="https://player.vimeo.com/video/1164917004?title=0&byline=0&portrait=0"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+Video 3. Full AI Assistance 
 Participants interacted with a fully integrated AI system providing personalized time estimation, autofill based on user information, and annotated AI review with documented sources.
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2rem;">
+  <iframe 
+    src="https://player.vimeo.com/video/1164917115?title=0&byline=0&portrait=0"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
 
 <h2>Survey Design</h2>
 
@@ -303,6 +333,7 @@ blablabla placeholder.
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 64.png' | relative_url }})
 
 <h2>Summary</h2>
+
 
 
 
