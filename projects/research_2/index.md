@@ -267,7 +267,22 @@ The survey instrument was designed to systematically measure task performance an
 <p class="section-subtitle">
   Clean & Transform Data
 </p>
-blablabla placeholder.
+
+#### Recode roles, versions, experience
+- version_f (factor with 3 versions)
+- role (architect vs resident)
+- experience (ordered factor)
+
+#### Extract numbers from Likert strings
+- version_f (factor with 3 versions)
+- role (architect vs resident)
+- experience (ordered factor)
+
+#### Standardize scale direction
+All items already:
+- 1 = negative
+- 5 = positive  
+So no reverse-scoring needed.
 
 <p class="section-subtitle">
   Measures
@@ -333,6 +348,7 @@ blablabla placeholder.
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 64.png' | relative_url }})
 
 <h2>Summary</h2>
+
 
 
 
