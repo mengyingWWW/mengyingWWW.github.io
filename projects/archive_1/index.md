@@ -103,7 +103,7 @@ toc_sticky: true
 
   <!-- Cover image -->
   <img
-    src="{{ '/projects/archive_0/assets/Frame 34.png' | relative_url }}"
+    src="{{ '/projects/archive_1/assets/Frame 65.png' | relative_url }}"
     alt="Project cover"
     style="width: 100%; border: 1px solid rgba(255,255,255,0.18);"
   />
@@ -114,8 +114,7 @@ toc_sticky: true
   <div class="kv-grid">
     <div class="kv-item">
       <div class="k">Team</div>
-      <div class="v">Kooi Pei Teoh, Tuerke, Yang Jinhua, Hu Xiaohan, Wang Xuan, Jin Chen, Cheng Zeyi, Deng Xinya, Fan Yuwei, Hu Yinyan, Chen Yiran, Huang Yu, Shi Jianan, Chen Zhuoshi, Li Hanyang, Ke Jingjing, Lin Zihan, Mi Yu, Liu Xu, Liu Yixuan,
-Luo Kai, Liu Xia, Pu Yanren, Zhang Xingzhao, Zhang Xiyu, Li Houyi, Wang Hongyi, Wang Mengying, Wang Zhiqi, Xiong Haisong, Xu Ye, Xu Yining, Yu Laiyan, Lin Yaoyu, Shen Jinkun, Zhu Junqiao, Zhao Chunxi, Zhao Xiaoxiao, Zheng Hanyu, Zhou Junyu, Zhou Yuchen, Zhang Xiaojing, Zhu Shilong, Li Chengyuan, Hu Yuelin</div>
+      <div class="v">Kooi Pei Teoh, Tuerke, Yang Jinhua, Hu Xiaohan, Wang Xuan, Jin Chen, Cheng Zeyi, Deng Xinya, Fan Yuwei, Hu Yinyan, Chen Yiran, Huang Yu, Shi Jianan, Chen Zhuoshi, Li Hanyang, Ke Jingjing, Lin Zihan, Mi Yu, Liu Xu, Liu Yixuan, Luo Kai, Liu Xia, Pu Yanren, Zhang Xingzhao, Zhang Xiyu, Li Houyi, Wang Hongyi, Wang Mengying, Wang Zhiqi, Xiong Haisong, Xu Ye, Xu Yining, Yu Laiyan, Lin Yaoyu, Shen Jinkun, Zhu Junqiao, Zhao Chunxi, Zhao Xiaoxiao, Zheng Hanyu, Zhou Junyu, Zhou Yuchen, Zhang Xiaojing, Zhu Shilong, Li Chengyuan, Hu Yuelin</div>
     </div>
 
     <div class="kv-item">
@@ -280,6 +279,7 @@ The exploded view reveals the constructive logic of the installation, demonstrat
 <p class="figure-caption">
   Figure 13. From Prototype to Full-Scale Installation.
 </p>
+
 
 
 
