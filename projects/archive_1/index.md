@@ -168,6 +168,35 @@ Beginning with scene modeling and live-action footage as source material, we emp
 
 <h2>Multi-Source Inputs to Generative Video Synthesis</h2>
 
+Multiple visual sources including Unreal Engine simulations, live-action footage, rendered architectural models, and C4D animations are transformed through diffusion-based generative workflows. Stable Diffusion and video-to-video pipelines reinterpret motion, texture, and spatial atmosphere while maintaining the compositional structure of the original scenes.
+
 ![Figure placeholder]({{ '/projects/archive_1/assets/Frame 67.png' | relative_url }})
 
-Multi-Source Visual Transformation via Stable Diffusion Pipelines
+<p class="figure-caption">
+  Figure 1. Multi-Source Visual Transformation via Stable Diffusion Pipelines.
+</p>
+
+<h2>Film Chapters</h2>
+
+![Figure placeholder]({{ '/projects/archive_1/assets/Frame 68.png' | relative_url }})
+
+<h2>Film Scenes</h2>
+
+![Figure placeholder]({{ '/projects/archive_1/assets/Frame 69.png' | relative_url }})
+
+<h2>Exhibition</h2>
+
+![Figure placeholder]({{ '/projects/archive_1/assets/Frame 70.png' | relative_url }})
+
+<h2>Watch the Full Film</h2>
+
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; margin:2rem 0;">
+  <iframe 
+    src="https://www.youtube.com/embed/WuC48M4kDjs" 
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    style="position:absolute; top:0; left:0; width:100%; height:100%;">
+  </iframe>
+</div>
