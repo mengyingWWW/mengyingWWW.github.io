@@ -345,13 +345,37 @@ So no reverse-scoring needed.
 
 <h2>Qualitative Data</h2>
 
+Qualitative responses illuminate how AI integration reshapes perceptions of authority, responsibility, and decision-making in civic service contexts. While residents often framed AI as a source of reassurance and cognitive support, architects articulated concerns around over-reliance and reduced professional discretion. These contrasts suggest that AI-assisted systems must account for role-based differences in expectations, expertise, and desired levels of autonomy.
+
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 63.png' | relative_url }})
 
 <h2>Discussion</h2>
 
+Our results highlight both the promise and complexity of integrating AI into civic service systems. However, limitations in sample size, role representation, and construct definition constrain the generalizability of our findings. In particular, distinguishing between partial and full AI assistance revealed the difficulty of measuring “AI involvement” independent of users’ perceived autonomy. Future research should further examine how AI system transparency, control mechanisms, and stakeholder diversity shape outcomes in public-sector contexts.
+
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 64.png' | relative_url }})
 
 <h2>Summary</h2>
+
+<h3>What We Did</h3>
+<ul>
+  <li>Designed a between-subject experiment to test three levels of AI-integrated permit workflows</li>
+  <li>Collected data from 42 participants (12 architects & 30 residents) across three task scenarios</li>
+  <li>Measured task performance expectations, usability, and trust/helpfulness</li>
+</ul>
+
+<h3>What We Found</h3>
+<ul>
+  <li>AI assistance significantly improved usability, trust/helpfulness, and performance expectations across all metrics (see ANOVA results on pp. 20–22)</li>
+  <li>Baseline &lt; Partial AI = Full AI:</li>
+  <li>AI helps meaningfully, but transparency and personalization (V3) did not yield statistically significant gains over basic AI support (V2)</li>
+  <li>Qualitative feedback shows:
+    <ul>
+      <li>Residents appreciated AI guidance, especially when lacking prior knowledge (p.25)</li>
+      <li>Architects expressed mixed trust: valuing independence and noticing technical frictions</li>
+    </ul>
+  </li>
+</ul>
 
 
 
