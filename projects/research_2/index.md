@@ -268,17 +268,17 @@ The survey instrument was designed to systematically measure task performance an
   Clean & Transform Data
 </p>
 
-#### Recode roles, versions, experience
+### Recode roles, versions, experience
 - version_f (factor with 3 versions)
 - role (architect vs resident)
 - experience (ordered factor)
 
-#### Extract numbers from Likert strings
+### Extract numbers from Likert strings
 - version_f (factor with 3 versions)
 - role (architect vs resident)
 - experience (ordered factor)
 
-#### Standardize scale direction
+### Standardize scale direction
 All items already:
 - 1 = negative
 - 5 = positive  
@@ -287,7 +287,31 @@ So no reverse-scoring needed.
 <p class="section-subtitle">
   Measures
 </p>
-blablabla placeholder.
+
+### Usability Index
+
+**USABILITY INDEX = (USABILITY HELP + TIME EFFORT) / 2**
+
+- “The assistance helped me understand what to do” → *usability_help_num*
+- “How much time/effort was required to complete the form?” → *time_effort_num*  
+  (reverse-coded if lower = easier)
+
+### Trust / Helpfulness Index
+
+**TRUST INDEX = (CONFIDENCE + ACCURACY EXPECTATIONS + BELIEF) / 3**
+
+- Confidence completing the task → *trust_confidence_num*
+- Accuracy of information → *confidence_accuracy_num*
+- Smoothness of future corrections → *confidence_smooth_num*
+
+### Performance Index
+
+**PERFORMANCE INDEX = (EXPECTED TIMELINE CONFIDENCE + UNDERSTANDING OF ISSUES + ABILITY TO FIX ERRORS + CONFIDENCE IN SMOOTH CORRECTION) / 4**
+
+- Expected timeline confidence → *confidence_timeline_num*
+- Understanding of issues → *understanding_issues_num*
+- Ability to fix errors → *confidence_fix_num*
+- Confidence in smooth correction → *confidence_smooth_num*
 
 <p class="section-subtitle">
   Sample Characteristics
@@ -348,6 +372,7 @@ blablabla placeholder.
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 64.png' | relative_url }})
 
 <h2>Summary</h2>
+
 
 
 
