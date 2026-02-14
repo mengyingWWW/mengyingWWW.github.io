@@ -248,18 +248,18 @@ Participants interacted with a fully integrated AI system providing personalized
 
 <h2>Survey Design</h2>
 
-blablabla placeholder
+The survey instrument was designed to systematically measure task performance and user perceptions across experimental conditions. Following prototype interaction, participants completed a 15-item questionnaire comprising 5 multi-select items, 9 Likert-scale measures, and 1 open-ended question. Items assessed perceived usability, task efficiency, helpfulness of AI assistance, and overall experience. This mixed-format design enabled both quantitative comparison and qualitative insight into user responses.
 
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 55.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 4. blablabla placeholder.
+  Figure 4. Experimental Procedure and Study Flow.
 </p>
 
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 56-2.png' | relative_url }})
 
 <p class="figure-caption">
-  Figure 5. blablabla placeholder.
+  Figure 5. Survey Interface Design and Question Structure.
 </p>
 
 <h2>Results & Findings</h2>
@@ -333,6 +333,7 @@ blablabla placeholder.
 ![Figure placeholder]({{ '/projects/research_2/assets/Frame 64.png' | relative_url }})
 
 <h2>Summary</h2>
+
 
 
 
