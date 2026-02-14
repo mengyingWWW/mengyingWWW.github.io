@@ -129,10 +129,10 @@ toc_sticky: true
     <div class="kv-item">
       <div class="k">Role</div>
       <div class="v">
-        90% installation design;<br/>
-        80% installation fabrication;<br/>
-        50% conceptual design;<br/>
-        50% serial communication.
+        90% Installation Design;<br/>
+        80% Installation Fabrication;<br/>
+        50% Conceptual Design;<br/>
+        50% Serial Communication.
       </div>
     </div>
 
@@ -281,6 +281,7 @@ The exploded view reveals the constructive logic of the installation, demonstrat
 <p class="figure-caption">
   Figure 13. From Prototype to Full-Scale Installation.
 </p>
+
 
 
 
